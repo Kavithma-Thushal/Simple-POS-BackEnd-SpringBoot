@@ -52,4 +52,9 @@ public class CustomerServiceImpl implements CustomerService {
     public List<CustomerEntity> loadAllCustomers() {
         return customerRepo.findAll();
     }
+
+    @Override
+    public long customerCount() {
+        return customerRepo.count();
+    }
 }

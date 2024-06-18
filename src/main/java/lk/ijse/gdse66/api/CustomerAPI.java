@@ -44,4 +44,9 @@ public class CustomerAPI {
     public List<CustomerEntity> loadAllCustomers() {
         return customerService.loadAllCustomers();
     }
+
+    @GetMapping("/customerCount")
+    public long customersCount() {
+        return customerService.customerCount();
+    }
 }
