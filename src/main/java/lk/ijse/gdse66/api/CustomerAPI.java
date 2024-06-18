@@ -17,13 +17,13 @@ public class CustomerAPI {
     @Autowired
     public CustomerService customerService;
 
-    @GetMapping("/getCustomer")
-    public String getCustomer() {
-        return "Kavithma Thushal";
-    }
-
     @PostMapping("/saveCustomer")
     public void saveCustomer(@RequestBody CustomerDTO customerDTO) {
         customerService.saveCustomer(customerDTO);
+    }
+
+    @GetMapping("/searchCustomer")
+    public String searchCustomer() {
+        return "Kavithma Thushal";
     }
 }
