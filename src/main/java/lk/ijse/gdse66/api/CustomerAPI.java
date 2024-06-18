@@ -1,8 +1,7 @@
 package lk.ijse.gdse66.api;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lk.ijse.gdse66.dto.CustomerDTO;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author : Kavithma Thushal
@@ -16,5 +15,13 @@ public class CustomerAPI {
     @GetMapping("/getCustomer")
     public String getCustomer() {
         return "Kavithma Thushal";
+    }
+
+    @PostMapping("/saveCustomer")
+    public void saveCustomer(@RequestBody CustomerDTO customerDTO) {
+        System.out.println(customerDTO.getId());
+        System.out.println(customerDTO.getName());
+        System.out.println(customerDTO.getAddress());
+        System.out.println(customerDTO.getSalary());
     }
 }

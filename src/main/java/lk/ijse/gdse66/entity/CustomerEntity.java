@@ -21,7 +21,7 @@ import lombok.Setter;
 @Table(name = "customer")
 public class CustomerEntity {
     @Id
-    private int id;
+    private String id;
     private String name;
     private String address;
     private String salary;
