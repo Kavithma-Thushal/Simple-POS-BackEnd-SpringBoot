@@ -31,4 +31,9 @@ public class CustomerAPI {
     public void updateCustomer(@RequestBody CustomerDTO customerDTO) {
         customerService.updateCustomer(customerDTO);
     }
+
+    @DeleteMapping("/deleteCustomer/{id}")
+    public void deleteCustomer(@PathVariable String id) {
+        customerService.deleteCustomer(id);
+    }
 }
