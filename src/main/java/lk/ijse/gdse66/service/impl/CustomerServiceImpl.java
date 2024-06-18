@@ -35,4 +35,9 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerDTO searchCustomer(String id) {
         return customerRepo.findById(id).map(customerEntity -> modelMapper.map(customerEntity, CustomerDTO.class)).orElse(null);
     }
+
+    @Override
+    public void updateCustomer(CustomerDTO customerDTO) {
+        customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
+    }
 }

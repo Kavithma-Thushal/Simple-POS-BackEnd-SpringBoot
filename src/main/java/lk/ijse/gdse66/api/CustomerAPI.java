@@ -26,4 +26,9 @@ public class CustomerAPI {
     public CustomerDTO searchCustomer(@PathVariable String id) {
         return customerService.searchCustomer(id);
     }
+
+    @PutMapping("/updateCustomer")
+    public void updateCustomer(@RequestBody CustomerDTO customerDTO) {
+        customerService.updateCustomer(customerDTO);
+    }
 }

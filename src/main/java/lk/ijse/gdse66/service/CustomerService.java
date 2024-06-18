@@ -12,4 +12,6 @@ public interface CustomerService {
     void saveCustomer(CustomerDTO customerDTO);
 
     CustomerDTO searchCustomer(String id);
+
+    void updateCustomer(CustomerDTO customerDTO);
 }
