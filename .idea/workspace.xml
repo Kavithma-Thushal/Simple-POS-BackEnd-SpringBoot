@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6afc5e0d-ca5d-4a3b-aaa9-d2372b562ee6" name="Changes" comment="FrontEnd Added">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c87ef049-76ec-4ff1-8c6d-705b8cb73759.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c87ef049-76ec-4ff1-8c6d-705b8cb73759.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/api/CustomerAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/api/CustomerAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/api/CustomerAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/api/CustomerAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/assets/styles/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controller/CustomerController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="6afc5e0d-ca5d-4a3b-aaa9-d2372b562ee6" name="Changes" comment="FrontEnd Completed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +52,11 @@
     ]
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="BackEnd" />
@@ -88,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718720434059</updated>
       <workItem from="1718720435291" duration="240000" />
-      <workItem from="1718720682400" duration="6092000" />
+      <workItem from="1718720682400" duration="7558000" />
     </task>
     <task id="LOCAL-00001" summary="FrontEnd Added">
       <option name="closed" value="true" />
@@ -98,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718720660515</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="FrontEnd Completed">
+      <option name="closed" value="true" />
+      <created>1718731280974</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718731280974</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +110,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="FrontEnd Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd Added" />
+    <MESSAGE value="FrontEnd Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd Completed" />
   </component>
 </project>
