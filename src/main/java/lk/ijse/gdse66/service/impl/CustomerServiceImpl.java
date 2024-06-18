@@ -1,6 +1,11 @@
 package lk.ijse.gdse66.service.impl;
 
+import lk.ijse.gdse66.dto.CustomerDTO;
+import lk.ijse.gdse66.entity.CustomerEntity;
+import lk.ijse.gdse66.repo.CustomerRepo;
 import lk.ijse.gdse66.service.CustomerService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,8 +18,14 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
 
-    @Override
-    public void saveCustomer() {
+    @Autowired
+    public ModelMapper modelMapper;
 
+    @Autowired
+    public CustomerRepo customerRepo;
+
+    @Override
+    public void saveCustomer(CustomerDTO customerDTO) {
+        customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
     }
 }
