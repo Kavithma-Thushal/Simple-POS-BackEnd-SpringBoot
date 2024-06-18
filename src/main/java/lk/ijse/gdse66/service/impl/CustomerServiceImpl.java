@@ -26,7 +26,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void saveCustomer(CustomerDTO customerDTO) {
-        customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
+        if (!customerRepo.existsById(customerDTO.getId())) {
+            customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
+        }
     }
 
     @Override
