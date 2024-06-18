@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>lk.ijse.gdse66</groupId>
-    <artifactId>SpringBoot-MySQL-CRUD</artifactId>
+    <artifactId>BackEnd</artifactId>
     <version>0.0.1</version>
     <name>SpringBoot-MySQL-CRUD</name>
     <description>SpringBoot-MySQL-CRUD</description>
