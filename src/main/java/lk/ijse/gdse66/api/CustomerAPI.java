@@ -1,9 +1,12 @@
 package lk.ijse.gdse66.api;
 
 import lk.ijse.gdse66.dto.CustomerDTO;
+import lk.ijse.gdse66.entity.CustomerEntity;
 import lk.ijse.gdse66.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author : Kavithma Thushal
@@ -35,5 +38,10 @@ public class CustomerAPI {
     @DeleteMapping("/deleteCustomer/{id}")
     public void deleteCustomer(@PathVariable String id) {
         customerService.deleteCustomer(id);
+    }
+
+    @GetMapping("/loadAllCustomers")
+    public List<CustomerEntity> loadAllCustomers() {
+        return customerService.loadAllCustomers();
     }
 }
