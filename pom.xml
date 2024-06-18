@@ -10,7 +10,7 @@
     </parent>
     <groupId>lk.ijse.gdse66</groupId>
     <artifactId>SpringBoot-MySQL-CRUD</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>SpringBoot-MySQL-CRUD</name>
     <description>SpringBoot-MySQL-CRUD</description>
     <properties>
