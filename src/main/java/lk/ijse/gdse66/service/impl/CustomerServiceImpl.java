@@ -28,4 +28,9 @@ public class CustomerServiceImpl implements CustomerService {
     public void saveCustomer(CustomerDTO customerDTO) {
         customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
     }
+
+    @Override
+    public CustomerDTO searchCustomer(String id) {
+        return customerRepo.findById(id).map(customerEntity -> modelMapper.map(customerEntity, CustomerDTO.class)).orElse(null);
+    }
 }

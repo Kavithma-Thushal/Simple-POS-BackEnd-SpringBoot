@@ -8,5 +8,8 @@ import lk.ijse.gdse66.dto.CustomerDTO;
  * @since : 7:24 AM - 6/18/2024
  **/
 public interface CustomerService {
+
     void saveCustomer(CustomerDTO customerDTO);
+
+    CustomerDTO searchCustomer(String id);
 }

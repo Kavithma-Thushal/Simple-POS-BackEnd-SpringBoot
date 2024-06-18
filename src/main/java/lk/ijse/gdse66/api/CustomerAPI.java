@@ -22,8 +22,8 @@ public class CustomerAPI {
         customerService.saveCustomer(customerDTO);
     }
 
-    @GetMapping("/searchCustomer")
-    public String searchCustomer() {
-        return "Kavithma Thushal";
+    @GetMapping("/searchCustomer/{id}")
+    public CustomerDTO searchCustomer(@PathVariable String id) {
+        return customerService.searchCustomer(id);
     }
 }
