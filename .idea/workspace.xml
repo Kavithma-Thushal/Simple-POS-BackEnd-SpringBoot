@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6afc5e0d-ca5d-4a3b-aaa9-d2372b562ee6" name="Changes" comment="README.md Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/api/CustomerAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/api/CustomerAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/WebApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/api/CustomerAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/dto/CustomerDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/entity/CustomerEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/repo/CustomerRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/service/impl/CustomerServiceImpl.class" beforeDir="false" />
-    </list>
+    <list default="true" id="6afc5e0d-ca5d-4a3b-aaa9-d2372b562ee6" name="Changes" comment="Customer Count Removed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +87,7 @@
       <workItem from="1718720682400" duration="7558000" />
       <workItem from="1718731413702" duration="458000" />
       <workItem from="1718762627915" duration="1164000" />
-      <workItem from="1718764721197" duration="1083000" />
+      <workItem from="1718764721197" duration="1226000" />
     </task>
     <task id="LOCAL-00001" summary="FrontEnd Added">
       <option name="closed" value="true" />
@@ -127,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718731870303</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Customer Count Removed">
+      <option name="closed" value="true" />
+      <created>1718765943178</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718765943179</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +132,7 @@
     <MESSAGE value="FrontEnd Added" />
     <MESSAGE value="FrontEnd Completed" />
     <MESSAGE value="README.md Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated" />
+    <MESSAGE value="Customer Count Removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Count Removed" />
   </component>
 </project>

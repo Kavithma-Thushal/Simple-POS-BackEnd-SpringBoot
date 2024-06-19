@@ -21,7 +21,7 @@ $("#btnSaveCustomer").click(function () {
         success: function (res) {
             alert("Customer Saved Successfully...!");
         }, error: function (error) {
-            console.log("Customer Saved Error...!");
+            alert("Customer Saved Error...!");
         }
     });
 });
