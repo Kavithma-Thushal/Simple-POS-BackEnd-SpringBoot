@@ -1,5 +1,7 @@
 let baseUrl = "http://localhost:8080/api/v1/customer";
 
+loadAllCustomers();
+
 $("#btnSaveCustomer").click(function () {
     let cusId = $("#txtCustomerId").val();
     let cusName = $("#txtCustomerName").val();
@@ -19,6 +21,7 @@ $("#btnSaveCustomer").click(function () {
         contentType: "application/json",
         data: JSON.stringify(customerOb),
         success: function (res) {
+            loadAllCustomers();
             alert("Customer Saved Successfully...!");
         }, error: function (error) {
             alert("Customer Saved Error...!");
@@ -62,6 +65,7 @@ $("#btnUpdateCustomer").click(function () {
         contentType: "application/json",
         data: JSON.stringify(customerOb),
         success: function (res) {
+            loadAllCustomers();
             alert("Customer Updated Successfully...!");
         },
         error: function (error) {
@@ -77,6 +81,7 @@ $("#btnDeleteCustomer").click(function () {
         url: baseUrl + "/deleteCustomer/" + deletedCusId,
         method: "DELETE",
         success: function (res) {
+            loadAllCustomers();
             alert("Customer Deleted Successfully...!");
         },
         error: function (error) {
@@ -86,6 +91,11 @@ $("#btnDeleteCustomer").click(function () {
 });
 
 $('#btnLoadAllCustomers').click(function () {
+    loadAllCustomers();
+});
+
+function loadAllCustomers() {
+    $('#customerTable').empty();
     $.ajax({
         url: baseUrl + "/loadAllCustomers",
         method: "GET",
@@ -109,4 +119,4 @@ $('#btnLoadAllCustomers').click(function () {
             console.log("Load All Customers Error...!");
         }
     });
-});
+}

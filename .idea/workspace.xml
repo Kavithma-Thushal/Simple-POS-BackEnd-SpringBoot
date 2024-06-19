@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6afc5e0d-ca5d-4a3b-aaa9-d2372b562ee6" name="Changes" comment="Customer Count Removed" />
+    <list default="true" id="6afc5e0d-ca5d-4a3b-aaa9-d2372b562ee6" name="Changes" comment="Alert Refactored">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,6 +92,9 @@
       <workItem from="1718731413702" duration="458000" />
       <workItem from="1718762627915" duration="1164000" />
       <workItem from="1718764721197" duration="1226000" />
+      <workItem from="1718766226729" duration="69000" />
+      <workItem from="1718779245237" duration="926000" />
+      <workItem from="1718791083405" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="FrontEnd Added">
       <option name="closed" value="true" />
@@ -121,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718765943179</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Alert Refactored">
+      <option name="closed" value="true" />
+      <created>1718766287904</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718766287904</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +148,7 @@
     <MESSAGE value="FrontEnd Completed" />
     <MESSAGE value="README.md Updated" />
     <MESSAGE value="Customer Count Removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Count Removed" />
+    <MESSAGE value="Alert Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alert Refactored" />
   </component>
 </project>
