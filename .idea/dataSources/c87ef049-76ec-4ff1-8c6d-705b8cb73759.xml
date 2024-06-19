@@ -966,7 +966,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="284" parent="1" name="demo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-06-18.16:57:28</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-06-19.02:57:39</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="285" parent="1" name="mysql.infoschema">

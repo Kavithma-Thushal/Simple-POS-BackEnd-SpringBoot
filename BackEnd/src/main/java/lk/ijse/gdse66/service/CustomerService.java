@@ -21,6 +21,4 @@ public interface CustomerService {
     void deleteCustomer(String id);
 
     List<CustomerEntity> loadAllCustomers();
-
-    long customerCount();
 }
