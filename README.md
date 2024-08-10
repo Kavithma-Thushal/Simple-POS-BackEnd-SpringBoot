@@ -32,9 +32,13 @@ efficiently manage customer data with ease.
 
 ## 📸 Screenshots
 
-### Customer Management Interface
+### Customer Management
 
-<img src="ss.png" alt="Customer Management Interface">
+<img src="FrontEnd/assets/images/Customer-Management.png" alt="Customer Management">
+
+### Item Management
+
+<img src="FrontEnd/assets/images/Item-Management.png" alt="Item Management">
 
 ## 📝 Version
 
