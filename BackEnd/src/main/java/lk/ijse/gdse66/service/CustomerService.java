@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @author : Kavithma Thushal
- * @project : SpringBoot-MySQL-CRUD
+ * @project : SpringBoot-CRUD
  * @since : 7:24 AM - 6/18/2024
  **/
 public interface CustomerService {

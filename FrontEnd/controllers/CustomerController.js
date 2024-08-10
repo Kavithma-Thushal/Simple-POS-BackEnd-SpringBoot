@@ -114,9 +114,24 @@ function loadAllCustomers() {
                 </tr>`;
                 $("#customerTable").append(row);
             });
+            tableListener();
         },
         error: function (error) {
             console.log("Load All Customers Error...!");
         }
+    });
+}
+
+function tableListener() {
+    $("#customerTable>tr").on("click", function () {
+        let id = $(this).children().eq(0).text();
+        let name = $(this).children().eq(1).text();
+        let address = $(this).children().eq(2).text();
+        let salary = $(this).children().eq(3).text();
+
+        $("#txtCustomerId").val(id);
+        $("#txtCustomerName").val(name);
+        $("#txtCustomerAddress").val(address);
+        $("#txtCustomerSalary").val(salary);
     });
 }

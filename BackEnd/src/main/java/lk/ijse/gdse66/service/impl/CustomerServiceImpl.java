@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * @author : Kavithma Thushal
- * @project : SpringBoot-MySQL-CRUD
+ * @project : SpringBoot-CRUD
  * @since : 7:25 AM - 6/18/2024
  **/
 @Service
@@ -21,10 +21,10 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
-    public ModelMapper modelMapper;
+    public CustomerRepo customerRepo;
 
     @Autowired
-    public CustomerRepo customerRepo;
+    public ModelMapper modelMapper;
 
     @Override
     public void saveCustomer(CustomerDTO customerDTO) {
@@ -40,7 +40,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void updateCustomer(CustomerDTO customerDTO) {
-        customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
+        if (customerRepo.existsById(customerDTO.getId())) {
+            customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
+        }
     }
 
     @Override

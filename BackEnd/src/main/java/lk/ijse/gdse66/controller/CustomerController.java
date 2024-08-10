@@ -1,4 +1,4 @@
-package lk.ijse.gdse66.api;
+package lk.ijse.gdse66.controller;
 
 import lk.ijse.gdse66.dto.CustomerDTO;
 import lk.ijse.gdse66.entity.CustomerEntity;
@@ -10,13 +10,13 @@ import java.util.List;
 
 /**
  * @author : Kavithma Thushal
- * @project : SpringBoot-MySQL-CRUD
+ * @project : SpringBoot-CRUD
  * @since : 7:05 AM - 6/18/2024
  **/
 @CrossOrigin
 @RestController
 @RequestMapping("/api/v1/customer")
-public class CustomerAPI {
+public class CustomerController {
 
     @Autowired
     public CustomerService customerService;
