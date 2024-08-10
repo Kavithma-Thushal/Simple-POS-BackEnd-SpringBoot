@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b7419ea-441d-44bb-80c0-0dfc4be46474" name="Changes" comment="FrontEnd Updated" />
+    <list default="true" id="6b7419ea-441d-44bb-80c0-0dfc4be46474" name="Changes" comment="README.md Updated">
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/OrderDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c5dbe3af-8d79-4908-be5b-a451d963ed4f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c5dbe3af-8d79-4908-be5b-a451d963ed4f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Item.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +34,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Maven.BackEnd [clean].executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
@@ -35,7 +44,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.WebApplication.executor&quot;: &quot;Run&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/3rd Sem Repo/My/CRUD/SpringBoot-CRUD/FrontEnd/controllers&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/3rd Sem Repo/My/CRUD/SpringBoot-CRUD/FrontEnd/assets/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -55,11 +64,13 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\SpringBoot-CRUD\FrontEnd\assets\images" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\SpringBoot-CRUD\FrontEnd\controllers" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\SpringBoot-CRUD\FrontEnd\pages" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\SpringBoot-CRUD" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\SpringBoot-CRUD\FrontEnd\assets\images" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\SpringBoot-CRUD\FrontEnd\pages" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\SpringBoot-CRUD\FrontEnd\CustomerPage" />
     </key>
@@ -111,6 +122,9 @@
       <workItem from="1723279885811" duration="207000" />
       <workItem from="1723281604969" duration="4887000" />
       <workItem from="1723286753157" duration="345000" />
+      <workItem from="1723287110059" duration="268000" />
+      <workItem from="1723299612987" duration="1525000" />
+      <workItem from="1723303013548" duration="348000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <option name="closed" value="true" />
@@ -160,19 +174,28 @@
       <option name="project" value="LOCAL" />
       <updated>1723287098191</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="README.md Updated">
+      <option name="closed" value="true" />
+      <created>1723287369082</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723287369082</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Updated" />
-    <MESSAGE value="README.md Updated" />
     <MESSAGE value="UI Updated" />
     <MESSAGE value="application.properties Updated" />
     <MESSAGE value="Item Added" />
     <MESSAGE value="FrontEnd Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd Updated" />
+    <MESSAGE value="README.md Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated" />
   </component>
 </project>
