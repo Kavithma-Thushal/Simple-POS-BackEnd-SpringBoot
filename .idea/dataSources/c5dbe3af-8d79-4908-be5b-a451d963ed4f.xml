@@ -910,7 +910,7 @@
     </schema>
     <schema id="289" parent="1" name="demo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-10.07:39:26</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-10.08:39:54</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="fruitjuicelab">
