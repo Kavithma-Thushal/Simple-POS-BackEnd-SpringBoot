@@ -34,7 +34,7 @@ efficiently manage customer data with ease.
 
 ### Customer Management Interface
 
-<img src="FrontEnd/ss.png" alt="Customer Management Interface">
+<img src="ss.png" alt="Customer Management Interface">
 
 ## 📝 Version
 
