@@ -35,9 +35,9 @@ $("#btnSearchItem").click(function () {
         url: baseUrl + "/searchItem/" + searchItemCode,
         method: "GET",
         success: function (res) {
-            $("#txtItemDescription").val(res.description);
-            $("#txtItemUnitPrice").val(res.unitPrice);
-            $("#txtItemQtyOnHand").val(res.qtyOnHand);
+            $("#itemTable").empty();
+            let row = "<tr><td>" + res.code + "</td><td>" + res.description + "</td><td>" + res.unitPrice + "</td><td>" + res.qtyOnHand + "</td></tr>";
+            $("#itemTable").append(row);
             console.log("Item Searched Successfully...!");
         },
         error: function (error) {

@@ -35,9 +35,9 @@ $("#btnSearchCustomer").click(function () {
         url: baseUrl + "/searchCustomer/" + searchCusId,
         method: "GET",
         success: function (res) {
-            $("#txtCustomerName").val(res.name);
-            $("#txtCustomerAddress").val(res.address);
-            $("#txtCustomerSalary").val(res.salary);
+            $("#customerTable").empty();
+            let row = "<tr><td>" + res.id + "</td><td>" + res.name + "</td><td>" + res.address + "</td><td>" + res.salary + "</td></tr>";
+            $("#customerTable").append(row);
             console.log("Customer Searched Successfully...!");
         },
         error: function (error) {
