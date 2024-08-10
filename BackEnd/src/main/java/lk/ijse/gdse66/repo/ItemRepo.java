@@ -1,6 +1,6 @@
 package lk.ijse.gdse66.repo;
 
-import lk.ijse.gdse66.entity.Customer;
+import lk.ijse.gdse66.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @project : SpringBoot-CRUD
  * @since : 7:35 AM - 6/18/2024
  **/
-public interface CustomerRepo extends JpaRepository<Customer, String> {
+public interface ItemRepo extends JpaRepository<Item, String> {
 }

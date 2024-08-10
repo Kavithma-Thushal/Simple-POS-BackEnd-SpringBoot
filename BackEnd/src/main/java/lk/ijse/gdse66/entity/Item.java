@@ -2,7 +2,6 @@ package lk.ijse.gdse66.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,11 +17,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "customer")
-public class CustomerEntity {
+public class Item {
     @Id
-    private String id;
-    private String name;
-    private String address;
-    private String salary;
+    private String code;
+    private String description;
+    private String unitPrice;
+    private String qtyOnHand;
 }

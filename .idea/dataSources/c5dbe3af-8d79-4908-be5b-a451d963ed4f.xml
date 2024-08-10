@@ -910,7 +910,7 @@
     </schema>
     <schema id="289" parent="1" name="demo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-10.08:39:54</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-10.10:29:55</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="fruitjuicelab">
@@ -969,29 +969,60 @@
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="306" parent="305" name="id">
+    <table id="306" parent="289" name="item">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="307" parent="305" name="id">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="307" parent="305" name="address">
+    <column id="308" parent="305" name="address">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="308" parent="305" name="name">
+    <column id="309" parent="305" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="309" parent="305" name="salary">
+    <column id="310" parent="305" name="salary">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="310" parent="305" name="PRIMARY">
+    <index id="311" parent="305" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="311" parent="305" name="PRIMARY">
+    <key id="312" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="313" parent="306" name="code">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="314" parent="306" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="315" parent="306" name="qty_on_hand">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="316" parent="306" name="unit_price">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <index id="317" parent="306" name="PRIMARY">
+      <ColNames>code</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="318" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

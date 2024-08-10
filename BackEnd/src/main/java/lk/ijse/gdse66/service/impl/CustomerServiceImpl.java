@@ -1,7 +1,7 @@
 package lk.ijse.gdse66.service.impl;
 
 import lk.ijse.gdse66.dto.CustomerDTO;
-import lk.ijse.gdse66.entity.CustomerEntity;
+import lk.ijse.gdse66.entity.Customer;
 import lk.ijse.gdse66.repo.CustomerRepo;
 import lk.ijse.gdse66.service.CustomerService;
 import org.modelmapper.ModelMapper;
@@ -29,19 +29,19 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void saveCustomer(CustomerDTO customerDTO) {
         if (!customerRepo.existsById(customerDTO.getId())) {
-            customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
+            customerRepo.save(modelMapper.map(customerDTO, Customer.class));
         }
     }
 
     @Override
     public CustomerDTO searchCustomer(String id) {
-        return customerRepo.findById(id).map(customerEntity -> modelMapper.map(customerEntity, CustomerDTO.class)).orElse(null);
+        return customerRepo.findById(id).map(customer -> modelMapper.map(customer, CustomerDTO.class)).orElse(null);
     }
 
     @Override
     public void updateCustomer(CustomerDTO customerDTO) {
         if (customerRepo.existsById(customerDTO.getId())) {
-            customerRepo.save(modelMapper.map(customerDTO, CustomerEntity.class));
+            customerRepo.save(modelMapper.map(customerDTO, Customer.class));
         }
     }
 
@@ -51,7 +51,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<CustomerEntity> loadAllCustomers() {
+    public List<Customer> loadAllCustomers() {
         return customerRepo.findAll();
     }
 }

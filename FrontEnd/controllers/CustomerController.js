@@ -3,23 +3,23 @@ let baseUrl = "http://localhost:8080/api/v1/customer";
 loadAllCustomers();
 
 $("#btnSaveCustomer").click(function () {
-    let cusId = $("#txtCustomerId").val();
-    let cusName = $("#txtCustomerName").val();
-    let cusAddress = $("#txtCustomerAddress").val();
-    let cusSalary = $("#txtCustomerSalary").val();
+    let id = $("#txtCustomerId").val();
+    let name = $("#txtCustomerName").val();
+    let address = $("#txtCustomerAddress").val();
+    let salary = $("#txtCustomerSalary").val();
 
-    const customerOb = {
-        id: cusId,
-        name: cusName,
-        address: cusAddress,
-        salary: cusSalary
+    const customerObj = {
+        id: id,
+        name: name,
+        address: address,
+        salary: salary
     };
 
     $.ajax({
         url: baseUrl + "/saveCustomer",
         method: "POST",
         contentType: "application/json",
-        data: JSON.stringify(customerOb),
+        data: JSON.stringify(customerObj),
         success: function (res) {
             loadAllCustomers();
             alert("Customer Saved Successfully...!");
@@ -47,23 +47,23 @@ $("#btnSearchCustomer").click(function () {
 });
 
 $("#btnUpdateCustomer").click(function () {
-    let cusId = $("#txtCustomerId").val();
-    let cusName = $("#txtCustomerName").val();
-    let cusAddress = $("#txtCustomerAddress").val();
-    let cusSalary = $("#txtCustomerSalary").val();
+    let id = $("#txtCustomerId").val();
+    let name = $("#txtCustomerName").val();
+    let address = $("#txtCustomerAddress").val();
+    let salary = $("#txtCustomerSalary").val();
 
-    const customerOb = {
-        id: cusId,
-        name: cusName,
-        address: cusAddress,
-        salary: cusSalary
+    const customerObj = {
+        id: id,
+        name: name,
+        address: address,
+        salary: salary
     };
 
     $.ajax({
         url: baseUrl + "/updateCustomer",
         method: "PUT",
         contentType: "application/json",
-        data: JSON.stringify(customerOb),
+        data: JSON.stringify(customerObj),
         success: function (res) {
             loadAllCustomers();
             alert("Customer Updated Successfully...!");
@@ -115,6 +115,7 @@ function loadAllCustomers() {
                 $("#customerTable").append(row);
             });
             tableListener();
+            clearInputs();
         },
         error: function (error) {
             console.log("Load All Customers Error...!");
@@ -134,4 +135,11 @@ function tableListener() {
         $("#txtCustomerAddress").val(address);
         $("#txtCustomerSalary").val(salary);
     });
+}
+
+function clearInputs() {
+    $("#txtCustomerId").val("");
+    $("#txtCustomerName").val("");
+    $("#txtCustomerAddress").val("");
+    $("#txtCustomerSalary").val("");
 }

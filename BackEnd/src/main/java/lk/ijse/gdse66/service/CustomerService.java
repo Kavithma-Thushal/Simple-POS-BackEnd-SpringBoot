@@ -1,7 +1,7 @@
 package lk.ijse.gdse66.service;
 
 import lk.ijse.gdse66.dto.CustomerDTO;
-import lk.ijse.gdse66.entity.CustomerEntity;
+import lk.ijse.gdse66.entity.Customer;
 
 import java.util.List;
 
@@ -20,5 +20,5 @@ public interface CustomerService {
 
     void deleteCustomer(String id);
 
-    List<CustomerEntity> loadAllCustomers();
+    List<Customer> loadAllCustomers();
 }
