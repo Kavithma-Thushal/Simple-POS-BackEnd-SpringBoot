@@ -4,8 +4,6 @@ Welcome to the **Spring Boot CRUD Application**! This project showcases a basic 
 application developed using Spring Boot and MySQL. It features a simple customer management system, enabling you to
 efficiently manage customer data with ease.
 
----
-
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -24,8 +22,6 @@ efficiently manage customer data with ease.
 ✅ **Maven**<br/>
 ✅ **MySQL**<br/>
 
----
-
 ## 🚀 Features
 
 ✅ **Create** new customer entries.<br/>
@@ -34,15 +30,15 @@ efficiently manage customer data with ease.
 ✅ **Delete** customer records.<br/>
 ✅ **Load** and display all customers.<br/>
 
----
-
 ## 📸 Screenshots
 
 ### Customer Management Interface
 
 <img src="FrontEnd/ss.png" alt="Customer Management Interface">
 
----
+## 📝 Version
+
+Current Version : **1.0.0**
 
 ## 📬 Get in Touch
 
@@ -50,14 +46,10 @@ Got any bugs, issues, or need help understanding the code? Feel free to reach ou
 
 📧 [kavithmathushal9007@gmail.com](mailto:kavithmathushal9007@gmail.com)
 
----
-
 <div align="center">
 
-### 📜 License
+#### This project is licensed under the [Apache License](LICENSE)
 
-This project is licensed under the [Apache License](LICENSE)
-
-### © 2024 All Rights Reserved | Designed by [Kavithma Thushal](https://github.com/Kavithma-Thushal)
+#### © 2024 All Rights Reserved | Designed by [Kavithma Thushal](https://github.com/Kavithma-Thushal)
 
 </div>
