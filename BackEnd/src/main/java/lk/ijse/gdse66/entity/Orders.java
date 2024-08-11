@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @author : Kavithma Thushal
- * @project : SpringBoot-CRUD
+ * @project : Spring-Boot-POS
  * @since : 8:48 PM - 8/10/2024
  **/
 @AllArgsConstructor

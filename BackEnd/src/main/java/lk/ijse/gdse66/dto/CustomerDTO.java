@@ -7,7 +7,7 @@ import lombok.Setter;
 
 /**
  * @author : Kavithma Thushal
- * @project : SpringBoot-CRUD
+ * @project : Spring-Boot-POS
  * @since : 6:55 AM - 6/18/2024
  **/
 @AllArgsConstructor

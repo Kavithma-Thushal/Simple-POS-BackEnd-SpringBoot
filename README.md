@@ -1,8 +1,8 @@
-# 🌟 Spring Boot CRUD Application
+# 🌟 Spring Boot POS Application
 
-Welcome to the **Spring Boot CRUD Application**! This project showcases a basic CRUD (Create, Read, Update, Delete)
-application developed using Spring Boot and MySQL. It features a simple customer management system, enabling you to
-efficiently manage customer data with ease.
+The Spring Boot POS Application is a powerful and user-friendly system designed to handle various point-of-sale
+functionalities. Built with the Spring Boot framework, this application provides a robust solution for manage Customer
+Details, Item Details and Place Orders efficiently.
 
 ## 🛠️ Tech Stack
 

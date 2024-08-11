@@ -11,8 +11,8 @@
     <groupId>lk.ijse.gdse66</groupId>
     <artifactId>BackEnd</artifactId>
     <version>1.0.0</version>
-    <name>SpringBoot-CRUD</name>
-    <description>SpringBoot CRUD</description>
+    <name>Spring-Boot-POS</name>
+    <description>SpringBoot POS</description>
     <properties>
         <java.version>17</java.version>
     </properties>

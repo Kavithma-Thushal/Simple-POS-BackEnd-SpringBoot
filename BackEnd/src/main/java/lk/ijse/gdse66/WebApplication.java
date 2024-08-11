@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * @author : Kavithma Thushal
- * @project : SpringBoot-CRUD
+ * @project : Spring-Boot-POS
  * @since : 7:24 AM - 6/18/2024
  **/
 @SpringBootApplication

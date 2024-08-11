@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author : Kavithma Thushal
- * @project : SpringBoot-CRUD
+ * @project : Spring-Boot-POS
  * @since : 7:25 AM - 6/18/2024
  **/
 @Service
