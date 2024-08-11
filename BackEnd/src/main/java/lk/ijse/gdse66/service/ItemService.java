@@ -1,7 +1,6 @@
 package lk.ijse.gdse66.service;
 
 import lk.ijse.gdse66.dto.ItemDTO;
-import lk.ijse.gdse66.entity.Item;
 
 import java.util.List;
 
@@ -20,5 +19,5 @@ public interface ItemService {
 
     void deleteItem(String code);
 
-    List<Item> loadAllItems();
+    List<ItemDTO> loadAllItems();
 }

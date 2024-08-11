@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @author : Kavithma Thushal
@@ -35,7 +37,8 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public ItemDTO searchItem(String code) {
-        return itemRepo.findById(code).map(item -> modelMapper.map(item, ItemDTO.class)).orElse(null);
+        Optional<Item> deleteCode = itemRepo.findById(code);
+        return deleteCode.map(item -> modelMapper.map(item, ItemDTO.class)).orElse(null);
     }
 
     @Override
@@ -51,7 +54,10 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public List<Item> loadAllItems() {
-        return itemRepo.findAll();
+    public List<ItemDTO> loadAllItems() {
+        List<Item> itemList = itemRepo.findAll();
+        return itemList.stream()
+                .map(item -> modelMapper.map(item, ItemDTO.class))
+                .collect(Collectors.toList());
     }
 }

@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @author : Kavithma Thushal
@@ -35,7 +37,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDTO searchCustomer(String id) {
-        return customerRepo.findById(id).map(customer -> modelMapper.map(customer, CustomerDTO.class)).orElse(null);
+        Optional<Customer> deleteId = customerRepo.findById(id);
+        return deleteId.map(customer -> modelMapper.map(customer, CustomerDTO.class)).orElse(null);
     }
 
     @Override
@@ -51,7 +54,10 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<Customer> loadAllCustomers() {
-        return customerRepo.findAll();
+    public List<CustomerDTO> loadAllCustomers() {
+        List<Customer> customerList = customerRepo.findAll();
+        return customerList.stream()
+                .map(customer -> modelMapper.map(customer, CustomerDTO.class))
+                .collect(Collectors.toList());
     }
 }

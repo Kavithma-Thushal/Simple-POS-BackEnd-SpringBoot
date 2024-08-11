@@ -1,9 +1,6 @@
 package lk.ijse.gdse66.controller;
 
-import lk.ijse.gdse66.dto.CustomerDTO;
 import lk.ijse.gdse66.dto.ItemDTO;
-import lk.ijse.gdse66.entity.Customer;
-import lk.ijse.gdse66.entity.Item;
 import lk.ijse.gdse66.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -44,7 +41,7 @@ public class ItemController {
     }
 
     @GetMapping("/loadAllItems")
-    public List<Item> loadAllItems() {
+    public List<ItemDTO> loadAllItems() {
         return itemService.loadAllItems();
     }
 }
