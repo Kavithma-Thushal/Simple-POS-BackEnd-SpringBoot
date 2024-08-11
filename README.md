@@ -34,11 +34,11 @@ Details, Item Details and Place Orders efficiently.
 
 ### Customer Management
 
-<img src="FrontEnd/assets/images/Customer-Management.png" alt="Customer Management">
+<img src="FrontEnd/ss/Customer-Management.png" alt="Customer Management">
 
 ### Item Management
 
-<img src="FrontEnd/assets/images/Item-Management.png" alt="Item Management">
+<img src="FrontEnd/ss/Item-Management.png" alt="Item Management">
 
 ## 📝 Version
 

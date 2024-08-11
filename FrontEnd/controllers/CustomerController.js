@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost:8080/api/v1/customer";
+let customerUrl = "http://localhost:8080/api/v1/customer";
 
 loadAllCustomers();
 
@@ -16,7 +16,7 @@ $("#btnSaveCustomer").click(function () {
     };
 
     $.ajax({
-        url: baseUrl + "/saveCustomer",
+        url: customerUrl + "/saveCustomer",
         method: "POST",
         contentType: "application/json",
         data: JSON.stringify(customerObj),
@@ -32,7 +32,7 @@ $("#btnSaveCustomer").click(function () {
 $("#btnSearchCustomer").click(function () {
     var searchCusId = $("#txtCustomerId").val();
     $.ajax({
-        url: baseUrl + "/searchCustomer/" + searchCusId,
+        url: customerUrl + "/searchCustomer/" + searchCusId,
         method: "GET",
         success: function (res) {
             $("#customerTable").empty();
@@ -60,7 +60,7 @@ $("#btnUpdateCustomer").click(function () {
     };
 
     $.ajax({
-        url: baseUrl + "/updateCustomer",
+        url: customerUrl + "/updateCustomer",
         method: "PUT",
         contentType: "application/json",
         data: JSON.stringify(customerObj),
@@ -78,7 +78,7 @@ $("#btnDeleteCustomer").click(function () {
     var deletedCusId = $("#txtCustomerId").val();
 
     $.ajax({
-        url: baseUrl + "/deleteCustomer/" + deletedCusId,
+        url: customerUrl + "/deleteCustomer/" + deletedCusId,
         method: "DELETE",
         success: function (res) {
             loadAllCustomers();
@@ -98,7 +98,7 @@ function loadAllCustomers() {
     $('#customerTable').empty();
 
     $.ajax({
-        url: baseUrl + "/loadAllCustomers",
+        url: customerUrl + "/loadAllCustomers",
         method: "GET",
         success: function (res) {
             res.forEach(customer => {

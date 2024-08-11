@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost:8080/api/v1/item";
+let itemUrl = "http://localhost:8080/api/v1/item";
 
 loadAllItems();
 
@@ -16,7 +16,7 @@ $("#btnSaveItem").click(function () {
     };
 
     $.ajax({
-        url: baseUrl + "/saveItem",
+        url: itemUrl + "/saveItem",
         method: "POST",
         contentType: "application/json",
         data: JSON.stringify(itemObj),
@@ -32,7 +32,7 @@ $("#btnSaveItem").click(function () {
 $("#btnSearchItem").click(function () {
     var searchItemCode = $("#txtItemCode").val();
     $.ajax({
-        url: baseUrl + "/searchItem/" + searchItemCode,
+        url: itemUrl + "/searchItem/" + searchItemCode,
         method: "GET",
         success: function (res) {
             $("#itemTable").empty();
@@ -60,7 +60,7 @@ $("#btnUpdateItem").click(function () {
     };
 
     $.ajax({
-        url: baseUrl + "/updateItem",
+        url: itemUrl + "/updateItem",
         method: "PUT",
         contentType: "application/json",
         data: JSON.stringify(itemObj),
@@ -78,7 +78,7 @@ $("#btnDeleteItem").click(function () {
     var deletedItemCode = $("#txtItemCode").val();
 
     $.ajax({
-        url: baseUrl + "/deleteItem/" + deletedItemCode,
+        url: itemUrl + "/deleteItem/" + deletedItemCode,
         method: "DELETE",
         success: function (res) {
             loadAllItems();
@@ -98,7 +98,7 @@ function loadAllItems() {
     $('#itemTable').empty();
 
     $.ajax({
-        url: baseUrl + "/loadAllItems",
+        url: itemUrl + "/loadAllItems",
         method: "GET",
         success: function (res) {
             res.forEach(customer => {

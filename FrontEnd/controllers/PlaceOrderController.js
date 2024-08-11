@@ -1,14 +1,14 @@
-let baseUrl = "http://localhost:8080/api/v1/orders";
+let placeOrderUrl = "http://localhost:8080/api/v1/orders";
 
 loadAllOrders();
 
 $("#btnPlaceOrder").click(function () {
 
-    let orderId = $("#txtOrderId").val();
-    let customerId = $("#txtCustomerId").val();
-    let itemCode = $("#txtItemCode").val();
-    let buyQty = $("#txtBuyQty").val();
-    let total = $("#txtTotal").val();
+    let orderId = $("#txtPlaceOrderOrderId").val();
+    let customerId = $("#txtPlaceOrderCustomerId").val();
+    let itemCode = $("#txtPlaceOrderItemCode").val();
+    let buyQty = $("#txtPlaceOrderBuyQty").val();
+    let total = $("#txtPlaceOrderTotal").val();
 
     const orderObj = {
         orderId: orderId,
@@ -23,7 +23,7 @@ $("#btnPlaceOrder").click(function () {
     };
 
     $.ajax({
-        url: baseUrl + "/placeOrder",
+        url: placeOrderUrl + "/placeOrder",
         method: "POST",
         contentType: "application/json",
         data: JSON.stringify(orderObj),
@@ -45,7 +45,7 @@ function loadAllOrders() {
     $('#orderTable').empty();
 
     $.ajax({
-        url: baseUrl + "/loadAllOrders",
+        url: placeOrderUrl + "/loadAllOrders",
         method: "GET",
         success: function (res) {
             res.forEach(order => {
@@ -82,18 +82,18 @@ function tableListener() {
         let buyQty = $(this).children().eq(3).text();
         let total = $(this).children().eq(4).text();
 
-        $("#txtOrderId").val(orderId);
-        $("#txtCustomerId").val(customerId);
-        $("#txtItemCode").val(itemCode);
-        $("#txtBuyQty").val(buyQty);
-        $("#txtTotal").val(total);
+        $("#txtPlaceOrderOrderId").val(orderId);
+        $("#txtPlaceOrderCustomerId").val(customerId);
+        $("#txtPlaceOrderItemCode").val(itemCode);
+        $("#txtPlaceOrderBuyQty").val(buyQty);
+        $("#txtPlaceOrderTotal").val(total);
     });
 }
 
 function clearInputs() {
-    $("#txtOrderId").val("");
-    $("#txtCustomerId").val("");
-    $("#txtItemCode").val("");
-    $("#txtBuyQty").val("");
-    $("#txtTotal").val("");
+    $("#txtPlaceOrderOrderId").val("");
+    $("#txtPlaceOrderCustomerId").val("");
+    $("#txtPlaceOrderItemCode").val("");
+    $("#txtPlaceOrderBuyQty").val("");
+    $("#txtPlaceOrderTotal").val("");
 }
