@@ -1,7 +1,7 @@
 package lk.ijse.gdse66.controller;
 
 import lk.ijse.gdse66.dto.OrdersDTO;
-import lk.ijse.gdse66.service.OrderService;
+import lk.ijse.gdse66.service.PlaceOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.*;
  **/
 @CrossOrigin
 @RestController
-@RequestMapping("/api/v1/orders")
-public class OrderController {
+@RequestMapping("/api/v1/placeOrder")
+public class PlaceOrderController {
 
     @Autowired
-    public OrderService orderService;
+    public PlaceOrderService placeOrderService;
 
-    @PostMapping("/placeOrder")
+    @PostMapping
     public void placeOrder(@RequestBody OrdersDTO ordersDTO) {
-        orderService.placeOrder(ordersDTO);
+        placeOrderService.placeOrder(ordersDTO);
     }
 }

@@ -5,14 +5,12 @@ import lk.ijse.gdse66.entity.Item;
 import lk.ijse.gdse66.entity.OrderDetails;
 import lk.ijse.gdse66.entity.Orders;
 import lk.ijse.gdse66.repo.ItemRepo;
-import lk.ijse.gdse66.repo.OrderRepo;
-import lk.ijse.gdse66.service.OrderService;
+import lk.ijse.gdse66.repo.PlaceOrderRepo;
+import lk.ijse.gdse66.service.PlaceOrderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 /**
  * @author : Kavithma Thushal
@@ -21,10 +19,10 @@ import java.util.Optional;
  **/
 @Service
 @Transactional
-public class OrderServiceImpl implements OrderService {
+public class PlaceOrderServiceImpl implements PlaceOrderService {
 
     @Autowired
-    private OrderRepo orderRepo;
+    private PlaceOrderRepo placeOrderRepo;
 
     @Autowired
     private ItemRepo itemRepo;
@@ -44,6 +42,6 @@ public class OrderServiceImpl implements OrderService {
             item.setQtyOnHand(item.getQtyOnHand() - orderDetail.getBuyQty());
             itemRepo.save(item);
         }
-        orderRepo.save(order);
+        placeOrderRepo.save(order);
     }
 }

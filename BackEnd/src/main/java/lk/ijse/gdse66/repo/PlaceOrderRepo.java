@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @project : SpringBoot-CRUD
  * @since : 9:46 PM - 8/10/2024
  **/
-public interface OrderRepo extends JpaRepository<Orders, String> {
+public interface PlaceOrderRepo extends JpaRepository<Orders, String> {
 }
