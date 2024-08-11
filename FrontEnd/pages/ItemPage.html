@@ -8,37 +8,13 @@
 </head>
 
 <body>
-<main class="container">
-    <h1 class="text-center m-4 fw-bold">Item Management</h1>
+<main class="container-fluid">
+    <h1 class="text-center fw-bold mt-5">Item Management</h1>
 
-    <!-- Item Form -->
-    <div class="row justify-content-center">
-        <form class="col-12 col-md-8 col-lg-6 p-5" style="box-shadow: rgba(0, 0, 0, 0.4) 0 0 7px; border-radius: 10px">
-            <div class="mb-3">
-                <input class="form-control" id="txtItemCode" type="text" placeholder="Item Code">
-            </div>
-            <div class="mb-3">
-                <input class="form-control" id="txtItemDescription" type="text" placeholder="Description">
-            </div>
-            <div class="mb-3">
-                <input class="form-control" id="txtItemUnitPrice" type="number" placeholder="Unit Price">
-            </div>
-            <div class="mb-3">
-                <input class="form-control" id="txtItemQtyOnHand" type="number" placeholder="Qty On Hand">
-            </div>
-            <div class="d-flex justify-content-center mt-4">
-                <button class="btn btn-primary mx-2" id="btnSaveItem" type="button">Save</button>
-                <button class="btn btn-success mx-2" id="btnSearchItem" type="button">Search</button>
-                <button class="btn btn-warning mx-2" id="btnUpdateItem" type="button">Update</button>
-                <button class="btn btn-danger mx-2" id="btnDeleteItem" type="button">Delete</button>
-                <button class="btn btn-secondary mx-2" id="btnLoadAllItems" type="button">Load All</button>
-            </div>
-        </form>
-    </div>
+    <div class="row mt-5">
 
-    <!-- Item Table -->
-    <div class="row justify-content-center mt-5">
-        <div class="col-12">
+        <!-- Item Table -->
+        <div class="col-6 p-0 mt-5 m-3 ms-5" style="box-shadow: rgba(0, 0, 0, 0.4) 0 0 7px; border-radius: 10px">
             <table class="table table-bordered table-striped">
                 <thead class="table-dark">
                 <tr>
@@ -51,6 +27,32 @@
                 <tbody id="itemTable"></tbody>
             </table>
         </div>
+
+        <!-- Item Form -->
+        <div class="col-5 p-5 mt-5 m-3" style="box-shadow: rgba(0, 0, 0, 0.4) 0 0 7px; border-radius: 10px">
+            <form>
+                <div class="mb-3">
+                    <input class="form-control" id="txtItemCode" type="text" placeholder="Item Code">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="txtItemDescription" type="text" placeholder="Description">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="txtItemUnitPrice" type="number" placeholder="Unit Price">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="txtItemQtyOnHand" type="number" placeholder="Qty On Hand">
+                </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <button class="btn btn-primary mx-2" id="btnSaveItem" type="button">Save</button>
+                    <button class="btn btn-success mx-2" id="btnSearchItem" type="button">Search</button>
+                    <button class="btn btn-warning mx-2" id="btnUpdateItem" type="button">Update</button>
+                    <button class="btn btn-danger mx-2" id="btnDeleteItem" type="button">Delete</button>
+                    <button class="btn btn-secondary mx-2" id="btnLoadAllItems" type="button">Load All</button>
+                </div>
+            </form>
+        </div>
+
     </div>
 </main>
 

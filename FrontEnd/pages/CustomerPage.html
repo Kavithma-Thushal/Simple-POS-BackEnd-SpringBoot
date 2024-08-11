@@ -8,37 +8,13 @@
 </head>
 
 <body>
-<main class="container">
-    <h1 class="text-center m-4 fw-bold">Customer Management</h1>
+<main class="container-fluid">
+    <h1 class="text-center fw-bold mt-5">Customer Management</h1>
 
-    <!-- Customer Form -->
-    <div class="row justify-content-center">
-        <form class="col-12 col-md-8 col-lg-6 p-5" style="box-shadow: rgba(0, 0, 0, 0.4) 0 0 7px; border-radius: 10px">
-            <div class="mb-3">
-                <input class="form-control" id="txtCustomerId" type="text" placeholder="Customer ID">
-            </div>
-            <div class="mb-3">
-                <input class="form-control" id="txtCustomerName" type="text" placeholder="Customer Name">
-            </div>
-            <div class="mb-3">
-                <input class="form-control" id="txtCustomerAddress" type="text" placeholder="Customer Address">
-            </div>
-            <div class="mb-3">
-                <input class="form-control" id="txtCustomerSalary" type="number" placeholder="Customer Salary">
-            </div>
-            <div class="d-flex justify-content-center mt-4">
-                <button class="btn btn-primary mx-2" id="btnSaveCustomer" type="button">Save</button>
-                <button class="btn btn-success mx-2" id="btnSearchCustomer" type="button">Search</button>
-                <button class="btn btn-warning mx-2" id="btnUpdateCustomer" type="button">Update</button>
-                <button class="btn btn-danger mx-2" id="btnDeleteCustomer" type="button">Delete</button>
-                <button class="btn btn-secondary mx-2" id="btnLoadAllCustomers" type="button">Load All</button>
-            </div>
-        </form>
-    </div>
+    <div class="row mt-5">
 
-    <!-- Customer Table -->
-    <div class="row justify-content-center mt-5">
-        <div class="col-12">
+        <!-- Customer Table -->
+        <div class="col-6 mt-5 p-0 m-3 ms-5" style="box-shadow: rgba(0, 0, 0, 0.4) 0 0 7px; border-radius: 10px">
             <table class="table table-bordered table-striped">
                 <thead class="table-dark">
                 <tr>
@@ -50,6 +26,31 @@
                 </thead>
                 <tbody id="customerTable"></tbody>
             </table>
+        </div>
+
+        <!-- Customer Form -->
+        <div class="col-5 mt-5 p-5 m-3" style="box-shadow: rgba(0, 0, 0, 0.4) 0 0 7px; border-radius: 10px">
+            <form>
+                <div class="mb-3">
+                    <input class="form-control" id="txtCustomerId" type="text" placeholder="Customer ID">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="txtCustomerName" type="text" placeholder="Customer Name">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="txtCustomerAddress" type="text" placeholder="Customer Address">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="txtCustomerSalary" type="number" placeholder="Customer Salary">
+                </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <button class="btn btn-primary mx-2" id="btnSaveCustomer" type="button">Save</button>
+                    <button class="btn btn-success mx-2" id="btnSearchCustomer" type="button">Search</button>
+                    <button class="btn btn-warning mx-2" id="btnUpdateCustomer" type="button">Update</button>
+                    <button class="btn btn-danger mx-2" id="btnDeleteCustomer" type="button">Delete</button>
+                    <button class="btn btn-secondary mx-2" id="btnLoadAllCustomers" type="button">Load All</button>
+                </div>
+            </form>
         </div>
     </div>
 </main>
