@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Project Name Changed">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/assets/images/Customer-Management.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/ss/Customer-Management.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/assets/images/Item-Management.png" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/ss/Item-Management.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="index.html Updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +106,7 @@
       <workItem from="1723386595638" duration="5913000" />
       <workItem from="1723396673847" duration="240000" />
       <workItem from="1723397253742" duration="15000" />
+      <workItem from="1723397539013" duration="267000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -124,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723377254625</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="index.html Updated">
+      <option name="closed" value="true" />
+      <created>1723397780179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723397780179</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +132,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project Name Changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Name Changed" />
+    <MESSAGE value="index.html Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="index.html Updated" />
   </component>
 </project>
