@@ -18,6 +18,6 @@ public class OrderDetailsDTO {
     private Long id;
     private String orderId;
     private String itemCode;
-    private String buyQty;
-    private String total;
+    private int buyQty;
+    private double total;
 }

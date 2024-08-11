@@ -26,8 +26,8 @@ public class Item {
     @Id
     private String code;
     private String description;
-    private String unitPrice;
-    private String qtyOnHand;
+    private double unitPrice;
+    private int qtyOnHand;
 
     @OneToMany(mappedBy = "item", cascade = CascadeType.ALL)
     private List<OrderDetails> orderDetailsList;

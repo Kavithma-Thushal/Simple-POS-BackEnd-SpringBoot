@@ -27,7 +27,7 @@ public class Customer {
     private String id;
     private String name;
     private String address;
-    private String salary;
+    private double salary;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Orders> ordersList;
