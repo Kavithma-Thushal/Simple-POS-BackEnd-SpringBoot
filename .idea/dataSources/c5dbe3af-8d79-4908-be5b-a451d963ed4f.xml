@@ -910,7 +910,7 @@
     </schema>
     <schema id="289" parent="1" name="demo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-11.06:47:40</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-11.07:01:56</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="fruitjuicelab">
@@ -1039,7 +1039,7 @@
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="321" parent="307" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>

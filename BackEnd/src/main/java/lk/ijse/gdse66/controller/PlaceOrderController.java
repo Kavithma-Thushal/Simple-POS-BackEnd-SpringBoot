@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.*;
  **/
 @CrossOrigin
 @RestController
-@RequestMapping("/api/v1/placeOrder")
+@RequestMapping("/api/v1/orders")
 public class PlaceOrderController {
 
     @Autowired
     public PlaceOrderService placeOrderService;
 
-    @PostMapping
+    @PostMapping("/placeOrder")
     public void placeOrder(@RequestBody OrdersDTO ordersDTO) {
         placeOrderService.placeOrder(ordersDTO);
     }

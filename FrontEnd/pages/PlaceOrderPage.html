@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+<main class="container">
+    <h1 class="text-center m-4 fw-bold">Place Order</h1>
+
+    <!-- Place Order Form -->
+    <div class="row justify-content-center">
+        <form class="col-12 col-md-8 col-lg-6 p-5" style="box-shadow: rgba(0, 0, 0, 0.4) 0 0 7px; border-radius: 10px">
+            <div class="mb-3">
+                <input class="form-control" id="txtOrderId" type="text" placeholder="Order ID">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="txtCustomerId" type="text" placeholder="Customer ID">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="txtItemCode" type="text" placeholder="Item Code">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="txtBuyQty" type="number" placeholder="Buy Qty">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" id="txtTotal" type="number" placeholder="Total">
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-primary mx-2" id="btnPlaceOrder" type="button">Place Order</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Place Order Table -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Buy Qty</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody id="placeOrderTable"></tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="../controllers/PlaceOrderController.js"></script>
+</body>
+</html>

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b7419ea-441d-44bb-80c0-0dfc4be46474" name="Changes" comment="README.md Updated" />
+    <list default="true" id="6b7419ea-441d-44bb-80c0-0dfc4be46474" name="Changes" comment="Place Order Refactored">
+      <change afterPath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/pages/PlaceOrderPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/controller/PlaceOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/pages/CustomerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pages/CustomerPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/pages/ItemPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/pages/ItemPage.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +22,8 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -32,36 +41,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Maven.BackEnd [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WebApplication.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/3rd Sem Repo/My/CRUD/SpringBoot-CRUD/FrontEnd/assets/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.BackEnd [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.WebApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IJSE/Workspace/3rd Sem Repo/My/CRUD/SpringBoot-CRUD/FrontEnd/assets/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\SpringBoot-CRUD\FrontEnd\assets\images" />
@@ -135,6 +145,8 @@
       <workItem from="1723354293999" duration="2488000" />
       <workItem from="1723356813262" duration="471000" />
       <workItem from="1723357291380" duration="1228000" />
+      <workItem from="1723358544259" duration="393000" />
+      <workItem from="1723358940162" duration="757000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <option name="closed" value="true" />
@@ -272,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723358512747</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Place Order Refactored">
+      <option name="closed" value="true" />
+      <created>1723358931086</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1723358931086</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +315,7 @@
     <MESSAGE value="int and double added to database" />
     <MESSAGE value="Update Item Qty" />
     <MESSAGE value="README.md Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated" />
+    <MESSAGE value="Place Order Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Place Order Refactored" />
   </component>
 </project>
