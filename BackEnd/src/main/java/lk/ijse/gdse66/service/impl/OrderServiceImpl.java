@@ -52,14 +52,14 @@ public class OrderServiceImpl implements OrderService {
         List<OrderDetails> orderDetailsList = new ArrayList<>();
 
         // Map each OrderDetailsDTO to OrderDetails entity and set the Orders reference
-        for (OrderDetailsDTO detailsDTO : ordersDTO.getOrderDetails()) {
+        for (OrderDetailsDTO detailsDTO : ordersDTO.getOrderDetailsList()) {
             OrderDetails orderDetails = modelMapper.map(detailsDTO, OrderDetails.class);
             orderDetails.setOrders(order); // Set the Orders reference
             orderDetailsList.add(orderDetails);
         }
 
         // Set the OrderDetails list to the Orders entity
-        order.setOrderDetails(orderDetailsList);
+        order.setOrderDetailsList(orderDetailsList);
 
         // Save the Orders entity which will also save the OrderDetails due to CascadeType.ALL
         orderRepo.save(order);

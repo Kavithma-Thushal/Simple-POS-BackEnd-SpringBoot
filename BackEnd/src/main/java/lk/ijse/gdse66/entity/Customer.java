@@ -30,5 +30,5 @@ public class Customer {
     private String salary;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    private List<Orders> orders;
+    private List<Orders> ordersList;
 }

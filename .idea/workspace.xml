@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b7419ea-441d-44bb-80c0-0dfc4be46474" name="Changes" comment="More DTO Added">
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/repo/OrderRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="6b7419ea-441d-44bb-80c0-0dfc4be46474" name="Changes" comment="Place Order Added">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c5dbe3af-8d79-4908-be5b-a451d963ed4f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c5dbe3af-8d79-4908-be5b-a451d963ed4f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/dto/OrdersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/dto/OrdersDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/entity/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/controller/CustomerController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +136,8 @@
       <workItem from="1723303013548" duration="475000" />
       <workItem from="1723303492366" duration="2717000" />
       <workItem from="1723306339913" duration="4116000" />
-      <workItem from="1723310509654" duration="632000" />
+      <workItem from="1723310509654" duration="976000" />
+      <workItem from="1723338769000" duration="3674000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <option name="closed" value="true" />
@@ -209,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723306311616</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Place Order Added">
+      <option name="closed" value="true" />
+      <created>1723311481305</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723311481305</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +235,7 @@
     <MESSAGE value="README.md Updated" />
     <MESSAGE value="Place Order Entity Added" />
     <MESSAGE value="More DTO Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="More DTO Added" />
+    <MESSAGE value="Place Order Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Place Order Added" />
   </component>
 </project>

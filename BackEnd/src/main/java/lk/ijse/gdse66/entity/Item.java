@@ -30,5 +30,5 @@ public class Item {
     private String qtyOnHand;
 
     @OneToMany(mappedBy = "item", cascade = CascadeType.ALL)
-    private List<OrderDetails> orderDetails;
+    private List<OrderDetails> orderDetailsList;
 }
