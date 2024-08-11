@@ -1,6 +1,6 @@
 package lk.ijse.gdse66.controller;
 
-import lk.ijse.gdse66.dto.OrdersDTO;
+import lk.ijse.gdse66.dto.OrderDTO;
 import lk.ijse.gdse66.service.PlaceOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,12 +21,12 @@ public class PlaceOrderController {
     public PlaceOrderService placeOrderService;
 
     @PostMapping("/placeOrder")
-    public void placeOrder(@RequestBody OrdersDTO ordersDTO) {
-        placeOrderService.placeOrder(ordersDTO);
+    public void placeOrder(@RequestBody OrderDTO orderDTO) {
+        placeOrderService.placeOrder(orderDTO);
     }
 
     @GetMapping("/loadAllOrders")
-    public List<OrdersDTO> loadAllOrders() {
+    public List<OrderDTO> loadAllOrders() {
         return placeOrderService.loadAllOrders();
     }
 }

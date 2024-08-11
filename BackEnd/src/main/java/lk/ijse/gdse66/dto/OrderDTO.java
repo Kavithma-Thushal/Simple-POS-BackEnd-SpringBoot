@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-public class OrdersDTO {
+public class OrderDTO {
     private String orderId;
     private String customerId;
     private List<OrderDetailsDTO> orderDetailsList;

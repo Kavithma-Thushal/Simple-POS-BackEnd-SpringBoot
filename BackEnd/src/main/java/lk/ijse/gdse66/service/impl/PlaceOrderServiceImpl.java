@@ -1,6 +1,6 @@
 package lk.ijse.gdse66.service.impl;
 
-import lk.ijse.gdse66.dto.OrdersDTO;
+import lk.ijse.gdse66.dto.OrderDTO;
 import lk.ijse.gdse66.entity.Item;
 import lk.ijse.gdse66.entity.OrderDetails;
 import lk.ijse.gdse66.entity.Orders;
@@ -34,8 +34,8 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     private ModelMapper modelMapper;
 
     @Override
-    public void placeOrder(OrdersDTO ordersDTO) {
-        Orders order = modelMapper.map(ordersDTO, Orders.class);
+    public void placeOrder(OrderDTO orderDTO) {
+        Orders order = modelMapper.map(orderDTO, Orders.class);
 
         for (OrderDetails orderDetail : order.getOrderDetailsList()) {
             orderDetail.setOrders(order);
@@ -49,10 +49,10 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     }
 
     @Override
-    public List<OrdersDTO> loadAllOrders() {
+    public List<OrderDTO> loadAllOrders() {
         List<Orders> orderList = placeOrderRepo.findAll();
         return orderList.stream()
-                .map(orders -> modelMapper.map(orders, OrdersDTO.class))
+                .map(orders -> modelMapper.map(orders, OrderDTO.class))
                 .collect(Collectors.toList());
     }
 }

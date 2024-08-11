@@ -65,9 +65,35 @@ function loadAllOrders() {
 
                 $("#orderTable").append(row);
             });
+            tableListener();
+            clearInputs();
         },
         error: function (error) {
             console.log("Load All Orders Error...!");
         }
     });
+}
+
+function tableListener() {
+    $("#orderTable>tr").on("click", function () {
+        let orderId = $(this).children().eq(0).text();
+        let customerId = $(this).children().eq(1).text();
+        let itemCode = $(this).children().eq(2).text();
+        let buyQty = $(this).children().eq(3).text();
+        let total = $(this).children().eq(4).text();
+
+        $("#txtOrderId").val(orderId);
+        $("#txtCustomerId").val(customerId);
+        $("#txtItemCode").val(itemCode);
+        $("#txtBuyQty").val(buyQty);
+        $("#txtTotal").val(total);
+    });
+}
+
+function clearInputs() {
+    $("#txtOrderId").val("");
+    $("#txtCustomerId").val("");
+    $("#txtItemCode").val("");
+    $("#txtBuyQty").val("");
+    $("#txtTotal").val("");
 }

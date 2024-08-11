@@ -1,6 +1,6 @@
 package lk.ijse.gdse66.service;
 
-import lk.ijse.gdse66.dto.OrdersDTO;
+import lk.ijse.gdse66.dto.OrderDTO;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  **/
 public interface PlaceOrderService {
 
-    void placeOrder(OrdersDTO ordersDTO);
+    void placeOrder(OrderDTO orderDTO);
 
-    List<OrdersDTO> loadAllOrders();
+    List<OrderDTO> loadAllOrders();
 }
