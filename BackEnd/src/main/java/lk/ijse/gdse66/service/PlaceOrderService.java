@@ -2,6 +2,8 @@ package lk.ijse.gdse66.service;
 
 import lk.ijse.gdse66.dto.OrdersDTO;
 
+import java.util.List;
+
 /**
  * @author : Kavithma Thushal
  * @project : SpringBoot-CRUD
@@ -10,4 +12,6 @@ import lk.ijse.gdse66.dto.OrdersDTO;
 public interface PlaceOrderService {
 
     void placeOrder(OrdersDTO ordersDTO);
+
+    List<OrdersDTO> loadAllOrders();
 }

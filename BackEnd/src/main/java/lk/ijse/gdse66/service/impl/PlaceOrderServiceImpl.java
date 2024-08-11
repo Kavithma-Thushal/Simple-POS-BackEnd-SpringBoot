@@ -12,6 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * @author : Kavithma Thushal
  * @project : SpringBoot-CRUD
@@ -43,5 +46,13 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
             itemRepo.save(item);
         }
         placeOrderRepo.save(order);
+    }
+
+    @Override
+    public List<OrdersDTO> loadAllOrders() {
+        List<Orders> orderList = placeOrderRepo.findAll();
+        return orderList.stream()
+                .map(orders -> modelMapper.map(orders, OrdersDTO.class))
+                .collect(Collectors.toList());
     }
 }

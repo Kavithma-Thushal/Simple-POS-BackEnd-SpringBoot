@@ -96,6 +96,7 @@ $('#btnLoadAllItems').click(function () {
 
 function loadAllItems() {
     $('#itemTable').empty();
+
     $.ajax({
         url: baseUrl + "/loadAllItems",
         method: "GET",

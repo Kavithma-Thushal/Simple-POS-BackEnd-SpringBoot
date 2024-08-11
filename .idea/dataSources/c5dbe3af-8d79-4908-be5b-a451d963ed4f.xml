@@ -2,8 +2,97 @@
 <dataSource name="demo@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.52">
     <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <Grants>|root||root|localhost|ALTER|G
+|root||root|localhost|ALTER ROUTINE|G
+|root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
+|root||mysql.session|localhost|AUDIT_ABORT_EXEMPT|G
+|root||mysql.sys|localhost|AUDIT_ABORT_EXEMPT|G
+|root||root|localhost|AUDIT_ABORT_EXEMPT|G
+|root||root|localhost|AUDIT_ADMIN|G
+|root||mysql.session|localhost|AUTHENTICATION_POLICY_ADMIN|G
+|root||root|localhost|AUTHENTICATION_POLICY_ADMIN|G
+|root||mysql.session|localhost|BACKUP_ADMIN|G
+|root||root|localhost|BACKUP_ADMIN|G
+|root||root|localhost|BINLOG_ADMIN|G
+|root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||mysql.session|localhost|CLONE_ADMIN|G
+|root||root|localhost|CLONE_ADMIN|G
+|root||mysql.session|localhost|CONNECTION_ADMIN|G
+|root||root|localhost|CONNECTION_ADMIN|G
+|root||root|localhost|CREATE|G
+|root||root|localhost|CREATE ROLE|G
+|root||root|localhost|CREATE ROUTINE|G
+|root||root|localhost|CREATE TABLESPACE|G
+|root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||root|localhost|CREATE USER|G
+|root||root|localhost|CREATE VIEW|G
+|root||root|localhost|DELETE|G
+|root||root|localhost|DROP|G
+|root||root|localhost|DROP ROLE|G
+|root||root|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||root|localhost|EVENT|G
+|root||root|localhost|EXECUTE|G
+|root||root|localhost|FILE|G
+|root||mysql.infoschema|localhost|FIREWALL_EXEMPT|G
+|root||mysql.session|localhost|FIREWALL_EXEMPT|G
+|root||mysql.sys|localhost|FIREWALL_EXEMPT|G
+|root||root|localhost|FIREWALL_EXEMPT|G
+|root||root|localhost|FLUSH_OPTIMIZER_COSTS|G
+|root||root|localhost|FLUSH_STATUS|G
+|root||root|localhost|FLUSH_TABLES|G
+|root||root|localhost|FLUSH_USER_RESOURCES|G
+|root||root|localhost|GROUP_REPLICATION_ADMIN|G
+|root||root|localhost|GROUP_REPLICATION_STREAM|G
+|root||root|localhost|INDEX|G
+|root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
+|root||root|localhost|INNODB_REDO_LOG_ENABLE|G
+|root||root|localhost|INSERT|G
+|root||root|localhost|LOCK TABLES|G
+|root||root|localhost|PASSWORDLESS_USER_ADMIN|G
+|root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root|localhost|PROCESS|G
+|root||root|localhost|REFERENCES|G
+|root||root|localhost|RELOAD|G
+|root||root|localhost|REPLICATION CLIENT|G
+|root||root|localhost|REPLICATION SLAVE|G
+|root||root|localhost|REPLICATION_APPLIER|G
+|root||root|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||root|localhost|RESOURCE_GROUP_ADMIN|G
+|root||root|localhost|RESOURCE_GROUP_USER|G
+|root||root|localhost|ROLE_ADMIN|G
+|root||mysql.infoschema|localhost|SELECT|G
+|root||root|localhost|SELECT|G
+|root||root|localhost|SENSITIVE_VARIABLES_OBSERVER|G
+|root||root|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root|localhost|SET_USER_ID|G
+|root||root|localhost|SHOW DATABASES|G
+|root||root|localhost|SHOW VIEW|G
+|root||root|localhost|SHOW_ROUTINE|G
+|root||mysql.session|localhost|SHUTDOWN|G
+|root||root|localhost|SHUTDOWN|G
+|root||mysql.session|localhost|SUPER|G
+|root||root|localhost|SUPER|G
+|root||mysql.infoschema|localhost|SYSTEM_USER|G
+|root||mysql.session|localhost|SYSTEM_USER|G
+|root||mysql.sys|localhost|SYSTEM_USER|G
+|root||root|localhost|SYSTEM_USER|G
+|root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||root|localhost|TELEMETRY_LOG_ADMIN|G
+|root||root|localhost|TRIGGER|G
+|root||root|localhost|UPDATE|G
+|root||root|localhost|XA_RECOVER_ADMIN|G
+|root||root|localhost|grant option|G
+performance_schema|schema||mysql.session|localhost|SELECT|G
+sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <ServerVersion>8.0.38</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
@@ -910,7 +999,7 @@
     </schema>
     <schema id="289" parent="1" name="demo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-11.07:01:56</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-11.08:54:39</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="fruitjuicelab">
@@ -934,186 +1023,189 @@
     <schema id="296" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="297" parent="1" name="sakila">
+    <schema id="297" parent="1" name="quantacomit_practical_test">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="298" parent="1" name="sys">
+    <schema id="298" parent="1" name="sakila">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="299" parent="1" name="web_pos">
+    <schema id="299" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="300" parent="1" name="world">
+    <schema id="300" parent="1" name="web_pos">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <user id="301" parent="1" name="mysql.infoschema">
+    <schema id="301" parent="1" name="world">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <user id="302" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="302" parent="1" name="mysql.session">
+    <user id="303" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="303" parent="1" name="mysql.sys">
+    <user id="304" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="304" parent="1" name="root">
+    <user id="305" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="305" parent="289" name="customer">
+    <table id="306" parent="289" name="customer">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="306" parent="289" name="item">
+    <table id="307" parent="289" name="item">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="307" parent="289" name="order_details">
+    <table id="308" parent="289" name="order_details">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="308" parent="289" name="orders">
+    <table id="309" parent="289" name="orders">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="309" parent="305" name="id">
+    <column id="310" parent="306" name="id">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="310" parent="305" name="address">
+    <column id="311" parent="306" name="address">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="311" parent="305" name="name">
+    <column id="312" parent="306" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="312" parent="305" name="salary">
+    <column id="313" parent="306" name="salary">
       <DasType>double|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="313" parent="305" name="PRIMARY">
+    <index id="314" parent="306" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="314" parent="305" name="PRIMARY">
+    <key id="315" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="315" parent="306" name="code">
+    <column id="316" parent="307" name="code">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="316" parent="306" name="description">
+    <column id="317" parent="307" name="description">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="317" parent="306" name="qty_on_hand">
+    <column id="318" parent="307" name="qty_on_hand">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="318" parent="306" name="unit_price">
+    <column id="319" parent="307" name="unit_price">
       <DasType>double|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="319" parent="306" name="PRIMARY">
+    <index id="320" parent="307" name="PRIMARY">
       <ColNames>code</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="320" parent="306" name="PRIMARY">
+    <key id="321" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="321" parent="307" name="id">
+    <column id="322" parent="308" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="322" parent="307" name="buy_qty">
+    <column id="323" parent="308" name="buy_qty">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="323" parent="307" name="total">
+    <column id="324" parent="308" name="total">
       <DasType>double|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="324" parent="307" name="item_code">
+    <column id="325" parent="308" name="item_code">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="325" parent="307" name="order_id">
+    <column id="326" parent="308" name="order_id">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <foreign-key id="326" parent="307" name="FKiu11dn39w4ejb2b9swl1ir1bw">
+    <foreign-key id="327" parent="308" name="FKiu11dn39w4ejb2b9swl1ir1bw">
       <ColNames>item_code</ColNames>
       <RefColNames>code</RefColNames>
       <RefTableName>item</RefTableName>
     </foreign-key>
-    <foreign-key id="327" parent="307" name="FKjyu2qbqt8gnvno9oe9j2s2ldk">
+    <foreign-key id="328" parent="308" name="FKjyu2qbqt8gnvno9oe9j2s2ldk">
       <ColNames>order_id</ColNames>
       <RefColNames>order_id</RefColNames>
       <RefTableName>orders</RefTableName>
     </foreign-key>
-    <index id="328" parent="307" name="PRIMARY">
+    <index id="329" parent="308" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="329" parent="307" name="FKiu11dn39w4ejb2b9swl1ir1bw">
+    <index id="330" parent="308" name="FKiu11dn39w4ejb2b9swl1ir1bw">
       <ColNames>item_code</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="330" parent="307" name="FKjyu2qbqt8gnvno9oe9j2s2ldk">
+    <index id="331" parent="308" name="FKjyu2qbqt8gnvno9oe9j2s2ldk">
       <ColNames>order_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="331" parent="307" name="PRIMARY">
+    <key id="332" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="332" parent="308" name="order_id">
+    <column id="333" parent="309" name="order_id">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="333" parent="308" name="customer_id">
+    <column id="334" parent="309" name="customer_id">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <foreign-key id="334" parent="308" name="FK624gtjin3po807j3vix093tlf">
+    <foreign-key id="335" parent="309" name="FK624gtjin3po807j3vix093tlf">
       <ColNames>customer_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>customer</RefTableName>
     </foreign-key>
-    <index id="335" parent="308" name="PRIMARY">
+    <index id="336" parent="309" name="PRIMARY">
       <ColNames>order_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="336" parent="308" name="FK624gtjin3po807j3vix093tlf">
+    <index id="337" parent="309" name="FK624gtjin3po807j3vix093tlf">
       <ColNames>customer_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="337" parent="308" name="PRIMARY">
+    <key id="338" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

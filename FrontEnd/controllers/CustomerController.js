@@ -96,6 +96,7 @@ $('#btnLoadAllCustomers').click(function () {
 
 function loadAllCustomers() {
     $('#customerTable').empty();
+
     $.ajax({
         url: baseUrl + "/loadAllCustomers",
         method: "GET",
