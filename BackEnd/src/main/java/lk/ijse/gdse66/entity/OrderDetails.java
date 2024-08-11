@@ -19,13 +19,11 @@ import lombok.Setter;
 public class OrderDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @ManyToOne
     @JoinColumn(name = "order_id")
     private Orders orders;
 
+    @Id
     @ManyToOne
     @JoinColumn(name = "item_code")
     private Item item;
