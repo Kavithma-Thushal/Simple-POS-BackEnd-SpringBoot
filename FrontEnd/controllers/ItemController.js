@@ -8,7 +8,7 @@ $("#btnSaveItem").click(function () {
     let unitPrice = $("#txtItemUnitPrice").val();
     let qtyOnHand = $("#txtItemQtyOnHand").val();
 
-    const itemObj = {
+    let itemObj = {
         code: code,
         description: description,
         unitPrice: unitPrice,
@@ -30,9 +30,9 @@ $("#btnSaveItem").click(function () {
 });
 
 $("#btnSearchItem").click(function () {
-    var searchItemCode = $("#txtItemCode").val();
+    let searchCode = $("#txtItemCode").val();
     $.ajax({
-        url: itemUrl + "/searchItem/" + searchItemCode,
+        url: itemUrl + "/searchItem/" + searchCode,
         method: "GET",
         success: function (res) {
             $("#itemTable").empty();
@@ -52,7 +52,7 @@ $("#btnUpdateItem").click(function () {
     let unitPrice = $("#txtItemUnitPrice").val();
     let qtyOnHand = $("#txtItemQtyOnHand").val();
 
-    const itemObj = {
+    let itemObj = {
         code: code,
         description: description,
         unitPrice: unitPrice,
@@ -75,10 +75,10 @@ $("#btnUpdateItem").click(function () {
 });
 
 $("#btnDeleteItem").click(function () {
-    var deletedItemCode = $("#txtItemCode").val();
+    let deleteId = $("#txtItemCode").val();
 
     $.ajax({
-        url: itemUrl + "/deleteItem/" + deletedItemCode,
+        url: itemUrl + "/deleteItem/" + deleteId,
         method: "DELETE",
         success: function (res) {
             loadAllItems();
@@ -115,8 +115,8 @@ function loadAllItems() {
                 </tr>`;
                 $("#itemTable").append(row);
             });
-            tableListener();
-            clearInputs();
+            itemTableListener();
+            clearItemInputs();
         },
         error: function (error) {
             console.log("Load All Customers Error...!");
@@ -124,7 +124,7 @@ function loadAllItems() {
     });
 }
 
-function tableListener() {
+function itemTableListener() {
     $("#itemTable>tr").on("click", function () {
         let code = $(this).children().eq(0).text();
         let description = $(this).children().eq(1).text();
@@ -138,7 +138,7 @@ function tableListener() {
     });
 }
 
-function clearInputs() {
+function clearItemInputs() {
     $("#txtItemCode").val("");
     $("#txtItemDescription").val("");
     $("#txtItemUnitPrice").val("");

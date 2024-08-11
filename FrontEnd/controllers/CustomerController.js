@@ -8,7 +8,7 @@ $("#btnSaveCustomer").click(function () {
     let address = $("#txtCustomerAddress").val();
     let salary = $("#txtCustomerSalary").val();
 
-    const customerObj = {
+    let customerObj = {
         id: id,
         name: name,
         address: address,
@@ -30,9 +30,9 @@ $("#btnSaveCustomer").click(function () {
 });
 
 $("#btnSearchCustomer").click(function () {
-    var searchCusId = $("#txtCustomerId").val();
+    let searchId = $("#txtCustomerId").val();
     $.ajax({
-        url: customerUrl + "/searchCustomer/" + searchCusId,
+        url: customerUrl + "/searchCustomer/" + searchId,
         method: "GET",
         success: function (res) {
             $("#customerTable").empty();
@@ -52,7 +52,7 @@ $("#btnUpdateCustomer").click(function () {
     let address = $("#txtCustomerAddress").val();
     let salary = $("#txtCustomerSalary").val();
 
-    const customerObj = {
+    let customerObj = {
         id: id,
         name: name,
         address: address,
@@ -75,10 +75,10 @@ $("#btnUpdateCustomer").click(function () {
 });
 
 $("#btnDeleteCustomer").click(function () {
-    var deletedCusId = $("#txtCustomerId").val();
+    let deleteId = $("#txtCustomerId").val();
 
     $.ajax({
-        url: customerUrl + "/deleteCustomer/" + deletedCusId,
+        url: customerUrl + "/deleteCustomer/" + deleteId,
         method: "DELETE",
         success: function (res) {
             loadAllCustomers();
@@ -115,8 +115,8 @@ function loadAllCustomers() {
                 </tr>`;
                 $("#customerTable").append(row);
             });
-            tableListener();
-            clearInputs();
+            customerTableListener();
+            clearCustomerInputs();
         },
         error: function (error) {
             console.log("Load All Customers Error...!");
@@ -124,7 +124,7 @@ function loadAllCustomers() {
     });
 }
 
-function tableListener() {
+function customerTableListener() {
     $("#customerTable>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
         let name = $(this).children().eq(1).text();
@@ -138,7 +138,7 @@ function tableListener() {
     });
 }
 
-function clearInputs() {
+function clearCustomerInputs() {
     $("#txtCustomerId").val("");
     $("#txtCustomerName").val("");
     $("#txtCustomerAddress").val("");

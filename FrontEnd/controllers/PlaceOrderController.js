@@ -10,7 +10,7 @@ $("#btnPlaceOrder").click(function () {
     let buyQty = $("#txtPlaceOrderBuyQty").val();
     let total = $("#txtPlaceOrderTotal").val();
 
-    const orderObj = {
+    let orderObj = {
         orderId: orderId,
         customerId: customerId,
         orderDetailsList: [
@@ -65,8 +65,8 @@ function loadAllOrders() {
 
                 $("#orderTable").append(row);
             });
-            tableListener();
-            clearInputs();
+            placeOrderTableListener();
+            clearPlaceOrderInputs();
         },
         error: function (error) {
             console.log("Load All Orders Error...!");
@@ -74,7 +74,7 @@ function loadAllOrders() {
     });
 }
 
-function tableListener() {
+function placeOrderTableListener() {
     $("#orderTable>tr").on("click", function () {
         let orderId = $(this).children().eq(0).text();
         let customerId = $(this).children().eq(1).text();
@@ -90,7 +90,7 @@ function tableListener() {
     });
 }
 
-function clearInputs() {
+function clearPlaceOrderInputs() {
     $("#txtPlaceOrderOrderId").val("");
     $("#txtPlaceOrderCustomerId").val("");
     $("#txtPlaceOrderItemCode").val("");
