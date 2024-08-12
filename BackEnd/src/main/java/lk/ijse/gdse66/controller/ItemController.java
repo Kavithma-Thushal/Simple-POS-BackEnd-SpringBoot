@@ -18,7 +18,7 @@ import java.util.List;
 public class ItemController {
 
     @Autowired
-    public ItemService itemService;
+    private ItemService itemService;
 
     @PostMapping("/saveItem")
     public void saveItem(@RequestBody ItemDTO itemDTO) {

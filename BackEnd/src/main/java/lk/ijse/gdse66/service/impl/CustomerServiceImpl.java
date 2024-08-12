@@ -23,10 +23,10 @@ import java.util.stream.Collectors;
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
-    public CustomerRepo customerRepo;
+    private CustomerRepo customerRepo;
 
     @Autowired
-    public ModelMapper modelMapper;
+    private ModelMapper modelMapper;
 
     @Override
     public void saveCustomer(CustomerDTO customerDTO) {

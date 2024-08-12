@@ -18,7 +18,7 @@ import java.util.List;
 public class PlaceOrderController {
 
     @Autowired
-    public PlaceOrderService placeOrderService;
+    private PlaceOrderService placeOrderService;
 
     @PostMapping("/placeOrder")
     public void placeOrder(@RequestBody OrderDTO orderDTO) {

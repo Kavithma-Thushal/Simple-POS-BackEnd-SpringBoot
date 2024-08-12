@@ -18,7 +18,7 @@ import java.util.List;
 public class CustomerController {
 
     @Autowired
-    public CustomerService customerService;
+    private CustomerService customerService;
 
     @PostMapping("/saveCustomer")
     public void saveCustomer(@RequestBody CustomerDTO customerDTO) {

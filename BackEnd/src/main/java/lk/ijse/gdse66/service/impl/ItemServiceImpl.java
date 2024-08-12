@@ -23,10 +23,10 @@ import java.util.stream.Collectors;
 public class ItemServiceImpl implements ItemService {
 
     @Autowired
-    public ItemRepo itemRepo;
+    private ItemRepo itemRepo;
 
     @Autowired
-    public ModelMapper modelMapper;
+    private ModelMapper modelMapper;
 
     @Override
     public void saveItem(ItemDTO itemDTO) {
