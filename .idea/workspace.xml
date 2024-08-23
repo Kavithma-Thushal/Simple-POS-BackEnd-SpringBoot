@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Refactored 3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="README.md Updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +129,7 @@
       <workItem from="1723825747339" duration="746000" />
       <workItem from="1723827530169" duration="2000" />
       <workItem from="1723862314739" duration="460000" />
+      <workItem from="1724395290020" duration="438000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -196,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723442796447</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="README.md Updated">
+      <option name="closed" value="true" />
+      <created>1724395725470</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724395725470</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,11 +213,11 @@
     <MESSAGE value="Project Name Changed" />
     <MESSAGE value="index.html Updated" />
     <MESSAGE value="ss location changed" />
-    <MESSAGE value="README.md Updated" />
     <MESSAGE value="Count UI Added" />
     <MESSAGE value="Refactored" />
     <MESSAGE value="Refactored 2" />
     <MESSAGE value="Refactored 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored 3" />
+    <MESSAGE value="README.md Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated" />
   </component>
 </project>
