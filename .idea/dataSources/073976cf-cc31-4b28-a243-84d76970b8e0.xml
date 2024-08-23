@@ -943,7 +943,7 @@
     </schema>
     <schema id="300" parent="1" name="demo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-23.16:30:42</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-23.18:08:15</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="301" parent="1" name="quantacomit_practical_test">
@@ -1022,12 +1022,10 @@
     </column>
     <column id="318" parent="307" name="qty_on_hand">
       <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="319" parent="307" name="unit_price">
       <DasType>double|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <index id="320" parent="307" name="PRIMARY">

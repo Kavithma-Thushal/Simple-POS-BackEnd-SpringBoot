@@ -4,7 +4,6 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import lk.ijse.gdse66.pos.entity.OrderDetails;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,8 +26,8 @@ public class Item {
     @Id
     private String code;
     private String description;
-    private double unitPrice;
-    private int qtyOnHand;
+    private Double unitPrice;
+    private Integer qtyOnHand;
 
     @OneToMany(mappedBy = "item", cascade = CascadeType.ALL)
     private List<OrderDetails> orderDetailsList;

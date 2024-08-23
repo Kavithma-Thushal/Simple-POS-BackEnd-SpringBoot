@@ -1,5 +1,6 @@
 package lk.ijse.gdse66.pos.controller;
 
+import jakarta.validation.Valid;
 import lk.ijse.gdse66.pos.dto.ItemDTO;
 import lk.ijse.gdse66.pos.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class ItemController {
     private ItemService itemService;
 
     @PostMapping("/saveItem")
-    public void saveItem(@RequestBody ItemDTO itemDTO) {
+    public void saveItem(@Valid @RequestBody ItemDTO itemDTO) {
         itemService.saveItem(itemDTO);
     }
 

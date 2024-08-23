@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Customers CRUD Finished...!">
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Send Emails">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/util/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/util/EmailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/util/ResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/util/ResponseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/dto/ItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/dto/ItemDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/entity/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +152,8 @@
       <workItem from="1724409255125" duration="495000" />
       <workItem from="1724410094719" duration="5155000" />
       <workItem from="1724433021473" duration="103000" />
-      <workItem from="1724434124108" duration="602000" />
+      <workItem from="1724434124108" duration="1065000" />
+      <workItem from="1724435462629" duration="991000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -266,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724433008505</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Send Emails">
+      <option name="closed" value="true" />
+      <created>1724435185350</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1724435185350</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +294,7 @@
     <MESSAGE value="Refactored" />
     <MESSAGE value="Save Customer Refactored" />
     <MESSAGE value="Customers CRUD Finished...!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customers CRUD Finished...!" />
+    <MESSAGE value="Send Emails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Send Emails" />
   </component>
 </project>
