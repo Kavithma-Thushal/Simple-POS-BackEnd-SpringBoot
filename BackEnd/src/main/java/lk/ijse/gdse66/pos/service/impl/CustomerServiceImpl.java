@@ -4,11 +4,11 @@ import lk.ijse.gdse66.pos.dto.CustomerDTO;
 import lk.ijse.gdse66.pos.entity.Customer;
 import lk.ijse.gdse66.pos.repo.CustomerRepo;
 import lk.ijse.gdse66.pos.service.CustomerService;
+import lk.ijse.gdse66.pos.util.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,76 +33,91 @@ public class CustomerServiceImpl implements CustomerService {
     private ModelMapper modelMapper;
 
     @Override
-    public String saveCustomer(CustomerDTO customerDTO) {
+    public Response<String> saveCustomer(CustomerDTO customerDTO) {
 
-        if (customerRepo.existsById(customerDTO.getId())) {
-            String errorResponse = "Customer Already Exists...!";
-            log.info("\u001B[31m{}\u001B[0m", errorResponse);
-            return errorResponse;
-
-        } else {
+        if (!customerRepo.existsById(customerDTO.getId())) {
             customerRepo.save(modelMapper.map(customerDTO, Customer.class));
+
             String successResponse = "Customer Saved Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return successResponse;
+            return new Response<>(successResponse, HttpStatus.OK, null);
+
+        } else {
+            String errorResponse = "Customer Already Exists...!";
+            log.error("\u001B[31m{}\u001B[0m", errorResponse);
+            return new Response<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
     }
 
     @Override
-    public CustomerDTO searchCustomer(String id) {
+    public Response<CustomerDTO> searchCustomer(String id) {
 
         Optional<Customer> customer = customerRepo.findById(id);
         if (customer.isPresent()) {
             CustomerDTO customerDTO = modelMapper.map(customer.get(), CustomerDTO.class);
+
             String successResponse = "Customer Searched Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return customerDTO;
+            return new Response<>(successResponse, HttpStatus.OK, customerDTO);
 
         } else {
             String errorResponse = "Customer Not Found...!";
-            log.info("\u001B[31m{}\u001B[0m", errorResponse);
-            throw new RuntimeException(errorResponse);
+            log.error("\u001B[31m{}\u001B[0m", errorResponse);
+            return new Response<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
     }
 
     @Override
-    public String updateCustomer(CustomerDTO customerDTO) {
+    public Response<String> updateCustomer(CustomerDTO customerDTO) {
 
         if (customerRepo.existsById(customerDTO.getId())) {
             customerRepo.save(modelMapper.map(customerDTO, Customer.class));
+
             String successResponse = "Customer Updated Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return successResponse;
+            return new Response<>(successResponse, HttpStatus.OK, null);
 
         } else {
             String errorResponse = "Customer Not Found...!";
             log.info("\u001B[31m{}\u001B[0m", errorResponse);
-            return errorResponse;
+            return new Response<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
     }
 
     @Override
-    public String deleteCustomer(String id) {
+    public Response<String> deleteCustomer(String id) {
 
         Optional<Customer> customer = customerRepo.findById(id);
         if (customer.isPresent()) {
+
             customerRepo.deleteById(id);
             String successResponse = "Customer Deleted Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return successResponse;
+            return new Response<>(successResponse, HttpStatus.OK, null);
 
         } else {
             String errorResponse = "Customer Not Found...!";
-            log.info("\u001B[31m{}\u001B[0m", errorResponse);
-            return errorResponse;
+            log.error("\u001B[31m{}\u001B[0m", errorResponse);
+            return new Response<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
     }
 
     @Override
-    public List<CustomerDTO> loadAllCustomers() {
+    public Response<List<CustomerDTO>> loadAllCustomers() {
+
         List<Customer> customerList = customerRepo.findAll();
-        return customerList.stream()
+        List<CustomerDTO> customerDTOList = customerList.stream()
                 .map(customer -> modelMapper.map(customer, CustomerDTO.class))
                 .collect(Collectors.toList());
+
+        if (!customerDTOList.isEmpty()) {
+            String successResponse = "Customers Loaded Successfully...!";
+            log.info("\u001B[34m{}\u001B[0m", successResponse);
+            return new Response<>(successResponse, HttpStatus.OK, customerDTOList);
+        } else {
+            String errorResponse = "Customers Not Found...!";
+            log.info("\u001B[33m{}\u001B[0m", errorResponse);
+            return new Response<>(errorResponse, HttpStatus.NO_CONTENT, null);
+        }
     }
 }

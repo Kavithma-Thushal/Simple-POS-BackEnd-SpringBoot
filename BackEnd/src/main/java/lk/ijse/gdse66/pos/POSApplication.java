@@ -17,7 +17,7 @@ public class POSApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(POSApplication.class, args);
-        log.error("\u001B[34m{}\u001B[0m", "POS Application Started Successfully...!");
+        log.info("\u001B[34m{}\u001B[0m", "POS Application Started Successfully...!");
     }
 
     @Bean

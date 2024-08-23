@@ -19,11 +19,20 @@ import java.util.stream.Collectors;
 public class ResponseHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<String> handleValidationException(MethodArgumentNotValidException e) {
+    public ResponseEntity<Response<String>> handleValidationException(MethodArgumentNotValidException e) {
         String errors = e.getBindingResult().getAllErrors().stream()
                 .map(error -> error.getDefaultMessage())
                 .collect(Collectors.joining(", "));
         log.error("\u001B[31m{}\u001B[0m", errors);
-        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+        Response<String> response = new Response<>(errors, HttpStatus.BAD_REQUEST, null);
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<Response<String>> handleGeneralException(Exception e) {
+        String errorMessage = "An unexpected error occurred";
+        log.error("\u001B[31m{}\u001B[0m", e.getMessage());
+        Response<String> response = new Response<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR, null);
+        return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
