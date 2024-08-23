@@ -943,7 +943,7 @@
     </schema>
     <schema id="300" parent="1" name="demo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-23.08:35:09</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-23.10:31:57</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="301" parent="1" name="quantacomit_practical_test">
@@ -999,7 +999,6 @@
     </column>
     <column id="313" parent="306" name="salary">
       <DasType>double|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <index id="314" parent="306" name="PRIMARY">

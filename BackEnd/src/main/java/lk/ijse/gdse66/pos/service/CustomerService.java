@@ -11,7 +11,7 @@ import java.util.List;
  **/
 public interface CustomerService {
 
-    void saveCustomer(CustomerDTO customerDTO);
+    String saveCustomer(CustomerDTO customerDTO);
 
     CustomerDTO searchCustomer(String id);
 

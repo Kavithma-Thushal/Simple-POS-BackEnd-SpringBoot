@@ -31,9 +31,18 @@ public class CustomerServiceImpl implements CustomerService {
     private ModelMapper modelMapper;
 
     @Override
-    public void saveCustomer(CustomerDTO customerDTO) {
-        if (!customerRepo.existsById(customerDTO.getId())) {
+    public String saveCustomer(CustomerDTO customerDTO) {
+
+        if (customerRepo.existsById(customerDTO.getId())) {
+            String errorResponse = "Customer Already Exists...!";
+            log.info("\u001B[31m{}\u001B[0m", errorResponse);
+            return errorResponse;
+
+        } else {
             customerRepo.save(modelMapper.map(customerDTO, Customer.class));
+            String successResponse = "Customer Saved Successfully...!";
+            log.info("\u001B[34m{}\u001B[0m", successResponse);
+            return successResponse;
         }
     }
 

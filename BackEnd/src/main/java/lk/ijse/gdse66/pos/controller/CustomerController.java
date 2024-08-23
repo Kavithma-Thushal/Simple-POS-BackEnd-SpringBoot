@@ -1,8 +1,11 @@
 package lk.ijse.gdse66.pos.controller;
 
+import jakarta.validation.Valid;
 import lk.ijse.gdse66.pos.dto.CustomerDTO;
 import lk.ijse.gdse66.pos.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,8 +24,9 @@ public class CustomerController {
     private CustomerService customerService;
 
     @PostMapping("/saveCustomer")
-    public void saveCustomer(@RequestBody CustomerDTO customerDTO) {
-        customerService.saveCustomer(customerDTO);
+    public ResponseEntity<String> saveCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
+        String response = customerService.saveCustomer(customerDTO);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("/searchCustomer/{id}")
