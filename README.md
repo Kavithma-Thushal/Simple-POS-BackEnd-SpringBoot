@@ -12,7 +12,7 @@ Details, Item Details and Place Orders efficiently.
 ✅ **CSS**<br/>
 ✅ **JS**<br/>
 ✅ **AJAX**<br/>
-✅ **jQuery**<br/>
+✅ **JQuery**<br/>
 ✅ **Bootstrap**<br/>
 
 ### Backend
@@ -24,11 +24,11 @@ Details, Item Details and Place Orders efficiently.
 
 ## 🚀 Features
 
-✅ **Create** new customer entries.<br/>
-✅ **Read** customer details.<br/>
-✅ **Update** existing customer information.<br/>
-✅ **Delete** customer records.<br/>
-✅ **Load** and display all customers.<br/>
+✅ **Create** Save New Customer.<br/>
+✅ **Read** Search Customer.<br/>
+✅ **Update** Update Customer Information.<br/>
+✅ **Delete** Delete Customer Records.<br/>
+✅ **Load All** Display All Customer Records.<br/>
 
 ## 📸 Screenshots
 
@@ -42,7 +42,7 @@ Details, Item Details and Place Orders efficiently.
 
 ## 📝 Version
 
-Current Version : **1.0.0**
+**1.0.0**
 
 ## 📬 Get in Touch
 
