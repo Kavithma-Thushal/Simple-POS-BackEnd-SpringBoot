@@ -7,6 +7,8 @@ import lk.ijse.gdse66.pos.service.CustomerService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -48,20 +50,52 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDTO searchCustomer(String id) {
-        Optional<Customer> deleteId = customerRepo.findById(id);
-        return deleteId.map(customer -> modelMapper.map(customer, CustomerDTO.class)).orElse(null);
-    }
 
-    @Override
-    public void updateCustomer(CustomerDTO customerDTO) {
-        if (customerRepo.existsById(customerDTO.getId())) {
-            customerRepo.save(modelMapper.map(customerDTO, Customer.class));
+        Optional<Customer> customer = customerRepo.findById(id);
+        if (customer.isPresent()) {
+            CustomerDTO customerDTO = modelMapper.map(customer.get(), CustomerDTO.class);
+            String successResponse = "Customer Searched Successfully...!";
+            log.info("\u001B[34m{}\u001B[0m", successResponse);
+            return customerDTO;
+
+        } else {
+            String errorResponse = "Customer Not Found...!";
+            log.info("\u001B[31m{}\u001B[0m", errorResponse);
+            throw new RuntimeException(errorResponse);
         }
     }
 
     @Override
-    public void deleteCustomer(String id) {
-        customerRepo.deleteById(id);
+    public String updateCustomer(CustomerDTO customerDTO) {
+
+        if (customerRepo.existsById(customerDTO.getId())) {
+            customerRepo.save(modelMapper.map(customerDTO, Customer.class));
+            String successResponse = "Customer Updated Successfully...!";
+            log.info("\u001B[34m{}\u001B[0m", successResponse);
+            return successResponse;
+
+        } else {
+            String errorResponse = "Customer Not Found...!";
+            log.info("\u001B[31m{}\u001B[0m", errorResponse);
+            return errorResponse;
+        }
+    }
+
+    @Override
+    public String deleteCustomer(String id) {
+
+        Optional<Customer> customer = customerRepo.findById(id);
+        if (customer.isPresent()) {
+            customerRepo.deleteById(id);
+            String successResponse = "Customer Deleted Successfully...!";
+            log.info("\u001B[34m{}\u001B[0m", successResponse);
+            return successResponse;
+
+        } else {
+            String errorResponse = "Customer Not Found...!";
+            log.info("\u001B[31m{}\u001B[0m", errorResponse);
+            return errorResponse;
+        }
     }
 
     @Override

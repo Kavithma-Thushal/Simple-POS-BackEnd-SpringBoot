@@ -15,9 +15,9 @@ public interface CustomerService {
 
     CustomerDTO searchCustomer(String id);
 
-    void updateCustomer(CustomerDTO customerDTO);
+    String updateCustomer(CustomerDTO customerDTO);
 
-    void deleteCustomer(String id);
+    String deleteCustomer(String id);
 
     List<CustomerDTO> loadAllCustomers();
 }

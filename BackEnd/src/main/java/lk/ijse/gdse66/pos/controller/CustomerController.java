@@ -30,22 +30,37 @@ public class CustomerController {
     }
 
     @GetMapping("/searchCustomer/{id}")
-    public CustomerDTO searchCustomer(@PathVariable String id) {
-        return customerService.searchCustomer(id);
+    public ResponseEntity<?> searchCustomer(@PathVariable String id) {
+        try {
+            CustomerDTO customerDTO = customerService.searchCustomer(id);
+            return new ResponseEntity<>(customerDTO, HttpStatus.OK);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
     }
 
     @PutMapping("/updateCustomer")
-    public void updateCustomer(@RequestBody CustomerDTO customerDTO) {
-        customerService.updateCustomer(customerDTO);
+    public ResponseEntity<String> updateCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
+        String response = customerService.updateCustomer(customerDTO);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteCustomer/{id}")
-    public void deleteCustomer(@PathVariable String id) {
-        customerService.deleteCustomer(id);
+    public ResponseEntity<String> deleteCustomer(@PathVariable String id) {
+        String response = customerService.deleteCustomer(id);
+        if (response.equals("Customer Deleted Successfully...!")) {
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("/loadAllCustomers")
-    public List<CustomerDTO> loadAllCustomers() {
-        return customerService.loadAllCustomers();
+    public ResponseEntity<List<CustomerDTO>> loadAllCustomers() {
+        List<CustomerDTO> customerDTOList = customerService.loadAllCustomers();
+        if (customerDTOList.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(customerDTOList, HttpStatus.OK);
     }
 }
