@@ -1,6 +1,9 @@
 let itemUrl = "http://localhost:8080/api/v1/item";
 
-loadAllItems();
+$(document).ready(function () {
+    generateItemCode();
+    loadAllItems();
+});
 
 $("#btnSaveItem").click(function () {
 
@@ -131,6 +134,8 @@ function loadAllItems() {
                 </tr>`;
                 $("#itemTable").append(row);
             });
+
+            generateItemCode();
             itemTableListener();
             clearItemInputs();
             console.log(res.message);
@@ -139,6 +144,29 @@ function loadAllItems() {
             console.log(error.responseJSON.message);
         }
     });
+}
+
+function generateItemCode() {
+    $.ajax({
+        url: itemUrl + "/generateItemCode",
+        method: "GET",
+        success: function (res) {
+            let lastItemCode = res.data;
+            let newItemCode = newItmCode(lastItemCode);
+            $("#txtItemCode").val(newItemCode);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
+
+function newItmCode(lastItemCode) {
+    let parts = lastItemCode.split('-');
+    let prefix = parts[0];
+    let number = parseInt(parts[1]) + 1;
+    let newItemCode = prefix + '-' + number.toString().padStart(3, '0');
+    return newItemCode;
 }
 
 function itemTableListener() {

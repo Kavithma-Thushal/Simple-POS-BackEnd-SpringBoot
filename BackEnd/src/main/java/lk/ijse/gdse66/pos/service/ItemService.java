@@ -21,4 +21,6 @@ public interface ItemService {
     ResponseUtil<String> deleteItem(String code);
 
     ResponseUtil<List<ItemDTO>> loadAllItems();
+
+    ResponseUtil<String> generateItemCode();
 }

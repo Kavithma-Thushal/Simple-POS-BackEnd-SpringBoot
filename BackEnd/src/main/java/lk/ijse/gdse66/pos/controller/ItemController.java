@@ -52,4 +52,10 @@ public class ItemController {
         ResponseUtil<List<ItemDTO>> responseUtil = itemService.loadAllItems();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
+
+    @GetMapping("/generateItemCode")
+    public ResponseEntity<ResponseUtil<String>> generateItemCode() {
+        ResponseUtil<String> responseUtil = itemService.generateItemCode();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
+    }
 }

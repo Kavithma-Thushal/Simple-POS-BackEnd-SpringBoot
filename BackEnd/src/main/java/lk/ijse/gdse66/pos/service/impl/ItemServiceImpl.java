@@ -126,4 +126,12 @@ public class ItemServiceImpl implements ItemService {
             return new ResponseUtil<>(errorResponse, HttpStatus.NO_CONTENT, null);
         }
     }
+
+    @Override
+    public ResponseUtil<String> generateItemCode() {
+        String lastItemCode = itemRepo.findTopByOrderByCodeDesc().map(Item::getCode).orElse("I00-000");
+        String successResponse = "Last Item Code Retrieved Successfully...!";
+        log.info("\u001B[34m{}\u001B[0m", successResponse);
+        return new ResponseUtil<>(successResponse, HttpStatus.OK, lastItemCode);
+    }
 }
