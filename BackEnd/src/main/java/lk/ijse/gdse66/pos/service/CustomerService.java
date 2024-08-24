@@ -21,4 +21,6 @@ public interface CustomerService {
     ResponseUtil<String> deleteCustomer(String id);
 
     ResponseUtil<List<CustomerDTO>> loadAllCustomers();
+
+    ResponseUtil<String> generateCustomerId();
 }

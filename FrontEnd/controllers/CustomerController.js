@@ -1,6 +1,9 @@
 let customerUrl = "http://localhost:8080/api/v1/customer";
 
-loadAllCustomers();
+$(document).ready(function () {
+    generateCustomerId();
+    loadAllCustomers();
+});
 
 $("#btnSaveCustomer").click(function () {
 
@@ -131,6 +134,8 @@ function loadAllCustomers() {
                         </tr>`;
                 $("#customerTable").append(row);
             });
+
+            generateCustomerId();
             customerTableListener();
             clearCustomerInputs();
             console.log(res.message);
@@ -139,6 +144,29 @@ function loadAllCustomers() {
             console.log(error.responseJSON.message);
         }
     });
+}
+
+function generateCustomerId() {
+    $.ajax({
+        url: customerUrl + "/generateCustomerId",
+        method: "GET",
+        success: function (res) {
+            let lastCustomerId = res.data;
+            let newCustomerId = newCusId(lastCustomerId);
+            $("#txtCustomerId").val(newCustomerId);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
+
+function newCusId(lastCustomerId) {
+    let parts = lastCustomerId.split('-');
+    let prefix = parts[0];
+    let number = parseInt(parts[1]) + 1;
+    let newCustomerId = prefix + '-' + number.toString().padStart(3, '0');
+    return newCustomerId;
 }
 
 function customerTableListener() {

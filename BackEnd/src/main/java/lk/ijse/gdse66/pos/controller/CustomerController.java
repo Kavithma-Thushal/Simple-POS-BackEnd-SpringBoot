@@ -52,4 +52,10 @@ public class CustomerController {
         ResponseUtil<List<CustomerDTO>> responseUtil = customerService.loadAllCustomers();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
+
+    @GetMapping("/generateCustomerId")
+    public ResponseEntity<ResponseUtil<String>> generateCustomerId() {
+        ResponseUtil<String> responseUtil = customerService.generateCustomerId();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
+    }
 }
