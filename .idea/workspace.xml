@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Item Count Added" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Refactored">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,6 +163,8 @@
       <workItem from="1724485843585" duration="1440000" />
       <workItem from="1724487308757" duration="867000" />
       <workItem from="1724488191640" duration="1135000" />
+      <workItem from="1724489640293" duration="364000" />
+      <workItem from="1724490008512" duration="495000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -367,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724489566162</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Refactored">
+      <option name="closed" value="true" />
+      <created>1724489996875</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724489996875</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +403,6 @@
     <MESSAGE value="Send Emails" />
     <MESSAGE value="Item DTO Refactored" />
     <MESSAGE value="Item Management Implemented Successfully...!" />
-    <MESSAGE value="Refactored" />
     <MESSAGE value="FrontEnd : Customer Controller Updated" />
     <MESSAGE value="FrontEnd : Customer Controller Updated 2" />
     <MESSAGE value="Item Managed Successfully" />
@@ -397,6 +411,7 @@
     <MESSAGE value="generate item code successfully" />
     <MESSAGE value="Customer Count Added" />
     <MESSAGE value="Item Count Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item Count Added" />
+    <MESSAGE value="Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored" />
   </component>
 </project>

@@ -79,17 +79,19 @@
 
             <!-- Customer Table -->
             <div class="col-6 mt-5 p-0 m-3 ms-5 shadow-lg border-light rounded">
-                <table class="table table-bordered table-striped">
-                    <thead class="table-dark">
-                    <tr>
-                        <th scope="col" class="w-25">ID</th>
-                        <th scope="col" class="w-25">Name</th>
-                        <th scope="col" class="w-25">Address</th>
-                        <th scope="col" class="w-25">Salary</th>
-                    </tr>
-                    </thead>
-                    <tbody id="customerTable"></tbody>
-                </table>
+                <div style="max-height: 400px; overflow-y: auto;">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-dark">
+                        <tr>
+                            <th scope="col" class="w-25">ID</th>
+                            <th scope="col" class="w-25">Name</th>
+                            <th scope="col" class="w-25">Address</th>
+                            <th scope="col" class="w-25">Salary</th>
+                        </tr>
+                        </thead>
+                        <tbody id="customerTable"></tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Customer Form -->
@@ -135,17 +137,19 @@
 
             <!-- Item Table -->
             <div class="col-6 mt-5 p-0 m-3 ms-5 shadow-lg border-light rounded">
-                <table class="table table-bordered table-striped">
-                    <thead class="table-dark">
-                    <tr>
-                        <th scope="col" class="w-25">Code</th>
-                        <th scope="col" class="w-25">Description</th>
-                        <th scope="col" class="w-25">Unit Price</th>
-                        <th scope="col" class="w-25">Qty On Hand</th>
-                    </tr>
-                    </thead>
-                    <tbody id="itemTable"></tbody>
-                </table>
+                <div style="max-height: 400px; overflow-y: auto;">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-dark">
+                        <tr>
+                            <th scope="col" class="w-25">Code</th>
+                            <th scope="col" class="w-25">Description</th>
+                            <th scope="col" class="w-25">Unit Price</th>
+                            <th scope="col" class="w-25">Qty On Hand</th>
+                        </tr>
+                        </thead>
+                        <tbody id="itemTable"></tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Item Form -->
@@ -277,6 +281,8 @@
 </main>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="Notifications.js"></script>
 <script>
     function showSection(sectionId) {
         $('#homeSection,#customerSection, #itemSection, #placeOrderSection').hide();

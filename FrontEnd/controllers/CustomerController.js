@@ -32,11 +32,11 @@ $("#btnSaveCustomer").click(function () {
         data: JSON.stringify(customerObj),
         success: function (res) {
             loadAllCustomers();
-            alert(res.message);
+            successNotification(res.message);
         },
         error: function (error) {
             loadAllCustomers();
-            alert(error.responseJSON.message);
+            errorNotification(error.responseJSON.message);
         }
     });
 });
@@ -63,7 +63,7 @@ $("#btnSearchCustomer").click(function () {
         },
         error: function (error) {
             loadAllCustomers();
-            alert(error.responseJSON.message);
+            errorNotification(error.responseJSON.message);
         }
     });
 });
@@ -89,11 +89,11 @@ $("#btnUpdateCustomer").click(function () {
         data: JSON.stringify(customerObj),
         success: function (res) {
             loadAllCustomers();
-            alert(res.message);
+            successNotification(res.message);
         },
         error: function (error) {
             loadAllCustomers();
-            alert(error.responseJSON.message);
+            errorNotification(error.responseJSON.message);
         }
     });
 });
@@ -106,11 +106,11 @@ $("#btnDeleteCustomer").click(function () {
         method: "DELETE",
         success: function (res) {
             loadAllCustomers();
-            alert(res.message);
+            successNotification(res.message);
         },
         error: function (error) {
             loadAllCustomers();
-            alert(error.responseJSON.message);
+            errorNotification(error.responseJSON.message);
         }
     });
 });

@@ -32,11 +32,11 @@ $("#btnSaveItem").click(function () {
         data: JSON.stringify(itemObj),
         success: function (res) {
             loadAllItems();
-            alert(res.message);
+            successNotification(res.message);
         },
         error: function (error) {
             loadAllItems();
-            alert(error.responseJSON.message);
+            errorNotification(error.responseJSON.message);
         }
     });
 });
@@ -63,7 +63,7 @@ $("#btnSearchItem").click(function () {
         },
         error: function (error) {
             loadAllItems();
-            alert(error.responseJSON.message);
+            errorNotification(error.responseJSON.message);
         }
     });
 });
@@ -89,11 +89,11 @@ $("#btnUpdateItem").click(function () {
         data: JSON.stringify(itemObj),
         success: function (res) {
             loadAllItems();
-            alert(res.message);
+            successNotification(res.message);
         },
         error: function (error) {
             loadAllItems();
-            alert(error.responseJSON.message);
+            errorNotification(error.responseJSON.message);
         }
     });
 });
@@ -106,11 +106,11 @@ $("#btnDeleteItem").click(function () {
         method: "DELETE",
         success: function (res) {
             loadAllItems();
-            alert(res.message);
+            successNotification(res.message);
         },
         error: function (error) {
             loadAllItems();
-            alert(error.responseJSON.message);
+            errorNotification(error.responseJSON.message);
         }
     });
 });
