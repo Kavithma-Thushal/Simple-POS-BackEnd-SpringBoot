@@ -121,6 +121,10 @@ $('#btnLoadAllItems').click(function () {
     loadAllItems();
 });
 
+$('#btnResetItem').click(function () {
+    loadAllItems();
+});
+
 function loadAllItems() {
     $.ajax({
         url: itemUrl + "/loadAllItems",

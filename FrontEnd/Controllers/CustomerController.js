@@ -121,6 +121,10 @@ $('#btnLoadAllCustomers').click(function () {
     loadAllCustomers();
 });
 
+$('#btnResetCustomer').click(function () {
+    loadAllCustomers();
+});
+
 function loadAllCustomers() {
     $.ajax({
         url: customerUrl + "/loadAllCustomers",
