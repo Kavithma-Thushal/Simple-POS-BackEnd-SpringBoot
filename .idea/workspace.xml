@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Item Validation Added">
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Reset Button Added">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/dto/ItemDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/dto/ItemDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/Controllers/CustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/Controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/Controllers/ItemController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +169,8 @@
       <workItem from="1724490008512" duration="3336000" />
       <workItem from="1724493400667" duration="4267000" />
       <workItem from="1724499597109" duration="5621000" />
-      <workItem from="1724512581877" duration="2128000" />
+      <workItem from="1724512581877" duration="2242000" />
+      <workItem from="1724515993565" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -415,14 +412,21 @@
       <option name="project" value="LOCAL" />
       <updated>1724508490061</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Reset Button Added">
+      <option name="closed" value="true" />
+      <created>1724515974648</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1724515974648</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="index.html Updated" />
     <MESSAGE value="ss location changed" />
     <MESSAGE value="Count UI Added" />
     <MESSAGE value="Refactored 2" />
@@ -447,6 +451,7 @@
     <MESSAGE value="SweetAlert2 Added" />
     <MESSAGE value="Customer Validation Added" />
     <MESSAGE value="Item Validation Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item Validation Added" />
+    <MESSAGE value="Reset Button Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reset Button Added" />
   </component>
 </project>
