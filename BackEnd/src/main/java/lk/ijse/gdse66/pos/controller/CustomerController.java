@@ -58,4 +58,10 @@ public class CustomerController {
         ResponseUtil<String> responseUtil = customerService.generateCustomerId();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
+
+    @GetMapping("/getCustomerCount")
+    public ResponseEntity<ResponseUtil<Integer>> getCustomerCount() {
+        ResponseUtil<Integer> responseUtil = customerService.getCustomerCount();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
+    }
 }

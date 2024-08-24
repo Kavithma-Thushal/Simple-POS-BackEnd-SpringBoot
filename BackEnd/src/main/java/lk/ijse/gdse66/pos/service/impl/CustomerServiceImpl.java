@@ -134,4 +134,13 @@ public class CustomerServiceImpl implements CustomerService {
         log.info("\u001B[34m{}\u001B[0m", successResponse);
         return new ResponseUtil<>(successResponse, HttpStatus.OK, lastCustomerId);
     }
+
+    @Override
+    public ResponseUtil<Integer> getCustomerCount() {
+        Integer customerCount = customerRepo.countBy();
+
+        String successResponse = "Customer Count Retrieved Successfully...!";
+        log.info("\u001B[34m{}\u001B[0m", successResponse);
+        return new ResponseUtil<>(successResponse, HttpStatus.OK, customerCount);
+    }
 }

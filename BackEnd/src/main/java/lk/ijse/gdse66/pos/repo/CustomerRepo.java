@@ -11,5 +11,10 @@ import java.util.Optional;
  * @since : 7:35 AM - 6/18/2024
  **/
 public interface CustomerRepo extends JpaRepository<Customer, String> {
+
+    // Generate Customer ID
     Optional<Customer> findTopByOrderByIdDesc();
+
+    // Get Customer Count
+    Integer countBy();
 }

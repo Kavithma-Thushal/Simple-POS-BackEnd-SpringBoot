@@ -136,6 +136,7 @@ function loadAllCustomers() {
             });
 
             generateCustomerId();
+            getCustomerCount();
             customerTableListener();
             clearCustomerInputs();
             console.log(res.message);
@@ -167,6 +168,20 @@ function newCusId(lastCustomerId) {
     let number = parseInt(parts[1]) + 1;
     let newCustomerId = prefix + '-' + number.toString().padStart(3, '0');
     return newCustomerId;
+}
+
+function getCustomerCount() {
+    $.ajax({
+        url: customerUrl + "/getCustomerCount",
+        method: "GET",
+        success: function (res) {
+            $("#customerCount").text(res.data);
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
 }
 
 function customerTableListener() {

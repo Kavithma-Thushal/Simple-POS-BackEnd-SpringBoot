@@ -23,4 +23,6 @@ public interface CustomerService {
     ResponseUtil<List<CustomerDTO>> loadAllCustomers();
 
     ResponseUtil<String> generateCustomerId();
+
+    ResponseUtil<Integer> getCustomerCount();
 }
