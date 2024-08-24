@@ -5,8 +5,6 @@ import lk.ijse.gdse66.pos.service.PlaceOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 /**
  * @author : Kavithma Thushal
  * @project : Spring-Boot-POS
@@ -23,10 +21,5 @@ public class PlaceOrderController {
     @PostMapping("/placeOrder")
     public void placeOrder(@RequestBody OrderDTO orderDTO) {
         placeOrderService.placeOrder(orderDTO);
-    }
-
-    @GetMapping("/loadAllOrders")
-    public List<OrderDTO> loadAllOrders() {
-        return placeOrderService.loadAllOrders();
     }
 }
