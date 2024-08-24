@@ -3,7 +3,7 @@ package lk.ijse.gdse66.pos.controller;
 import jakarta.validation.Valid;
 import lk.ijse.gdse66.pos.dto.CustomerDTO;
 import lk.ijse.gdse66.pos.service.CustomerService;
-import lk.ijse.gdse66.pos.util.Response;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,32 +24,32 @@ public class CustomerController {
     private CustomerService customerService;
 
     @PostMapping("/saveCustomer")
-    public ResponseEntity<Response<String>> saveCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
-        Response<String> response = customerService.saveCustomer(customerDTO);
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<String>> saveCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
+        ResponseUtil<String> responseUtil = customerService.saveCustomer(customerDTO);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @GetMapping("/searchCustomer/{id}")
-    public ResponseEntity<Response<CustomerDTO>> searchCustomer(@PathVariable String id) {
-        Response<CustomerDTO> response = customerService.searchCustomer(id);
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<CustomerDTO>> searchCustomer(@PathVariable String id) {
+        ResponseUtil<CustomerDTO> responseUtil = customerService.searchCustomer(id);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @PutMapping("/updateCustomer")
-    public ResponseEntity<Response<String>> updateCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
-        Response<String> response = customerService.updateCustomer(customerDTO);
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<String>> updateCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
+        ResponseUtil<String> responseUtil = customerService.updateCustomer(customerDTO);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @DeleteMapping("/deleteCustomer/{id}")
-    public ResponseEntity<Response<String>> deleteCustomer(@PathVariable String id) {
-        Response<String> response = customerService.deleteCustomer(id);
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<String>> deleteCustomer(@PathVariable String id) {
+        ResponseUtil<String> responseUtil = customerService.deleteCustomer(id);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @GetMapping("/loadAllCustomers")
-    public ResponseEntity<Response<List<CustomerDTO>>> loadAllCustomers() {
-        Response<List<CustomerDTO>> response = customerService.loadAllCustomers();
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<List<CustomerDTO>>> loadAllCustomers() {
+        ResponseUtil<List<CustomerDTO>> responseUtil = customerService.loadAllCustomers();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 }

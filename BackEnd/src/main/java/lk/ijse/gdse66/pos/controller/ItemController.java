@@ -3,7 +3,7 @@ package lk.ijse.gdse66.pos.controller;
 import jakarta.validation.Valid;
 import lk.ijse.gdse66.pos.dto.ItemDTO;
 import lk.ijse.gdse66.pos.service.ItemService;
-import lk.ijse.gdse66.pos.util.Response;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,32 +24,32 @@ public class ItemController {
     private ItemService itemService;
 
     @PostMapping("/saveItem")
-    public ResponseEntity<Response<String>> saveItem(@Valid @RequestBody ItemDTO itemDTO) {
-        Response<String> response = itemService.saveItem(itemDTO);
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<String>> saveItem(@Valid @RequestBody ItemDTO itemDTO) {
+        ResponseUtil<String> responseUtil = itemService.saveItem(itemDTO);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @GetMapping("/searchItem/{code}")
-    public ResponseEntity<Response<ItemDTO>> searchItem(@PathVariable String code) {
-        Response<ItemDTO> response = itemService.searchItem(code);
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<ItemDTO>> searchItem(@PathVariable String code) {
+        ResponseUtil<ItemDTO> responseUtil = itemService.searchItem(code);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @PutMapping("/updateItem")
-    public ResponseEntity<Response<String>> updateItem(@Valid @RequestBody ItemDTO itemDTO) {
-        Response<String> response = itemService.updateItem(itemDTO);
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<String>> updateItem(@Valid @RequestBody ItemDTO itemDTO) {
+        ResponseUtil<String> responseUtil = itemService.updateItem(itemDTO);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @DeleteMapping("/deleteItem/{code}")
-    public ResponseEntity<Response<String>> deleteItem(@PathVariable String code) {
-        Response<String> response = itemService.deleteItem(code);
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<String>> deleteItem(@PathVariable String code) {
+        ResponseUtil<String> responseUtil = itemService.deleteItem(code);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @GetMapping("/loadAllItems")
-    public ResponseEntity<Response<List<ItemDTO>>> loadAllItems() {
-        Response<List<ItemDTO>> response = itemService.loadAllItems();
-        return new ResponseEntity<>(response, response.getStatus());
+    public ResponseEntity<ResponseUtil<List<ItemDTO>>> loadAllItems() {
+        ResponseUtil<List<ItemDTO>> responseUtil = itemService.loadAllItems();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 }

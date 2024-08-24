@@ -1,7 +1,7 @@
 package lk.ijse.gdse66.pos.service;
 
 import lk.ijse.gdse66.pos.dto.ItemDTO;
-import lk.ijse.gdse66.pos.util.Response;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
 
 import java.util.List;
 
@@ -12,13 +12,13 @@ import java.util.List;
  **/
 public interface ItemService {
 
-    Response<String> saveItem(ItemDTO itemDTO);
+    ResponseUtil<String> saveItem(ItemDTO itemDTO);
 
-    Response<ItemDTO> searchItem(String code);
+    ResponseUtil<ItemDTO> searchItem(String code);
 
-    Response<String> updateItem(ItemDTO itemDTO);
+    ResponseUtil<String> updateItem(ItemDTO itemDTO);
 
-    Response<String> deleteItem(String code);
+    ResponseUtil<String> deleteItem(String code);
 
-    Response<List<ItemDTO>> loadAllItems();
+    ResponseUtil<List<ItemDTO>> loadAllItems();
 }

@@ -1,7 +1,7 @@
 package lk.ijse.gdse66.pos.service;
 
 import lk.ijse.gdse66.pos.dto.CustomerDTO;
-import lk.ijse.gdse66.pos.util.Response;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
 
 import java.util.List;
 
@@ -12,13 +12,13 @@ import java.util.List;
  **/
 public interface CustomerService {
 
-    Response<String> saveCustomer(CustomerDTO customerDTO);
+    ResponseUtil<String> saveCustomer(CustomerDTO customerDTO);
 
-    Response<CustomerDTO> searchCustomer(String id);
+    ResponseUtil<CustomerDTO> searchCustomer(String id);
 
-    Response<String> updateCustomer(CustomerDTO customerDTO);
+    ResponseUtil<String> updateCustomer(CustomerDTO customerDTO);
 
-    Response<String> deleteCustomer(String id);
+    ResponseUtil<String> deleteCustomer(String id);
 
-    Response<List<CustomerDTO>> loadAllCustomers();
+    ResponseUtil<List<CustomerDTO>> loadAllCustomers();
 }

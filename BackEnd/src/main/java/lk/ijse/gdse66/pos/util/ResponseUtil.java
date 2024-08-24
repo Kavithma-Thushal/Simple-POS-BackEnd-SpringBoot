@@ -15,7 +15,7 @@ import org.springframework.http.HttpStatus;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Response<T> {
+public class ResponseUtil<T> {
     private String message;
     private HttpStatus status;
     private T data;

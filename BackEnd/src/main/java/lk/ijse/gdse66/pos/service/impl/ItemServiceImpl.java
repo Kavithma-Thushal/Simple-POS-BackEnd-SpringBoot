@@ -5,7 +5,7 @@ import lk.ijse.gdse66.pos.entity.Item;
 import lk.ijse.gdse66.pos.repo.ItemRepo;
 import lk.ijse.gdse66.pos.service.ItemService;
 import lk.ijse.gdse66.pos.util.EmailSender;
-import lk.ijse.gdse66.pos.util.Response;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +37,7 @@ public class ItemServiceImpl implements ItemService {
     private EmailSender emailSender;
 
     @Override
-    public Response<String> saveItem(ItemDTO itemDTO) {
+    public ResponseUtil<String> saveItem(ItemDTO itemDTO) {
 
         if (!itemRepo.existsById(itemDTO.getCode())) {
             itemRepo.save(modelMapper.map(itemDTO, Item.class));
@@ -45,17 +45,17 @@ public class ItemServiceImpl implements ItemService {
             String successResponse = "Item Saved Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
             emailSender.sendEmail("kavithmathushal451@gmail.com", "Item Management", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, null);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
             String errorResponse = "Item Already Exists...!";
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.BAD_REQUEST, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
     }
 
     @Override
-    public Response<ItemDTO> searchItem(String id) {
+    public ResponseUtil<ItemDTO> searchItem(String id) {
 
         Optional<Item> item = itemRepo.findById(id);
         if (item.isPresent()) {
@@ -63,34 +63,34 @@ public class ItemServiceImpl implements ItemService {
 
             String successResponse = "Item Searched Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, itemDTO);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, itemDTO);
 
         } else {
             String errorResponse = "Item Not Found...!";
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.NOT_FOUND, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
     }
 
     @Override
-    public Response<String> updateItem(ItemDTO itemDTO) {
+    public ResponseUtil<String> updateItem(ItemDTO itemDTO) {
 
         if (itemRepo.existsById(itemDTO.getCode())) {
             itemRepo.save(modelMapper.map(itemDTO, Item.class));
 
             String successResponse = "Item Updated Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, null);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
             String errorResponse = "Item Not Found...!";
             log.info("\u001B[31m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.BAD_REQUEST, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
     }
 
     @Override
-    public Response<String> deleteItem(String id) {
+    public ResponseUtil<String> deleteItem(String id) {
 
         Optional<Item> item = itemRepo.findById(id);
         if (item.isPresent()) {
@@ -98,17 +98,17 @@ public class ItemServiceImpl implements ItemService {
             itemRepo.deleteById(id);
             String successResponse = "Item Deleted Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, null);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
             String errorResponse = "Item Not Found...!";
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.NOT_FOUND, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
     }
 
     @Override
-    public Response<List<ItemDTO>> loadAllItems() {
+    public ResponseUtil<List<ItemDTO>> loadAllItems() {
 
         List<Item> itemList = itemRepo.findAll();
         List<ItemDTO> itemDTOList = itemList.stream()
@@ -118,12 +118,12 @@ public class ItemServiceImpl implements ItemService {
         if (!itemDTOList.isEmpty()) {
             String successResponse = "Items Loaded Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, itemDTOList);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, itemDTOList);
 
         } else {
             String errorResponse = "No Items Found in DB";
             log.info("\u001B[33m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.NO_CONTENT, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.NO_CONTENT, null);
         }
     }
 }

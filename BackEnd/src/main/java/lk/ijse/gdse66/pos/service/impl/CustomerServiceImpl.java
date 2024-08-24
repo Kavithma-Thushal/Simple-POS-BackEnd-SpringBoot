@@ -5,7 +5,7 @@ import lk.ijse.gdse66.pos.entity.Customer;
 import lk.ijse.gdse66.pos.repo.CustomerRepo;
 import lk.ijse.gdse66.pos.service.CustomerService;
 import lk.ijse.gdse66.pos.util.EmailSender;
-import lk.ijse.gdse66.pos.util.Response;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +37,7 @@ public class CustomerServiceImpl implements CustomerService {
     private EmailSender emailSender;
 
     @Override
-    public Response<String> saveCustomer(CustomerDTO customerDTO) {
+    public ResponseUtil<String> saveCustomer(CustomerDTO customerDTO) {
 
         if (!customerRepo.existsById(customerDTO.getId())) {
             customerRepo.save(modelMapper.map(customerDTO, Customer.class));
@@ -45,17 +45,17 @@ public class CustomerServiceImpl implements CustomerService {
             String successResponse = "Customer Saved Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
             emailSender.sendEmail("kavithmathushal451@gmail.com", "Customer Management", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, null);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
             String errorResponse = "Customer Already Exists...!";
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.BAD_REQUEST, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
     }
 
     @Override
-    public Response<CustomerDTO> searchCustomer(String id) {
+    public ResponseUtil<CustomerDTO> searchCustomer(String id) {
 
         Optional<Customer> customer = customerRepo.findById(id);
         if (customer.isPresent()) {
@@ -63,34 +63,34 @@ public class CustomerServiceImpl implements CustomerService {
 
             String successResponse = "Customer Searched Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, customerDTO);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, customerDTO);
 
         } else {
             String errorResponse = "Customer Not Found...!";
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.NOT_FOUND, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
     }
 
     @Override
-    public Response<String> updateCustomer(CustomerDTO customerDTO) {
+    public ResponseUtil<String> updateCustomer(CustomerDTO customerDTO) {
 
         if (customerRepo.existsById(customerDTO.getId())) {
             customerRepo.save(modelMapper.map(customerDTO, Customer.class));
 
             String successResponse = "Customer Updated Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, null);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
             String errorResponse = "Customer Not Found...!";
             log.info("\u001B[31m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.BAD_REQUEST, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
     }
 
     @Override
-    public Response<String> deleteCustomer(String id) {
+    public ResponseUtil<String> deleteCustomer(String id) {
 
         Optional<Customer> customer = customerRepo.findById(id);
         if (customer.isPresent()) {
@@ -98,17 +98,17 @@ public class CustomerServiceImpl implements CustomerService {
             customerRepo.deleteById(id);
             String successResponse = "Customer Deleted Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, null);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
             String errorResponse = "Customer Not Found...!";
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.NOT_FOUND, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
     }
 
     @Override
-    public Response<List<CustomerDTO>> loadAllCustomers() {
+    public ResponseUtil<List<CustomerDTO>> loadAllCustomers() {
 
         List<Customer> customerList = customerRepo.findAll();
         List<CustomerDTO> customerDTOList = customerList.stream()
@@ -118,12 +118,12 @@ public class CustomerServiceImpl implements CustomerService {
         if (!customerDTOList.isEmpty()) {
             String successResponse = "Customers Loaded Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            return new Response<>(successResponse, HttpStatus.OK, customerDTOList);
+            return new ResponseUtil<>(successResponse, HttpStatus.OK, customerDTOList);
 
         } else {
             String errorResponse = "No Customers Found in DB";
             log.info("\u001B[33m{}\u001B[0m", errorResponse);
-            return new Response<>(errorResponse, HttpStatus.NO_CONTENT, null);
+            return new ResponseUtil<>(errorResponse, HttpStatus.NO_CONTENT, null);
         }
     }
 }

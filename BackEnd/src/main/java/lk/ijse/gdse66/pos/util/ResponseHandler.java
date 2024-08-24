@@ -19,12 +19,12 @@ import java.util.stream.Collectors;
 public class ResponseHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Response<String>> handleValidationException(MethodArgumentNotValidException e) {
+    public ResponseEntity<ResponseUtil<String>> handleValidationException(MethodArgumentNotValidException e) {
         String errors = e.getBindingResult().getAllErrors().stream()
                 .map(error -> error.getDefaultMessage())
                 .collect(Collectors.joining(", "));
         log.error("\u001B[31m{}\u001B[0m", errors);
-        Response<String> response = new Response<>(errors, HttpStatus.BAD_REQUEST, null);
-        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        ResponseUtil<String> responseUtil = new ResponseUtil<>(errors, HttpStatus.BAD_REQUEST, null);
+        return new ResponseEntity<>(responseUtil, HttpStatus.BAD_REQUEST);
     }
 }
