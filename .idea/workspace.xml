@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="FrontEnd : Customer Controller Updated" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="FrontEnd : Customer Controller Updated 2">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,6 +157,8 @@
       <workItem from="1724436718590" duration="1465000" />
       <workItem from="1724460898291" duration="1027000" />
       <workItem from="1724462007058" duration="11698000" />
+      <workItem from="1724474998954" duration="23000" />
+      <workItem from="1724478490936" duration="1318000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -303,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724474987525</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="FrontEnd : Customer Controller Updated 2">
+      <option name="closed" value="true" />
+      <created>1724475011769</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724475011769</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +343,7 @@
     <MESSAGE value="Item Management Implemented Successfully...!" />
     <MESSAGE value="Refactored" />
     <MESSAGE value="FrontEnd : Customer Controller Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd : Customer Controller Updated" />
+    <MESSAGE value="FrontEnd : Customer Controller Updated 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd : Customer Controller Updated 2" />
   </component>
 </project>

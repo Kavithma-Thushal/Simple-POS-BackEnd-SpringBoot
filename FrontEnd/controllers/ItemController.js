@@ -3,6 +3,7 @@ let itemUrl = "http://localhost:8080/api/v1/item";
 loadAllItems();
 
 $("#btnSaveItem").click(function () {
+
     let code = $("#txtItemCode").val();
     let description = $("#txtItemDescription").val();
     let unitPrice = $("#txtItemUnitPrice").val();
@@ -22,31 +23,44 @@ $("#btnSaveItem").click(function () {
         data: JSON.stringify(itemObj),
         success: function (res) {
             loadAllItems();
-            alert("Item Saved Successfully...!");
-        }, error: function (error) {
-            alert("Item Saved Error...!");
+            alert(res.message);
+        },
+        error: function (error) {
+            loadAllItems();
+            alert(error.responseJSON.message);
         }
     });
 });
 
 $("#btnSearchItem").click(function () {
-    let searchCode = $("#txtItemCode").val();
+    let searchCode = $("#txtSearchItem").val();
+
     $.ajax({
         url: itemUrl + "/searchItem/" + searchCode,
         method: "GET",
         success: function (res) {
             $("#itemTable").empty();
-            let row = "<tr><td>" + res.code + "</td><td>" + res.description + "</td><td>" + res.unitPrice + "</td><td>" + res.qtyOnHand + "</td></tr>";
+            let row = `<tr>
+                    <td>${res.data.code}</td>
+                    <td>${res.data.description}</td>
+                    <td>${res.data.unitPrice}</td>
+                    <td>${res.data.qtyOnHand}</td>
+                </tr>`;
             $("#itemTable").append(row);
-            console.log("Item Searched Successfully...!");
+
+            itemTableListener();
+            clearItemInputs();
+            console.log(res.message);
         },
         error: function (error) {
-            console.log("Item Searched Error...!");
+            loadAllItems();
+            alert(error.responseJSON.message);
         }
     });
 });
 
 $("#btnUpdateItem").click(function () {
+
     let code = $("#txtItemCode").val();
     let description = $("#txtItemDescription").val();
     let unitPrice = $("#txtItemUnitPrice").val();
@@ -66,10 +80,11 @@ $("#btnUpdateItem").click(function () {
         data: JSON.stringify(itemObj),
         success: function (res) {
             loadAllItems();
-            alert("Item Updated Successfully...!");
+            alert(res.message);
         },
         error: function (error) {
-            alert("Item Updated Error...!");
+            loadAllItems();
+            alert(error.responseJSON.message);
         }
     });
 });
@@ -82,10 +97,11 @@ $("#btnDeleteItem").click(function () {
         method: "DELETE",
         success: function (res) {
             loadAllItems();
-            alert("Item Deleted Successfully...!");
+            alert(res.message);
         },
         error: function (error) {
-            alert("Item Deleted Error...!");
+            loadAllItems();
+            alert(error.responseJSON.message);
         }
     });
 });
@@ -95,12 +111,12 @@ $('#btnLoadAllItems').click(function () {
 });
 
 function loadAllItems() {
-    $('#itemTable').empty();
-
     $.ajax({
         url: itemUrl + "/loadAllItems",
         method: "GET",
         success: function (res) {
+            $('#itemTable').empty();
+
             res.data.forEach(item => {
                 let code = item.code;
                 let description = item.description;
@@ -140,6 +156,7 @@ function itemTableListener() {
 }
 
 function clearItemInputs() {
+    $("#txtSearchItem").val("");
     $("#txtItemCode").val("");
     $("#txtItemDescription").val("");
     $("#txtItemUnitPrice").val("");

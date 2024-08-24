@@ -51,7 +51,8 @@ $("#btnSearchCustomer").click(function () {
             customerTableListener();
             clearCustomerInputs();
             console.log(res.message);
-        }, error: function (error) {
+        },
+        error: function (error) {
             loadAllCustomers();
             alert(error.responseJSON.message);
         }
@@ -97,7 +98,8 @@ $("#btnDeleteCustomer").click(function () {
         success: function (res) {
             loadAllCustomers();
             alert(res.message);
-        }, error: function (error) {
+        },
+        error: function (error) {
             loadAllCustomers();
             alert(error.responseJSON.message);
         }
