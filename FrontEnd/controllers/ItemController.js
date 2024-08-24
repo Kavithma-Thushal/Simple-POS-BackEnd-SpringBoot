@@ -136,6 +136,7 @@ function loadAllItems() {
             });
 
             generateItemCode();
+            getItemCount();
             itemTableListener();
             clearItemInputs();
             console.log(res.message);
@@ -167,6 +168,20 @@ function newItmCode(lastItemCode) {
     let number = parseInt(parts[1]) + 1;
     let newItemCode = prefix + '-' + number.toString().padStart(3, '0');
     return newItemCode;
+}
+
+function getItemCount() {
+    $.ajax({
+        url: itemUrl + "/getItemCount",
+        method: "GET",
+        success: function (res) {
+            $("#itemCount").text(res.data);
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
 }
 
 function itemTableListener() {

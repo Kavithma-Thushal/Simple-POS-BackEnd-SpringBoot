@@ -58,4 +58,10 @@ public class ItemController {
         ResponseUtil<String> responseUtil = itemService.generateItemCode();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
+
+    @GetMapping("/getItemCount")
+    public ResponseEntity<ResponseUtil<Integer>> getItemCount() {
+        ResponseUtil<Integer> responseUtil = itemService.getItemCount();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
+    }
 }

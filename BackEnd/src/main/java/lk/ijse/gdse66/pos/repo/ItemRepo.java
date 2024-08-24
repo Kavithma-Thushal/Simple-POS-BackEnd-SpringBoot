@@ -11,5 +11,10 @@ import java.util.Optional;
  * @since : 7:35 AM - 6/18/2024
  **/
 public interface ItemRepo extends JpaRepository<Item, String> {
+
+    // Generate Item Code
     Optional<Item> findTopByOrderByCodeDesc();
+
+    // Get Item Count
+    Integer countBy();
 }

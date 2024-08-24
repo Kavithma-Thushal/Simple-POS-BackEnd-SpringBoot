@@ -134,4 +134,13 @@ public class ItemServiceImpl implements ItemService {
         log.info("\u001B[34m{}\u001B[0m", successResponse);
         return new ResponseUtil<>(successResponse, HttpStatus.OK, lastItemCode);
     }
+
+    @Override
+    public ResponseUtil<Integer> getItemCount() {
+        Integer itemCount = itemRepo.countBy();
+
+        String successResponse = "Item Count Retrieved Successfully...!";
+        log.info("\u001B[34m{}\u001B[0m", successResponse);
+        return new ResponseUtil<>(successResponse, HttpStatus.OK, itemCount);
+    }
 }

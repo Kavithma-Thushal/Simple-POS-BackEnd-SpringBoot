@@ -23,4 +23,6 @@ public interface ItemService {
     ResponseUtil<List<ItemDTO>> loadAllItems();
 
     ResponseUtil<String> generateItemCode();
+
+    ResponseUtil<Integer> getItemCount();
 }
