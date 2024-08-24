@@ -28,6 +28,6 @@ public class OrderDetails {
     @JoinColumn(name = "item_code")
     private Item item;
 
-    private int buyQty;
-    private double total;
+    private Integer buyQty;
+    private Double total;
 }
