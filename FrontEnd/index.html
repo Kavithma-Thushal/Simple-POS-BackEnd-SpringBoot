@@ -103,15 +103,19 @@
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtCustomerId" type="text" placeholder="Customer ID" disabled>
+                        <div id="txtCusIdError" class="text-danger mt-1"></div>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtCustomerName" type="text" placeholder="Customer Name">
+                        <div id="txtCusNameError" class="text-danger mt-1"></div>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtCustomerAddress" type="text" placeholder="Customer Address">
+                        <div id="txtCusAddressError" class="text-danger mt-1"></div>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtCustomerSalary" type="number" placeholder="Customer Salary">
+                        <div id="txtCusSalaryError" class="text-danger mt-1"></div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
                         <button class="btn btn-outline-primary mx-2 w-100" id="btnSaveCustomer" type="button">Save
@@ -281,16 +285,18 @@
 </main>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="Notifications.js"></script>
 <script>
     function showSection(sectionId) {
         $('#homeSection,#customerSection, #itemSection, #placeOrderSection').hide();
         $('#' + sectionId).show();
     }
 </script>
-<script src="controllers/CustomerController.js"></script>
-<script src="controllers/ItemController.js"></script>
-<script src="controllers/PlaceOrderController.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="Util/Notifications.js"></script>
+<script src="Controllers/HomeController.js"></script>
+<script src="Controllers/CustomerController.js"></script>
+<script src="Controllers/ItemController.js"></script>
+<script src="Controllers/PlaceOrderController.js"></script>
+<script src="Validations/CustomerValidation.js"></script>
 </body>
 </html>
