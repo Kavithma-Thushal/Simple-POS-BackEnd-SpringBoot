@@ -1,7 +1,6 @@
 package lk.ijse.gdse66.pos.controller;
 
 import jakarta.validation.Valid;
-import lk.ijse.gdse66.pos.dto.CustomerDTO;
 import lk.ijse.gdse66.pos.dto.ItemDTO;
 import lk.ijse.gdse66.pos.service.ItemService;
 import lk.ijse.gdse66.pos.util.Response;

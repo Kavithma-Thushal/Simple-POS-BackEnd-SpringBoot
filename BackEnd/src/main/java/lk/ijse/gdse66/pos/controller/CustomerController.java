@@ -31,8 +31,8 @@ public class CustomerController {
 
     @GetMapping("/searchCustomer/{id}")
     public ResponseEntity<Response<CustomerDTO>> searchCustomer(@PathVariable String id) {
-            Response<CustomerDTO> response = customerService.searchCustomer(id);
-            return new ResponseEntity<>(response, response.getStatus());
+        Response<CustomerDTO> response = customerService.searchCustomer(id);
+        return new ResponseEntity<>(response, response.getStatus());
     }
 
     @PutMapping("/updateCustomer")
