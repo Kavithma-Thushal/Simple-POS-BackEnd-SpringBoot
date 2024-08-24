@@ -23,7 +23,8 @@
                     <a class="nav-link" href="#itemSection" onclick="showSection('itemSection')">Item</a>
                 </li>
                 <li class="nav-item mx-3">
-                    <a class="nav-link" href="#placeOrderSection" onclick="showSection('placeOrderSection')">Place Order</a>
+                    <a class="nav-link" href="#placeOrderSection" onclick="showSection('placeOrderSection')">Place
+                        Order</a>
                 </li>
             </ul>
         </div>
@@ -33,7 +34,7 @@
 <!-- Main Content -->
 <main class="container-fluid mt-5">
 
-    <!-- home -->
+    <!-- Home -->
     <section id="homeSection" class="container-fluid my-5">
 
         <div class="d-flex justify-content-center">
@@ -77,14 +78,14 @@
         <div class="row mt-4">
 
             <!-- Customer Table -->
-            <div class="col-6 mt-5 p-0 m-3 ms-5  shadow-lg border-light rounded">
+            <div class="col-6 mt-5 p-0 m-3 ms-5 shadow-lg border-light rounded">
                 <table class="table table-bordered table-striped">
                     <thead class="table-dark">
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Salary</th>
+                        <th scope="col" class="w-25">ID</th>
+                        <th scope="col" class="w-25">Name</th>
+                        <th scope="col" class="w-25">Address</th>
+                        <th scope="col" class="w-25">Salary</th>
                     </tr>
                     </thead>
                     <tbody id="customerTable"></tbody>
@@ -94,6 +95,10 @@
             <!-- Customer Form -->
             <div class="col-5 mt-5 p-5 m-3 shadow-lg border-light rounded">
                 <form>
+                    <div class="mb-3 d-flex">
+                        <input class="form-control me-2" id="txtSearchCustomer" type="text" placeholder="Search Here">
+                        <button class="btn btn-outline-success" id="btnSearchCustomer" type="button">Search</button>
+                    </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtCustomerId" type="text" placeholder="Customer ID">
                     </div>
@@ -107,11 +112,10 @@
                         <input class="form-control" id="txtCustomerSalary" type="number" placeholder="Customer Salary">
                     </div>
                     <div class="d-flex justify-content-center mt-4">
-                        <button class="btn btn-primary mx-2" id="btnSaveCustomer" type="button">Save</button>
-                        <button class="btn btn-success mx-2" id="btnSearchCustomer" type="button">Search</button>
-                        <button class="btn btn-warning mx-2" id="btnUpdateCustomer" type="button">Update</button>
-                        <button class="btn btn-danger mx-2" id="btnDeleteCustomer" type="button">Delete</button>
-                        <button class="btn btn-secondary mx-2" id="btnLoadAllCustomers" type="button">Load All</button>
+                        <button class="btn btn-outline-primary mx-2 w-100" id="btnSaveCustomer" type="button">Save</button>
+                        <button class="btn btn-outline-warning mx-2 w-100" id="btnUpdateCustomer" type="button">Update</button>
+                        <button class="btn btn-outline-danger mx-2 w-100" id="btnDeleteCustomer" type="button">Delete</button>
+                        <button class="btn btn-outline-secondary mx-2 w-100" id="btnLoadAllCustomers" type="button">Load All</button>
                     </div>
                 </form>
             </div>
@@ -125,14 +129,14 @@
         <div class="row mt-4">
 
             <!-- Item Table -->
-            <div class="col-6 p-0 mt-5 m-3 ms-5 shadow-lg border-light rounded">
+            <div class="col-6 mt-5 p-0 m-3 ms-5 shadow-lg border-light rounded">
                 <table class="table table-bordered table-striped">
                     <thead class="table-dark">
                     <tr>
-                        <th scope="col">Code</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Unit Price</th>
-                        <th scope="col">Qty On Hand</th>
+                        <th scope="col" class="w-25">Code</th>
+                        <th scope="col" class="w-25">Description</th>
+                        <th scope="col" class="w-25">Unit Price</th>
+                        <th scope="col" class="w-25">Qty On Hand</th>
                     </tr>
                     </thead>
                     <tbody id="itemTable"></tbody>
@@ -146,7 +150,7 @@
                         <input class="form-control" id="txtItemCode" type="text" placeholder="Item Code">
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" id="txtItemDescription" type="text" placeholder="Description">
+                        <input class="form-control" id="txtItemDescription" type="text" placeholder="Item Description">
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtItemUnitPrice" type="number" placeholder="Unit Price">
@@ -155,11 +159,17 @@
                         <input class="form-control" id="txtItemQtyOnHand" type="number" placeholder="Qty On Hand">
                     </div>
                     <div class="d-flex justify-content-center mt-4">
-                        <button class="btn btn-primary mx-2" id="btnSaveItem" type="button">Save</button>
-                        <button class="btn btn-success mx-2" id="btnSearchItem" type="button">Search</button>
-                        <button class="btn btn-warning mx-2" id="btnUpdateItem" type="button">Update</button>
-                        <button class="btn btn-danger mx-2" id="btnDeleteItem" type="button">Delete</button>
-                        <button class="btn btn-secondary mx-2" id="btnLoadAllItems" type="button">Load All</button>
+                        <button class="btn btn-outline-primary mx-2 w-100" id="btnSaveItem" type="button">Save
+                        </button>
+                        <button class="btn btn-outline-success mx-2 w-100" id="btnSearchItem" type="button">Search
+                        </button>
+                        <button class="btn btn-outline-warning mx-2 w-100" id="btnUpdateItem" type="button">Update
+                        </button>
+                        <button class="btn btn-outline-danger mx-2 w-100" id="btnDeleteItem" type="button">Delete
+                        </button>
+                        <button class="btn btn-outline-secondary mx-2 w-100" id="btnLoadAllItems" type="button">Load
+                            All
+                        </button>
                     </div>
                 </form>
             </div>

@@ -63,7 +63,6 @@ public class CustomerServiceImpl implements CustomerService {
 
             String successResponse = "Customer Searched Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Customer Management", successResponse);
             return new Response<>(successResponse, HttpStatus.OK, customerDTO);
 
         } else {
@@ -81,7 +80,6 @@ public class CustomerServiceImpl implements CustomerService {
 
             String successResponse = "Customer Updated Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Customer Management", successResponse);
             return new Response<>(successResponse, HttpStatus.OK, null);
 
         } else {
@@ -100,7 +98,6 @@ public class CustomerServiceImpl implements CustomerService {
             customerRepo.deleteById(id);
             String successResponse = "Customer Deleted Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Customer Management", successResponse);
             return new Response<>(successResponse, HttpStatus.OK, null);
 
         } else {
@@ -121,11 +118,10 @@ public class CustomerServiceImpl implements CustomerService {
         if (!customerDTOList.isEmpty()) {
             String successResponse = "Customers Loaded Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Customer Management", successResponse);
             return new Response<>(successResponse, HttpStatus.OK, customerDTOList);
 
         } else {
-            String errorResponse = "Customers Not Found...!";
+            String errorResponse = "No Customers Found in DB";
             log.info("\u001B[33m{}\u001B[0m", errorResponse);
             return new Response<>(errorResponse, HttpStatus.NO_CONTENT, null);
         }

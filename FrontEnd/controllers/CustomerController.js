@@ -3,6 +3,7 @@ let customerUrl = "http://localhost:8080/api/v1/customer";
 loadAllCustomers();
 
 $("#btnSaveCustomer").click(function () {
+
     let id = $("#txtCustomerId").val();
     let name = $("#txtCustomerName").val();
     let address = $("#txtCustomerAddress").val();
@@ -22,31 +23,43 @@ $("#btnSaveCustomer").click(function () {
         data: JSON.stringify(customerObj),
         success: function (res) {
             loadAllCustomers();
-            alert("Customer Saved Successfully...!");
-        }, error: function (error) {
-            alert("Customer Saved Error...!");
+            alert(res.message);
+        },
+        error: function (error) {
+            loadAllCustomers();
+            alert(error.responseJSON.message);
         }
     });
 });
 
 $("#btnSearchCustomer").click(function () {
-    let searchId = $("#txtCustomerId").val();
+    let searchId = $("#txtSearchCustomer").val();
+
     $.ajax({
         url: customerUrl + "/searchCustomer/" + searchId,
         method: "GET",
         success: function (res) {
             $("#customerTable").empty();
-            let row = "<tr><td>" + res.id + "</td><td>" + res.name + "</td><td>" + res.address + "</td><td>" + res.salary + "</td></tr>";
+            let row = `<tr>
+                    <td>${res.data.id}</td>
+                    <td>${res.data.name}</td>
+                    <td>${res.data.address}</td>
+                    <td>${res.data.salary}</td>
+                </tr>`;
             $("#customerTable").append(row);
-            console.log("Customer Searched Successfully...!");
-        },
-        error: function (error) {
-            console.log("Customer Searched Error...!");
+
+            customerTableListener();
+            clearCustomerInputs();
+            console.log(res.message);
+        }, error: function (error) {
+            loadAllCustomers();
+            alert(error.responseJSON.message);
         }
     });
 });
 
 $("#btnUpdateCustomer").click(function () {
+
     let id = $("#txtCustomerId").val();
     let name = $("#txtCustomerName").val();
     let address = $("#txtCustomerAddress").val();
@@ -66,10 +79,11 @@ $("#btnUpdateCustomer").click(function () {
         data: JSON.stringify(customerObj),
         success: function (res) {
             loadAllCustomers();
-            alert("Customer Updated Successfully...!");
+            alert(res.message);
         },
         error: function (error) {
-            alert("Customer Updated Error...!");
+            loadAllCustomers();
+            alert(error.responseJSON.message);
         }
     });
 });
@@ -82,10 +96,10 @@ $("#btnDeleteCustomer").click(function () {
         method: "DELETE",
         success: function (res) {
             loadAllCustomers();
-            alert("Customer Deleted Successfully...!");
-        },
-        error: function (error) {
-            alert("Customer Deleted Error...!");
+            alert(res.message);
+        }, error: function (error) {
+            loadAllCustomers();
+            alert(error.responseJSON.message);
         }
     });
 });
@@ -95,31 +109,32 @@ $('#btnLoadAllCustomers').click(function () {
 });
 
 function loadAllCustomers() {
-    $('#customerTable').empty();
-
     $.ajax({
         url: customerUrl + "/loadAllCustomers",
         method: "GET",
         success: function (res) {
-            res.forEach(customer => {
+            $('#customerTable').empty();
+
+            res.data.forEach(customer => {
                 let id = customer.id;
                 let name = customer.name;
                 let address = customer.address;
                 let salary = customer.salary;
 
                 let row = `<tr>
-                    <td>${id}</td>
-                    <td>${name}</td>
-                    <td>${address}</td>
-                    <td>${salary}</td>
-                </tr>`;
+                            <td>${id}</td>
+                            <td>${name}</td>
+                            <td>${address}</td>
+                            <td>${salary}</td>
+                        </tr>`;
                 $("#customerTable").append(row);
             });
             customerTableListener();
             clearCustomerInputs();
-        },
-        error: function (error) {
-            console.log("Load All Customers Error...!");
+            console.log(res.message);
+
+        }, error: function (error) {
+            console.log(error.responseJSON.message);
         }
     });
 }
@@ -139,6 +154,7 @@ function customerTableListener() {
 }
 
 function clearCustomerInputs() {
+    $("#txtSearchCustomer").val("");
     $("#txtCustomerId").val("");
     $("#txtCustomerName").val("");
     $("#txtCustomerAddress").val("");

@@ -63,7 +63,6 @@ public class ItemServiceImpl implements ItemService {
 
             String successResponse = "Item Searched Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Item Management", successResponse);
             return new Response<>(successResponse, HttpStatus.OK, itemDTO);
 
         } else {
@@ -81,7 +80,6 @@ public class ItemServiceImpl implements ItemService {
 
             String successResponse = "Item Updated Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Item Management", successResponse);
             return new Response<>(successResponse, HttpStatus.OK, null);
 
         } else {
@@ -100,7 +98,6 @@ public class ItemServiceImpl implements ItemService {
             itemRepo.deleteById(id);
             String successResponse = "Item Deleted Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Item Management", successResponse);
             return new Response<>(successResponse, HttpStatus.OK, null);
 
         } else {
@@ -119,13 +116,12 @@ public class ItemServiceImpl implements ItemService {
                 .collect(Collectors.toList());
 
         if (!itemDTOList.isEmpty()) {
-            String successResponse = "Item Loaded Successfully...!";
+            String successResponse = "Items Loaded Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Item Management", successResponse);
             return new Response<>(successResponse, HttpStatus.OK, itemDTOList);
 
         } else {
-            String errorResponse = "Items Not Found...!";
+            String errorResponse = "No Items Found in DB";
             log.info("\u001B[33m{}\u001B[0m", errorResponse);
             return new Response<>(errorResponse, HttpStatus.NO_CONTENT, null);
         }

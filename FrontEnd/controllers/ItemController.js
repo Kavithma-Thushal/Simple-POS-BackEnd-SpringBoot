@@ -101,11 +101,11 @@ function loadAllItems() {
         url: itemUrl + "/loadAllItems",
         method: "GET",
         success: function (res) {
-            res.forEach(customer => {
-                let code = customer.code;
-                let description = customer.description;
-                let unitPrice = customer.unitPrice;
-                let qtyOnHand = customer.qtyOnHand;
+            res.data.forEach(item => {
+                let code = item.code;
+                let description = item.description;
+                let unitPrice = item.unitPrice;
+                let qtyOnHand = item.qtyOnHand;
 
                 let row = `<tr>
                     <td>${code}</td>
@@ -117,9 +117,10 @@ function loadAllItems() {
             });
             itemTableListener();
             clearItemInputs();
+            console.log(res.message);
         },
         error: function (error) {
-            console.log("Load All Customers Error...!");
+            console.log(error.responseJSON.message);
         }
     });
 }
