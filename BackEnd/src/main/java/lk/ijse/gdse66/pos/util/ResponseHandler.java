@@ -20,11 +20,19 @@ public class ResponseHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ResponseUtil<String>> handleValidationException(MethodArgumentNotValidException e) {
-        String errors = e.getBindingResult().getAllErrors().stream()
+        String errorResponse = e.getBindingResult().getAllErrors().stream()
                 .map(error -> error.getDefaultMessage())
                 .collect(Collectors.joining(", "));
-        log.error("\u001B[31m{}\u001B[0m", errors);
-        ResponseUtil<String> responseUtil = new ResponseUtil<>(errors, HttpStatus.BAD_REQUEST, null);
+        log.error("\u001B[31m{}\u001B[0m", errorResponse);
+        ResponseUtil<String> responseUtil = new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
+        return new ResponseEntity<>(responseUtil, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<ResponseUtil<String>> handleRuntimeException(RuntimeException e) {
+        String errorResponse = e.getMessage();
+        log.error("\u001B[31m{}\u001B[0m", errorResponse);
+        ResponseUtil<String> responseUtil = new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         return new ResponseEntity<>(responseUtil, HttpStatus.BAD_REQUEST);
     }
 }

@@ -1,47 +1,88 @@
 package lk.ijse.gdse66.pos.service.impl;
 
 import lk.ijse.gdse66.pos.dto.OrderDTO;
+import lk.ijse.gdse66.pos.dto.OrderDetailsDTO;
 import lk.ijse.gdse66.pos.entity.Item;
 import lk.ijse.gdse66.pos.entity.OrderDetails;
 import lk.ijse.gdse66.pos.entity.Orders;
+import lk.ijse.gdse66.pos.repo.CustomerRepo;
 import lk.ijse.gdse66.pos.repo.ItemRepo;
 import lk.ijse.gdse66.pos.repo.PlaceOrderRepo;
 import lk.ijse.gdse66.pos.service.PlaceOrderService;
+import lk.ijse.gdse66.pos.util.EmailSender;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author : Kavithma Thushal
  * @project : Spring-Boot-POS
  * @since : 9:44 PM - 8/10/2024
  **/
+@Slf4j
 @Service
 @Transactional
 public class PlaceOrderServiceImpl implements PlaceOrderService {
 
     @Autowired
-    private PlaceOrderRepo placeOrderRepo;
+    private CustomerRepo customerRepo;
 
     @Autowired
     private ItemRepo itemRepo;
 
     @Autowired
+    private PlaceOrderRepo placeOrderRepo;
+
+    @Autowired
     private ModelMapper modelMapper;
 
+    @Autowired
+    private EmailSender emailSender;
+
     @Override
-    public void placeOrder(OrderDTO orderDTO) {
-        Orders order = modelMapper.map(orderDTO, Orders.class);
+    public ResponseUtil<String> placeOrder(OrderDTO orderDTO) {
 
-        for (OrderDetails orderDetail : order.getOrderDetailsList()) {
-            orderDetail.setOrders(order);
+        Orders order = new Orders();
+        order.setOrderId(orderDTO.getOrderId());
+        order.setCustomer(customerRepo.findById(orderDTO.getCustomerId())
+                .orElseThrow(() -> new RuntimeException("Customer Not Found...!")));
 
-            // Update Item Qty
-            Item item = itemRepo.findById(orderDetail.getItem().getCode()).orElse(null);
-            item.setQtyOnHand(item.getQtyOnHand() - orderDetail.getBuyQty());
+        List<OrderDetails> orderDetailsList = new ArrayList<>();
+        for (OrderDetailsDTO orderDetailsDTO : orderDTO.getOrderDetailsList()) {
+            Item item = itemRepo.findById(orderDetailsDTO.getItemCode())
+                    .orElseThrow(() -> new RuntimeException("Item Not Found...!"));
+
+            if (item.getQtyOnHand() < orderDetailsDTO.getBuyQty()) {
+                throw new RuntimeException("Not Enough Stock For Item " + item.getDescription());
+            }
+
+            item.setQtyOnHand(item.getQtyOnHand() - orderDetailsDTO.getBuyQty());
             itemRepo.save(item);
+
+            double total = item.getUnitPrice() * orderDetailsDTO.getBuyQty();
+
+            OrderDetails orderDetails = new OrderDetails();
+            orderDetails.setOrders(order);
+            orderDetails.setItem(item);
+            orderDetails.setBuyQty(orderDetailsDTO.getBuyQty());
+            orderDetails.setTotal(total);
+            orderDetailsList.add(orderDetails);
         }
+
+        order.setOrderDetailsList(orderDetailsList);
         placeOrderRepo.save(order);
+
+        String successResponse = "Order Placed Successfully...!";
+        log.info("\u001B[34m{}\u001B[0m", successResponse);
+        emailSender.sendEmail("kavithmathushal451@gmail.com", "Order Management", successResponse);
+
+        return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
     }
 }

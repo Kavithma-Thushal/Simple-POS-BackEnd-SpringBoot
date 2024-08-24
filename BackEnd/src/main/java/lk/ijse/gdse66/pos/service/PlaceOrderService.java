@@ -1,6 +1,7 @@
 package lk.ijse.gdse66.pos.service;
 
 import lk.ijse.gdse66.pos.dto.OrderDTO;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
 
 /**
  * @author : Kavithma Thushal
@@ -9,5 +10,5 @@ import lk.ijse.gdse66.pos.dto.OrderDTO;
  **/
 public interface PlaceOrderService {
 
-    void placeOrder(OrderDTO orderDTO);
+    ResponseUtil<String> placeOrder(OrderDTO orderDTO);
 }

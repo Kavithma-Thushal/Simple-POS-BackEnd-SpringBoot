@@ -1,5 +1,6 @@
 package lk.ijse.gdse66.pos.dto;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,11 @@ import java.util.List;
 @Getter
 @Setter
 public class OrderDTO {
+
     private String orderId;
+
     private String customerId;
+
+    @Valid
     private List<OrderDetailsDTO> orderDetailsList;
 }

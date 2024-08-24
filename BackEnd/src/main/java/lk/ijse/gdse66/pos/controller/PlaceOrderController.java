@@ -1,8 +1,11 @@
 package lk.ijse.gdse66.pos.controller;
 
+import jakarta.validation.Valid;
 import lk.ijse.gdse66.pos.dto.OrderDTO;
 import lk.ijse.gdse66.pos.service.PlaceOrderService;
+import lk.ijse.gdse66.pos.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -19,7 +22,8 @@ public class PlaceOrderController {
     private PlaceOrderService placeOrderService;
 
     @PostMapping("/placeOrder")
-    public void placeOrder(@RequestBody OrderDTO orderDTO) {
-        placeOrderService.placeOrder(orderDTO);
+    public ResponseEntity<ResponseUtil<String>> placeOrder(@Valid @RequestBody OrderDTO orderDTO) {
+        ResponseUtil<String> responseUtil = placeOrderService.placeOrder(orderDTO);
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 }
