@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="SweetAlert2 Added" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Customer Validation Added">
+      <change afterPath="$PROJECT_DIR$/FrontEnd/Validations/ItemValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/dto/ItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/dto/ItemDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/Controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/Controllers/CustomerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/Controllers/HomeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/Controllers/HomeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/Controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/Controllers/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/Validations/CustomerValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/Validations/CustomerValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,42 +43,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.POSApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WebApplication.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/4th Sem Repo/Simple POS/Spring-Boot-POS/BackEnd/src/main/java/lk/ijse/gdse66/pos&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.POSApplication.executor": "Run",
+    "Spring Boot.WebApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IJSE/Workspace/4th Sem Repo/Simple POS/Spring-Boot-POS/FrontEnd/Validations",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IJSE\Workspace\4th Sem Repo\Simple POS\Spring-Boot-POS\FrontEnd\Validations" />
       <recent name="D:\IJSE\Workspace\4th Sem Repo\Simple POS\Spring-Boot-POS\BackEnd\src\main\java\lk\ijse\gdse66\pos" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\Spring-Boot-POS\ss" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IJSE\Workspace\4th Sem Repo\Simple POS\Spring-Boot-POS\FrontEnd\util" />
       <recent name="D:\IJSE\Workspace\4th Sem Repo\Simple POS\Spring-Boot-POS\FrontEnd" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\Spring-Boot-POS" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\My\CRUD\Spring-Boot-POS\FrontEnd" />
@@ -162,6 +174,8 @@
       <workItem from="1724488191640" duration="1135000" />
       <workItem from="1724489640293" duration="364000" />
       <workItem from="1724490008512" duration="3336000" />
+      <workItem from="1724493400667" duration="4267000" />
+      <workItem from="1724499597109" duration="4749000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -387,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724493364577</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Customer Validation Added">
+      <option name="closed" value="true" />
+      <created>1724497688169</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1724497688169</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,6 +440,7 @@
     <MESSAGE value="Item Count Added" />
     <MESSAGE value="Refactored" />
     <MESSAGE value="SweetAlert2 Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="SweetAlert2 Added" />
+    <MESSAGE value="Customer Validation Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Validation Added" />
   </component>
 </project>

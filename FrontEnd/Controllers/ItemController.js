@@ -9,6 +9,8 @@ let itemUrl = "http://localhost:8080/api/v1/item";
 $(document).ready(function () {
     generateItemCode();
     loadAllItems();
+    itemValidation();
+    resetItemBorders();
 });
 
 $("#btnSaveItem").click(function () {
@@ -144,6 +146,8 @@ function loadAllItems() {
             generateItemCode();
             getItemCount();
             itemTableListener();
+            itemValidation();
+            resetItemBorders();
             clearItemInputs();
             console.log(res.message);
         },
@@ -174,20 +178,6 @@ function newItmCode(lastItemCode) {
     let number = parseInt(parts[1]) + 1;
     let newItemCode = prefix + '-' + number.toString().padStart(3, '0');
     return newItemCode;
-}
-
-function getItemCount() {
-    $.ajax({
-        url: itemUrl + "/getItemCount",
-        method: "GET",
-        success: function (res) {
-            $("#itemCount").text(res.data);
-            console.log(res.message);
-        },
-        error: function (error) {
-            console.log(error.responseJSON.message);
-        }
-    });
 }
 
 function itemTableListener() {

@@ -11,7 +11,7 @@ function successNotification(message) {
         background: '#d4edda',
         color: '#155724',
         confirmButtonColor: '#28a745',
-        timer: 10000,
+        timer: 3000,
         timerProgressBar: true,
         position: 'top-end',
         toast: true
@@ -25,7 +25,7 @@ function errorNotification(message) {
         background: '#f8d7da',
         color: '#721c24',
         confirmButtonColor: '#dc3545',
-        timer: 10000,
+        timer: 3000,
         timerProgressBar: true,
         position: 'top-end',
         toast: true

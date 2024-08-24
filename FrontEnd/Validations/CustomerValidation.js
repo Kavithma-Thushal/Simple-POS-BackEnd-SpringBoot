@@ -32,7 +32,7 @@ function customerValidation() {
         }
     });
 
-// Customer Address validation
+    // Customer Address validation
     $("#txtCustomerAddress").on('input', function () {
         let value = $(this).val();
         let pattern = /^[A-Za-z\s'-]{4,}$/;
@@ -45,7 +45,7 @@ function customerValidation() {
         }
     });
 
-// Customer Salary validation
+    // Customer Salary validation
     $("#txtCustomerSalary").on('input', function () {
         let value = $(this).val();
         let number = parseFloat(value);

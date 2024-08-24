@@ -29,7 +29,7 @@ public class ItemDTO {
     @Min(value = 0, message = "Unit Price must be a positive value or zero")
     private Double unitPrice;
 
-    @NotNull(message = "Quantity On Hand can't be null")
-    @Min(value = 0, message = "Quantity On Hand must be a positive value or zero")
+    @NotNull(message = "Qty On Hand can't be null")
+    @Min(value = 0, message = "Qty On Hand must be a positive value or zero")
     private Integer qtyOnHand;
 }

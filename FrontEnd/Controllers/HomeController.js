@@ -17,3 +17,17 @@ function getCustomerCount() {
         }
     });
 }
+
+function getItemCount() {
+    $.ajax({
+        url: itemUrl + "/getItemCount",
+        method: "GET",
+        success: function (res) {
+            $("#itemCount").text(res.data);
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}

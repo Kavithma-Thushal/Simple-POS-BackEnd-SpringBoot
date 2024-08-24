@@ -165,15 +165,19 @@
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtItemCode" type="text" placeholder="Item Code" disabled>
+                        <div id="txtItemCodeError" class="text-danger mt-1"></div>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtItemDescription" type="text" placeholder="Item Description">
+                        <div id="txtItemDescriptionError" class="text-danger mt-1"></div>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtItemUnitPrice" type="number" placeholder="Unit Price">
+                        <div id="txtItemUnitPriceError" class="text-danger mt-1"></div>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtItemQtyOnHand" type="number" placeholder="Qty On Hand">
+                        <div id="txtItemQtyOnHandError" class="text-danger mt-1"></div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
                         <button class="btn btn-outline-primary mx-2 w-100" id="btnSaveItem" type="button">Save
@@ -298,5 +302,6 @@
 <script src="Controllers/ItemController.js"></script>
 <script src="Controllers/PlaceOrderController.js"></script>
 <script src="Validations/CustomerValidation.js"></script>
+<script src="Validations/ItemValidation.js"></script>
 </body>
 </html>

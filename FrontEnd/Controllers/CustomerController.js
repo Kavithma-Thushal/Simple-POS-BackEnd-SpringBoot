@@ -9,6 +9,8 @@ let customerUrl = "http://localhost:8080/api/v1/customer";
 $(document).ready(function () {
     generateCustomerId();
     loadAllCustomers();
+    customerValidation();
+    resetCustomerBorders();
 });
 
 $("#btnSaveCustomer").click(function () {
