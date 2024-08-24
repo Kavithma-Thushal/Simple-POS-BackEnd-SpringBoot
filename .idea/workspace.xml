@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Refactored">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/controller/ItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/util/ResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/util/ResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/ItemController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="FrontEnd : Customer Controller Updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,7 +149,7 @@
       <workItem from="1724435462629" duration="1231000" />
       <workItem from="1724436718590" duration="1465000" />
       <workItem from="1724460898291" duration="1027000" />
-      <workItem from="1724462007058" duration="11487000" />
+      <workItem from="1724462007058" duration="11698000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -306,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724461918305</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="FrontEnd : Customer Controller Updated">
+      <option name="closed" value="true" />
+      <created>1724474987525</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724474987525</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +325,7 @@
     <MESSAGE value="Item DTO Refactored" />
     <MESSAGE value="Item Management Implemented Successfully...!" />
     <MESSAGE value="Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored" />
+    <MESSAGE value="FrontEnd : Customer Controller Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd : Customer Controller Updated" />
   </component>
 </project>
