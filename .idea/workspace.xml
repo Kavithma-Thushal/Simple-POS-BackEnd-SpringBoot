@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Place Order Refactored">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Model Mapper Removed From Place Order">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,6 +189,8 @@
       <workItem from="1724577480219" duration="592000" />
       <workItem from="1724578077627" duration="776000" />
       <workItem from="1724578862975" duration="717000" />
+      <workItem from="1724579588141" duration="211000" />
+      <workItem from="1724580236151" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -541,7 +544,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724579570787</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Model Mapper Removed From Place Order">
+      <option name="closed" value="true" />
+      <created>1724579794456</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1724579794456</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +560,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Customers CRUD Finished...!" />
     <MESSAGE value="Send Emails" />
     <MESSAGE value="Item DTO Refactored" />
     <MESSAGE value="Item Management Implemented Successfully...!" />
@@ -574,6 +584,7 @@
     <MESSAGE value="Add Suitable Comments" />
     <MESSAGE value="Logger Updated" />
     <MESSAGE value="Place Order Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Place Order Refactored" />
+    <MESSAGE value="Model Mapper Removed From Place Order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model Mapper Removed From Place Order" />
   </component>
 </project>

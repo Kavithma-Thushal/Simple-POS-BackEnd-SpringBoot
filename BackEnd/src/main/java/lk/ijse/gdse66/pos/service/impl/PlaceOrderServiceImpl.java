@@ -52,7 +52,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
             return new ResponseUtil<>(errorResponse, HttpStatus.CONFLICT, null);
         }
 
-        // Set Customer
+        // Set OrderId & Customer
         Orders order = new Orders();
         order.setOrderId(orderDTO.getOrderId());
         order.setCustomer(customerRepo.findById(orderDTO.getCustomerId())
