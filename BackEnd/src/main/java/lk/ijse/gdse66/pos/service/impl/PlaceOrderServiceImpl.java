@@ -12,6 +12,7 @@ import lk.ijse.gdse66.pos.service.PlaceOrderService;
 import lk.ijse.gdse66.pos.util.EmailSender;
 import lk.ijse.gdse66.pos.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -40,6 +41,9 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     private PlaceOrderRepo placeOrderRepo;
 
     @Autowired
+    private ModelMapper modelMapper;
+
+    @Autowired
     private EmailSender emailSender;
 
     @Override
@@ -52,9 +56,8 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
             return new ResponseUtil<>(errorResponse, HttpStatus.CONFLICT, null);
         }
 
-        // Set OrderId & Customer
-        Orders order = new Orders();
-        order.setOrderId(orderDTO.getOrderId());
+        // Set Customer
+        Orders order = modelMapper.map(orderDTO, Orders.class);
         order.setCustomer(customerRepo.findById(orderDTO.getCustomerId())
                 .orElseThrow(() -> new RuntimeException("Customer Not Found: " + orderDTO.getCustomerId())));
 
@@ -68,19 +71,18 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
                 throw new RuntimeException("Not Enough Stock For Item: " + item.getDescription());
             }
 
-            double total = item.getUnitPrice() * orderDetailsDTO.getBuyQty();
-
-            OrderDetails orderDetails = new OrderDetails();
+            OrderDetails orderDetails = modelMapper.map(orderDetailsDTO, OrderDetails.class);
             orderDetails.setOrders(order);
             orderDetails.setItem(item);
-            orderDetails.setBuyQty(orderDetailsDTO.getBuyQty());
-            orderDetails.setTotal(total);
+            orderDetails.setTotal(item.getUnitPrice() * orderDetailsDTO.getBuyQty());
             orderDetailsList.add(orderDetails);
 
+            // Update Item Quantity
             item.setQtyOnHand(item.getQtyOnHand() - orderDetailsDTO.getBuyQty());
             itemRepo.save(item);
         }
 
+        // Place Order
         order.setOrderDetailsList(orderDetailsList);
         placeOrderRepo.save(order);
 
