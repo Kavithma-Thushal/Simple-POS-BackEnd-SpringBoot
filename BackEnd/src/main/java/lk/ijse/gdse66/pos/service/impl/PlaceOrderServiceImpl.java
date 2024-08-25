@@ -60,16 +60,16 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
         Orders order = new Orders();
         order.setOrderId(orderDTO.getOrderId());
         order.setCustomer(customerRepo.findById(orderDTO.getCustomerId())
-                .orElseThrow(() -> new RuntimeException("Customer Not Found...!")));
+                .orElseThrow(() -> new RuntimeException("Customer Not Found: " + orderDTO.getCustomerId())));
 
         // Set Item
         List<OrderDetails> orderDetailsList = new ArrayList<>();
         for (OrderDetailsDTO orderDetailsDTO : orderDTO.getOrderDetailsList()) {
             Item item = itemRepo.findById(orderDetailsDTO.getItemCode())
-                    .orElseThrow(() -> new RuntimeException("Item Not Found...!"));
+                    .orElseThrow(() -> new RuntimeException("Item Not Found: " + orderDetailsDTO.getItemCode()));
 
             if (item.getQtyOnHand() < orderDetailsDTO.getBuyQty()) {
-                throw new RuntimeException("Not Enough Stock For Item " + item.getDescription());
+                throw new RuntimeException("Not Enough Stock For Item: " + item.getDescription());
             }
 
             double total = item.getUnitPrice() * orderDetailsDTO.getBuyQty();
