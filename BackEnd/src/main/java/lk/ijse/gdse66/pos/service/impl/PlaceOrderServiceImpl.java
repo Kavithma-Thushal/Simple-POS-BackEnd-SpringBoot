@@ -63,9 +63,6 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
                 throw new RuntimeException("Not Enough Stock For Item " + item.getDescription());
             }
 
-            item.setQtyOnHand(item.getQtyOnHand() - orderDetailsDTO.getBuyQty());
-            itemRepo.save(item);
-
             double total = item.getUnitPrice() * orderDetailsDTO.getBuyQty();
 
             OrderDetails orderDetails = new OrderDetails();
@@ -74,6 +71,9 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
             orderDetails.setBuyQty(orderDetailsDTO.getBuyQty());
             orderDetails.setTotal(total);
             orderDetailsList.add(orderDetails);
+
+            item.setQtyOnHand(item.getQtyOnHand() - orderDetailsDTO.getBuyQty());
+            itemRepo.save(item);
         }
 
         order.setOrderDetailsList(orderDetailsList);
@@ -82,7 +82,6 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
         String successResponse = "Order Placed Successfully...!";
         log.info("\u001B[34m{}\u001B[0m", successResponse);
         emailSender.sendEmail("kavithmathushal451@gmail.com", "Order Management", successResponse);
-
         return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
     }
 }
