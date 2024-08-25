@@ -52,7 +52,7 @@ public class CustomerServiceImpl implements CustomerService {
             return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
-            String errorResponse = "Customer Already Exists...!";
+            String errorResponse = "Duplicate Customer Id: " + customerDTO.getId();
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
@@ -70,7 +70,7 @@ public class CustomerServiceImpl implements CustomerService {
             return new ResponseUtil<>(successResponse, HttpStatus.OK, customerDTO);
 
         } else {
-            String errorResponse = "Customer Not Found...!";
+            String errorResponse = "Customer Not Found: "+id;
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
@@ -87,7 +87,7 @@ public class CustomerServiceImpl implements CustomerService {
             return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
-            String errorResponse = "Customer Not Found...!";
+            String errorResponse = "Customer Not Found: "+customerDTO.getId();
             log.info("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
@@ -105,7 +105,7 @@ public class CustomerServiceImpl implements CustomerService {
             return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
-            String errorResponse = "Customer Not Found...!";
+            String errorResponse = "Customer Not Found: "+id;
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }

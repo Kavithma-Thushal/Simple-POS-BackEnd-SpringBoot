@@ -52,16 +52,16 @@ public class ItemServiceImpl implements ItemService {
             return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
-            String errorResponse = "Item Already Exists...!";
+            String errorResponse = "Duplicate Item Code: " + itemDTO.getCode();
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
     }
 
     @Override
-    public ResponseUtil<ItemDTO> searchItem(String id) {
+    public ResponseUtil<ItemDTO> searchItem(String code) {
 
-        Optional<Item> item = itemRepo.findById(id);
+        Optional<Item> item = itemRepo.findById(code);
         if (item.isPresent()) {
             ItemDTO itemDTO = modelMapper.map(item.get(), ItemDTO.class);
 
@@ -70,7 +70,7 @@ public class ItemServiceImpl implements ItemService {
             return new ResponseUtil<>(successResponse, HttpStatus.OK, itemDTO);
 
         } else {
-            String errorResponse = "Item Not Found...!";
+            String errorResponse = "Item Not Found: " + code;
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
@@ -87,25 +87,25 @@ public class ItemServiceImpl implements ItemService {
             return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
-            String errorResponse = "Item Not Found...!";
+            String errorResponse = "Item Not Found: " + itemDTO.getCode();
             log.info("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.BAD_REQUEST, null);
         }
     }
 
     @Override
-    public ResponseUtil<String> deleteItem(String id) {
+    public ResponseUtil<String> deleteItem(String code) {
 
-        Optional<Item> item = itemRepo.findById(id);
+        Optional<Item> item = itemRepo.findById(code);
         if (item.isPresent()) {
 
-            itemRepo.deleteById(id);
+            itemRepo.deleteById(code);
             String successResponse = "Item Deleted Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
             return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
-            String errorResponse = "Item Not Found...!";
+            String errorResponse = "Item Not Found: " + code;
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.NOT_FOUND, null);
         }
