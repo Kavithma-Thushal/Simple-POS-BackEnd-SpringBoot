@@ -1026,7 +1026,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="298" parent="1" name="demo">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-25.03:49:08</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-25.08:00:13</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="299" parent="1" name="mysql.infoschema">
@@ -1118,33 +1118,33 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="319" parent="305" name="buy_qty">
-      <DasType>int|0s</DasType>
+    <column id="319" parent="305" name="item_code">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="320" parent="305" name="total">
-      <DasType>double|0s</DasType>
+    <column id="320" parent="305" name="order_id">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="321" parent="305" name="order_id">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="321" parent="305" name="buy_qty">
+      <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="322" parent="305" name="item_code">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="322" parent="305" name="total">
+      <DasType>double|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="323" parent="305" name="FKjyu2qbqt8gnvno9oe9j2s2ldk">
-      <ColNames>order_id</ColNames>
-      <RefColNames>order_id</RefColNames>
-      <RefTableName>orders</RefTableName>
-    </foreign-key>
-    <foreign-key id="324" parent="305" name="FKiu11dn39w4ejb2b9swl1ir1bw">
+    <foreign-key id="323" parent="305" name="FKiu11dn39w4ejb2b9swl1ir1bw">
       <ColNames>item_code</ColNames>
       <RefColNames>code</RefColNames>
       <RefTableName>item</RefTableName>
+    </foreign-key>
+    <foreign-key id="324" parent="305" name="FKjyu2qbqt8gnvno9oe9j2s2ldk">
+      <ColNames>order_id</ColNames>
+      <RefColNames>order_id</RefColNames>
+      <RefTableName>orders</RefTableName>
     </foreign-key>
     <index id="325" parent="305" name="PRIMARY">
       <ColNames>item_code
@@ -1168,6 +1168,7 @@ order_id</ColNames>
     </column>
     <column id="329" parent="306" name="customer_id">
       <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <foreign-key id="330" parent="306" name="FK624gtjin3po807j3vix093tlf">

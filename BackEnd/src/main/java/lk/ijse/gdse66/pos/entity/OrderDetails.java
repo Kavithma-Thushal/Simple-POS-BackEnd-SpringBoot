@@ -16,16 +16,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@IdClass(OrderDetailsId.class)
 public class OrderDetails {
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "order_id", nullable = false)
     private Orders orders;
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "item_code")
+    @JoinColumn(name = "item_code", nullable = false)
     private Item item;
 
     private Integer buyQty;
