@@ -4,6 +4,11 @@
  * @since : 7:05 AM - 6/18/2024
  **/
 
+$(document).ready(function () {
+    getCustomerCount();
+    getItemCount();
+});
+
 function getCustomerCount() {
     $.ajax({
         url: customerUrl + "/getCustomerCount",

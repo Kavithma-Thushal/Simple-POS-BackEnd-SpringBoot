@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Place Order Implemented Successfully...!">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Place Order FrontEnd Implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +191,8 @@
       <workItem from="1724579588141" duration="211000" />
       <workItem from="1724580236151" duration="26000" />
       <workItem from="1724585797679" duration="307000" />
-      <workItem from="1724599519189" duration="2299000" />
+      <workItem from="1724599519189" duration="2381000" />
+      <workItem from="1724601940745" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -564,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724594397477</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Place Order FrontEnd Implemented">
+      <option name="closed" value="true" />
+      <created>1724601875864</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1724601875864</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +578,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Item DTO Refactored" />
     <MESSAGE value="Item Management Implemented Successfully...!" />
     <MESSAGE value="FrontEnd : Customer Controller Updated" />
     <MESSAGE value="FrontEnd : Customer Controller Updated 2" />
@@ -597,6 +602,7 @@
     <MESSAGE value="Place Order Refactored" />
     <MESSAGE value="Model Mapper Removed From Place Order" />
     <MESSAGE value="Place Order Implemented Successfully...!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Place Order Implemented Successfully...!" />
+    <MESSAGE value="Place Order FrontEnd Implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Place Order FrontEnd Implemented" />
   </component>
 </project>
