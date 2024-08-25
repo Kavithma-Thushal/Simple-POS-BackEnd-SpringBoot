@@ -49,6 +49,13 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     @Override
     public ResponseUtil<String> placeOrder(OrderDTO orderDTO) {
 
+        // Check if the OrderId already exists
+        if (placeOrderRepo.existsById(orderDTO.getOrderId())) {
+            String errorResponse = "Duplicate Order Id: " + orderDTO.getOrderId();
+            log.error("\u001B[31m{}\u001B[0m", errorResponse);
+            return new ResponseUtil<>(errorResponse, HttpStatus.CONFLICT, null);
+        }
+
         Orders order = new Orders();
         order.setOrderId(orderDTO.getOrderId());
         order.setCustomer(customerRepo.findById(orderDTO.getCustomerId())
