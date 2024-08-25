@@ -2,7 +2,7 @@
 
 The Spring Boot POS Application is a powerful and user-friendly system designed to handle various point-of-sale
 functionalities. Built with the Spring Boot framework, this application provides a robust solution for manage Customer
-Details, Item Details and Place Orders efficiently.
+Details, Item Details and Place Orders efficiently
 
 ## 🛠️ Tech Stack
 
