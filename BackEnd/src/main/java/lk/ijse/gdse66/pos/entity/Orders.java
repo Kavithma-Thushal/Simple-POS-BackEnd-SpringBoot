@@ -1,8 +1,6 @@
 package lk.ijse.gdse66.pos.entity;
 
 import jakarta.persistence.*;
-import lk.ijse.gdse66.pos.entity.Customer;
-import lk.ijse.gdse66.pos.entity.OrderDetails;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
