@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Labels Added to UI" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Add To Cart Added to UI">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,14 +200,8 @@
       <workItem from="1724602106470" duration="294000" />
       <workItem from="1724602512732" duration="472000" />
       <workItem from="1724603121656" duration="2591000" />
-    </task>
-    <task id="LOCAL-00003" summary="ss location changed">
-      <option name="closed" value="true" />
-      <created>1723398163282</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1723398163282</updated>
+      <workItem from="1724605747612" duration="837000" />
+      <workItem from="1724606617143" duration="1215000" />
     </task>
     <task id="LOCAL-00004" summary="README.md Updated">
       <option name="closed" value="true" />
@@ -587,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724605737333</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Add To Cart Added to UI">
+      <option name="closed" value="true" />
+      <created>1724606583628</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1724606583628</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +603,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ResponseUtil Updated" />
     <MESSAGE value="generate customer id successfully" />
     <MESSAGE value="generate item code successfully" />
     <MESSAGE value="Customer Count Added" />
@@ -620,6 +627,7 @@
     <MESSAGE value="Email Disabled" />
     <MESSAGE value="Place Order Modified" />
     <MESSAGE value="Labels Added to UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Labels Added to UI" />
+    <MESSAGE value="Add To Cart Added to UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add To Cart Added to UI" />
   </component>
 </project>
