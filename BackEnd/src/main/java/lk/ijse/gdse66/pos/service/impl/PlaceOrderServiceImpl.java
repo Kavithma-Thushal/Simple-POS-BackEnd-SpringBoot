@@ -12,7 +12,6 @@ import lk.ijse.gdse66.pos.service.PlaceOrderService;
 import lk.ijse.gdse66.pos.util.EmailSender;
 import lk.ijse.gdse66.pos.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -39,9 +38,6 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
     @Autowired
     private PlaceOrderRepo placeOrderRepo;
-
-    @Autowired
-    private ModelMapper modelMapper;
 
     @Autowired
     private EmailSender emailSender;

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Logger Updated">
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Place Order Refactored">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +187,7 @@
       <workItem from="1724576766257" duration="691000" />
       <workItem from="1724577480219" duration="592000" />
       <workItem from="1724578077627" duration="776000" />
-      <workItem from="1724578862975" duration="615000" />
+      <workItem from="1724578862975" duration="717000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -535,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724578853769</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Place Order Refactored">
+      <option name="closed" value="true" />
+      <created>1724579570787</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1724579570787</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,12 +568,12 @@
     <MESSAGE value="DB Refactored" />
     <MESSAGE value="Order Placed Successfully...!" />
     <MESSAGE value="Refactored" />
-    <MESSAGE value="Place Order Refactored" />
     <MESSAGE value="Composite Key Added" />
     <MESSAGE value="Order Id Duplicate Error Managed" />
     <MESSAGE value="Email Sender added to try catch" />
     <MESSAGE value="Add Suitable Comments" />
     <MESSAGE value="Logger Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logger Updated" />
+    <MESSAGE value="Place Order Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Place Order Refactored" />
   </component>
 </project>
