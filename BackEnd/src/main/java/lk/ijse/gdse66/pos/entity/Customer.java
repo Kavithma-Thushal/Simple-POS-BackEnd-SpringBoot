@@ -1,15 +1,11 @@
 package lk.ijse.gdse66.pos.entity;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.List;
 
 /**
  * @author : Kavithma Thushal
@@ -22,13 +18,9 @@ import java.util.List;
 @Setter
 @Entity
 public class Customer {
-
     @Id
     private String id;
     private String name;
     private String address;
     private Double salary;
-
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    private List<Orders> ordersList;
 }
