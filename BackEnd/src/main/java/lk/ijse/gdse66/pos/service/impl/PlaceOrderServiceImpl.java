@@ -56,11 +56,13 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
             return new ResponseUtil<>(errorResponse, HttpStatus.CONFLICT, null);
         }
 
+        // Set Customer
         Orders order = new Orders();
         order.setOrderId(orderDTO.getOrderId());
         order.setCustomer(customerRepo.findById(orderDTO.getCustomerId())
                 .orElseThrow(() -> new RuntimeException("Customer Not Found...!")));
 
+        // Set Item
         List<OrderDetails> orderDetailsList = new ArrayList<>();
         for (OrderDetailsDTO orderDetailsDTO : orderDTO.getOrderDetailsList()) {
             Item item = itemRepo.findById(orderDetailsDTO.getItemCode())
