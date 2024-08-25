@@ -74,7 +74,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
             OrderDetails orderDetails = modelMapper.map(orderDetailsDTO, OrderDetails.class);
             orderDetails.setOrders(order);
             orderDetails.setItem(item);
-            orderDetails.setTotal(item.getUnitPrice() * orderDetailsDTO.getBuyQty());
+//            orderDetails.setTotal(item.getUnitPrice() * orderDetailsDTO.getBuyQty());
             orderDetailsList.add(orderDetails);
 
             // Update Item Quantity

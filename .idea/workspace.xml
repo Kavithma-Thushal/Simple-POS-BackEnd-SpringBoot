@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Home Controller Refactored" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Email Disabled">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,6 +198,7 @@
       <workItem from="1724599519189" duration="2381000" />
       <workItem from="1724601940745" duration="15000" />
       <workItem from="1724602106470" duration="294000" />
+      <workItem from="1724602512732" duration="328000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -577,7 +584,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724602396489</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Email Disabled">
+      <option name="closed" value="true" />
+      <created>1724602669152</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1724602669152</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +600,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="FrontEnd : Customer Controller Updated" />
     <MESSAGE value="FrontEnd : Customer Controller Updated 2" />
     <MESSAGE value="Item Managed Successfully" />
     <MESSAGE value="ResponseUtil Updated" />
@@ -610,6 +624,7 @@
     <MESSAGE value="Place Order Implemented Successfully...!" />
     <MESSAGE value="Place Order FrontEnd Implemented" />
     <MESSAGE value="Home Controller Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Controller Refactored" />
+    <MESSAGE value="Email Disabled" />
+    <option name="LAST_COMMIT_MESSAGE" value="Email Disabled" />
   </component>
 </project>
