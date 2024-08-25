@@ -44,7 +44,11 @@ public class CustomerServiceImpl implements CustomerService {
 
             String successResponse = "Customer Saved Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Customer Management", successResponse);
+            try {
+                emailSender.sendEmail("kavithmathushal451@gmail.com", "Customer Management", successResponse);
+            } catch (Exception e) {
+                log.error("\u001B[31m{}\u001B[0m", "Failed to Send Email...!");
+            }
             return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {
