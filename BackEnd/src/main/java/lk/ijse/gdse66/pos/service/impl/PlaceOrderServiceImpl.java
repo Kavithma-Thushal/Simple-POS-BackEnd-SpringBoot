@@ -88,11 +88,11 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
         String successResponse = "Order Placed Successfully...!";
         log.info("\u001B[34m{}\u001B[0m", successResponse);
-        try {
-            emailSender.sendEmail("kavithmathushal451@gmail.com", "Order Management", successResponse);
-        } catch (Exception e) {
-            log.error("\u001B[31m{}\u001B[0m", "Failed to Send Email...!");
-        }
+//        try {
+//            emailSender.sendEmail("kavithmathushal451@gmail.com", "Order Management", successResponse);
+//        } catch (Exception e) {
+//            log.error("\u001B[31m{}\u001B[0m", "Failed to Send Email...!");
+//        }
         return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
     }
 }

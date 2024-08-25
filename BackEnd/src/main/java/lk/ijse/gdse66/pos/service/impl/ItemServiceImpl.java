@@ -44,11 +44,11 @@ public class ItemServiceImpl implements ItemService {
 
             String successResponse = "Item Saved Successfully...!";
             log.info("\u001B[34m{}\u001B[0m", successResponse);
-            try {
-                emailSender.sendEmail("kavithmathushal451@gmail.com", "Item Management", successResponse);
-            } catch (Exception e) {
-                log.error("\u001B[31m{}\u001B[0m", "Failed to Send Email...!");
-            }
+//            try {
+//                emailSender.sendEmail("kavithmathushal451@gmail.com", "Item Management", successResponse);
+//            } catch (Exception e) {
+//                log.error("\u001B[31m{}\u001B[0m", "Failed to Send Email...!");
+//            }
             return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
 
         } else {

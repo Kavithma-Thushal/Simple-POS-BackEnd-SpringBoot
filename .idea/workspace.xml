@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Place Order FrontEnd Implemented">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Home Controller Refactored" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,6 +191,7 @@
       <workItem from="1724585797679" duration="307000" />
       <workItem from="1724599519189" duration="2381000" />
       <workItem from="1724601940745" duration="15000" />
+      <workItem from="1724602106470" duration="294000" />
     </task>
     <task id="LOCAL-00001" summary="Project Name Changed">
       <option name="closed" value="true" />
@@ -570,7 +569,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724601875864</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Home Controller Refactored">
+      <option name="closed" value="true" />
+      <created>1724602396489</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1724602396489</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +585,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Item Management Implemented Successfully...!" />
     <MESSAGE value="FrontEnd : Customer Controller Updated" />
     <MESSAGE value="FrontEnd : Customer Controller Updated 2" />
     <MESSAGE value="Item Managed Successfully" />
@@ -603,6 +609,7 @@
     <MESSAGE value="Model Mapper Removed From Place Order" />
     <MESSAGE value="Place Order Implemented Successfully...!" />
     <MESSAGE value="Place Order FrontEnd Implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Place Order FrontEnd Implemented" />
+    <MESSAGE value="Home Controller Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Controller Refactored" />
   </component>
 </project>
