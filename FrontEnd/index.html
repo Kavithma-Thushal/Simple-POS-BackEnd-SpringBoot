@@ -218,15 +218,15 @@
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtPlaceOrderCustomerName" type="text"
-                               placeholder="Customer Name">
+                               placeholder="Customer Name" disabled>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtPlaceOrderCustomerAddress" type="text"
-                               placeholder="Customer Address">
+                               placeholder="Customer Address" disabled>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtPlaceOrderCustomerSalary" type="text"
-                               placeholder="Customer Salary">
+                               placeholder="Customer Salary" disabled>
                     </div>
                 </form>
             </div>
@@ -240,15 +240,15 @@
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtPlaceOrderItemDescription" type="text"
-                               placeholder="Description">
+                               placeholder="Item Description" disabled>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtPlaceOrderItemUnitPrice" type="text"
-                               placeholder="Unit Price">
+                               placeholder="Unit Price" disabled>
                     </div>
                     <div class="mb-3">
                         <input class="form-control" id="txtPlaceOrderItemQtyOnHand" type="text"
-                               placeholder="Qty On Hand">
+                               placeholder="Qty On Hand" disabled>
                     </div>
                 </form>
             </div>
@@ -264,8 +264,8 @@
                         <input class="form-control" id="txtPlaceOrderTotal" type="number" placeholder="Total">
                     </div>
                     <div class="d-flex justify-content-center mt-4">
-                        <button class="btn btn-primary mx-2" id="btnPlaceOrder" type="button">Place Order</button>
-                        <button class="btn btn-secondary mx-2" id="btnLoadAllOrders" type="button">Load All</button>
+                        <button class="btn btn-outline-primary mx-2" id="btnPlaceOrder" type="button">Place Order
+                        </button>
                     </div>
                 </form>
             </div>
@@ -277,11 +277,12 @@
                 <table class="table table-bordered table-striped">
                     <thead class="table-dark">
                     <tr>
-                        <th scope="col">Order ID</th>
-                        <th scope="col">Customer ID</th>
-                        <th scope="col">Item Code</th>
-                        <th scope="col">Buy Qty</th>
-                        <th scope="col">Total</th>
+                        <th scope="col" style="width: 200px">Order ID</th>
+                        <th scope="col" style="width: 200px">Customer</th>
+                        <th scope="col" style="width: 200px">Item</th>
+                        <th scope="col" style="width: 200px">Unit Price</th>
+                        <th scope="col" style="width: 200px">Buy Qty</th>
+                        <th scope="col" style="width: 200px">Total</th>
                     </tr>
                     </thead>
                     <tbody id="orderTable"></tbody>
