@@ -229,7 +229,7 @@
                     </div>
                     <div class="mb-2">
                         <label for="txtPlaceOrderCustomerId" class="form-label fw-bold">Customer ID</label>
-                        <input class="form-control" id="txtPlaceOrderCustomerId" type="text">
+                        <select class="form-control" id="txtPlaceOrderCustomerId" onchange="loadCustomerDetailsToInputs()"></select>
                     </div>
                     <div class="mb-2">
                         <label for="txtPlaceOrderCustomerName" class="form-label fw-bold">Customer Name</label>
@@ -252,7 +252,7 @@
                     <h3 class="text-center mb-4">Item Details</h3>
                     <div class="mb-2">
                         <label for="txtPlaceOrderItemCode" class="form-label fw-bold">Item Code</label>
-                        <input class="form-control" id="txtPlaceOrderItemCode" type="text">
+                        <select class="form-control" id="txtPlaceOrderItemCode" onchange="loadItemDetailsToInputs()"></select>
                     </div>
                     <div class="mb-2">
                         <label for="txtPlaceOrderItemDescription" class="form-label fw-bold">Item Description</label>

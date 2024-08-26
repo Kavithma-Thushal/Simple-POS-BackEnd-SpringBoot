@@ -10,7 +10,137 @@ let cart = [];
 
 $(document).ready(function () {
     generateOrderId();
+    loadAllCustomersToCombo();
+    loadAllItemsToCombo();
 });
+
+function generateOrderId() {
+    $.ajax({
+        url: placeOrderUrl + "/generateOrderId",
+        method: "GET",
+        success: function (res) {
+            let lastOrderId = res.data;
+            let newOrderId = newOrdId(lastOrderId);
+            $("#txtPlaceOrderOrderId").val(newOrderId);
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
+
+function newOrdId(lastOrderId) {
+    let parts = lastOrderId.split('-');
+    let prefix = parts[0];
+    let number = parseInt(parts[1]) + 1;
+    let newOrderId = prefix + '-' + number.toString().padStart(3, '0');
+    return newOrderId;
+}
+
+function loadAllCustomersToCombo() {
+    $.ajax({
+        url: customerUrl + "/loadAllCustomers",
+        method: "GET",
+        success: function (res) {
+            let cmbCustomerId = $("#txtPlaceOrderCustomerId");
+            cmbCustomerId.empty();
+
+            // Add Disabled Option
+            cmbCustomerId.append(
+                $("<option></option>")
+                    .attr("value", "")
+                    .attr("disabled", "disabled")
+                    .attr("selected", "selected")
+                    .text("Select a Customer ID")
+            );
+
+            // Add customer ID
+            res.data.forEach(customer => {
+                let option = $("<option></option>")
+                    .attr("value", customer.id)
+                    .text(customer.id);
+                cmbCustomerId.append(option);
+            });
+
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
+
+function loadCustomerDetailsToInputs() {
+    let selectedCustomerId = $("#txtPlaceOrderCustomerId").val();
+
+    $.ajax({
+        url: customerUrl + "/searchCustomer/" + selectedCustomerId,
+        method: "GET",
+        success: function (res) {
+            $("#txtPlaceOrderCustomerName").val(res.data.name);
+            $("#txtPlaceOrderCustomerAddress").val(res.data.address);
+            $("#txtPlaceOrderCustomerSalary").val(res.data.salary);
+
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
+
+function loadAllItemsToCombo() {
+    $.ajax({
+        url: itemUrl + "/loadAllItems",
+        method: "GET",
+        success: function (res) {
+            let cmbItemCode = $("#txtPlaceOrderItemCode");
+            cmbItemCode.empty();
+
+            // Add Disabled Option
+            cmbItemCode.append(
+                $("<option></option>")
+                    .attr("value", "")
+                    .attr("disabled", "disabled")
+                    .attr("selected", "selected")
+                    .text("Select an Item Code")
+            );
+
+            // Add Item Code
+            res.data.forEach(item => {
+                let option = $("<option></option>")
+                    .attr("value", item.code)
+                    .text(item.code);
+                cmbItemCode.append(option);
+            });
+
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
+
+function loadItemDetailsToInputs() {
+    let selectedItemCode = $("#txtPlaceOrderItemCode").val();
+
+    $.ajax({
+        url: itemUrl + "/searchItem/" + selectedItemCode,
+        method: "GET",
+        success: function (res) {
+            $("#txtPlaceOrderItemDescription").val(res.data.description);
+            $("#txtPlaceOrderItemUnitPrice").val(res.data.unitPrice);
+            $("#txtPlaceOrderItemQtyOnHand").val(res.data.qtyOnHand);
+
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
 
 $("#btnAddToCart").click(function () {
 
@@ -108,27 +238,3 @@ $("#btnPlaceOrder").click(function () {
         }
     });
 });
-
-function generateOrderId() {
-    $.ajax({
-        url: placeOrderUrl + "/generateOrderId",
-        method: "GET",
-        success: function (res) {
-            let lastOrderId = res.data;
-            let newOrderId = newOrdId(lastOrderId);
-            $("#txtPlaceOrderOrderId").val(newOrderId);
-            console.log(res.message);
-        },
-        error: function (error) {
-            console.log(error.responseJSON.message);
-        }
-    });
-}
-
-function newOrdId(lastOrderId) {
-    let parts = lastOrderId.split('-');
-    let prefix = parts[0];
-    let number = parseInt(parts[1]) + 1;
-    let newOrderId = prefix + '-' + number.toString().padStart(3, '0');
-    return newOrderId;
-}

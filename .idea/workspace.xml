@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Place Order Updated 2">
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="generateOrderId and getOrderCount">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/073976cf-cc31-4b28-a243-84d76970b8e0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/controller/PlaceOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/repo/PlaceOrderRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/repo/PlaceOrderRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/PlaceOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/PlaceOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/HomeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/HomeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/controller/PlaceOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/controller/PlaceOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/repo/PlaceOrderRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/repo/PlaceOrderRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/PlaceOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/PlaceOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/ItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
     </list>
@@ -218,15 +214,8 @@
       <workItem from="1724664086025" duration="1496000" />
       <workItem from="1724665594911" duration="569000" />
       <workItem from="1724666169410" duration="42000" />
-      <workItem from="1724672054121" duration="3114000" />
-    </task>
-    <task id="LOCAL-00010" summary="README.md Updated 2">
-      <option name="closed" value="true" />
-      <created>1724395903171</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1724395903171</updated>
+      <workItem from="1724672054121" duration="3203000" />
+      <workItem from="1724686731236" duration="3368000" />
     </task>
     <task id="LOCAL-00011" summary="README.md Updated 3">
       <option name="closed" value="true" />
@@ -612,7 +601,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724666159605</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="generateOrderId and getOrderCount">
+      <option name="closed" value="true" />
+      <created>1724675271878</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1724675271879</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,7 +617,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Customer Validation Added" />
     <MESSAGE value="Item Validation Added" />
     <MESSAGE value="Reset Button Added" />
     <MESSAGE value="DB Refactored" />
@@ -645,6 +641,7 @@
     <MESSAGE value="Refactored" />
     <MESSAGE value="Place Order Updated" />
     <MESSAGE value="Place Order Updated 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Place Order Updated 2" />
+    <MESSAGE value="generateOrderId and getOrderCount" />
+    <option name="LAST_COMMIT_MESSAGE" value="generateOrderId and getOrderCount" />
   </component>
 </project>
