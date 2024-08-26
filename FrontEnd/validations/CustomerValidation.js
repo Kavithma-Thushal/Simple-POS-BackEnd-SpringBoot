@@ -6,8 +6,8 @@
 
 function customerValidation() {
 
-    // Check Inputs For Validation
-    function validateFields() {
+    // Check Inputs For Customer Validation
+    function validateCustomerFields() {
         const isValid = !$(".border-danger").length &&
             $("#txtCustomerId").val() &&
             $("#txtCustomerName").val() &&
@@ -27,7 +27,7 @@ function customerValidation() {
             $(this).removeClass('border-success').addClass('border-danger');
             $("#txtCusIdError").text('Customer ID format must be "C00-001", "C12-345"');
         }
-        validateFields();
+        validateCustomerFields();
     });
 
     // Customer Name validation
@@ -41,7 +41,7 @@ function customerValidation() {
             $(this).removeClass('border-success').addClass('border-danger');
             $("#txtCusNameError").text('Name must contain at least 4 letters');
         }
-        validateFields();
+        validateCustomerFields();
     });
 
     // Customer Address validation
@@ -55,7 +55,7 @@ function customerValidation() {
             $(this).removeClass('border-success').addClass('border-danger');
             $("#txtCusAddressError").text('Address must contain at least 4 letters');
         }
-        validateFields();
+        validateCustomerFields();
     });
 
     // Customer Salary validation
@@ -69,7 +69,7 @@ function customerValidation() {
             $(this).removeClass('border-success').addClass('border-danger');
             $("#txtCusSalaryError").text('Salary must be a positive value or zero');
         }
-        validateFields();
+        validateCustomerFields();
     });
 }
 

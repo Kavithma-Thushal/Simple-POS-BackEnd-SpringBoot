@@ -6,6 +6,16 @@
 
 function itemValidation() {
 
+    // Check Inputs For Item Validation
+    function validateItemFields() {
+        const isValid = !$(".border-danger").length &&
+            $("#txtItemCode").val() &&
+            $("#txtItemDescription").val() &&
+            $("#txtItemUnitPrice").val() &&
+            $("#txtItemQtyOnHand").val();
+        $("#btnSaveItem, #btnUpdateItem, #btnDeleteItem").prop("disabled", !isValid);
+    }
+
     // Item Code validation
     $("#txtItemCode").on('input', function () {
         let value = $(this).val();
@@ -17,6 +27,7 @@ function itemValidation() {
             $(this).removeClass('border-success').addClass('border-danger');
             $("#txtItemCodeError").text('Item Code format must be "I00-001", "I12-345"');
         }
+        validateItemFields();
     });
 
     // Item Description validation
@@ -30,6 +41,7 @@ function itemValidation() {
             $(this).removeClass('border-success').addClass('border-danger');
             $("#txtItemDescriptionError").text('Description must contain at least 4 letters');
         }
+        validateItemFields();
     });
 
     // Unit Price validation
@@ -43,6 +55,7 @@ function itemValidation() {
             $(this).removeClass('border-success').addClass('border-danger');
             $("#txtItemUnitPriceError").text('Unit Price must be a positive value or zero');
         }
+        validateItemFields();
     });
 
     // Qty On Hand validation
@@ -56,6 +69,7 @@ function itemValidation() {
             $(this).removeClass('border-success').addClass('border-danger');
             $("#txtItemQtyOnHandError").text('Qty On Hand must be a positive value or zero');
         }
+        validateItemFields();
     });
 }
 

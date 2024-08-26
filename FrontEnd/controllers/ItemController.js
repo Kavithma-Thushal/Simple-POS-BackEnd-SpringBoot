@@ -4,13 +4,10 @@
  * @since : 7:05 AM - 6/18/2024
  **/
 
-let itemUrl = "http://localhost:8080/api/v1/item";
+const itemUrl = "http://localhost:8080/api/v1/item";
 
 $(document).ready(function () {
-    generateItemCode();
     loadAllItems();
-    itemValidation();
-    resetItemBorders();
 });
 
 $("#btnSaveItem").click(function () {
@@ -58,9 +55,7 @@ $("#btnSearchItem").click(function () {
                     <td>${res.data.qtyOnHand}</td>
                 </tr>`;
             $("#itemTable").append(row);
-
-            itemTableListener();
-            clearItemInputs();
+            loadAllItems();
             console.log(res.message);
         },
         error: function (error) {
@@ -147,11 +142,11 @@ function loadAllItems() {
                 $("#itemTable").append(row);
             });
 
-            generateItemCode();
             getItemCount();
-            itemTableListener();
+            generateItemCode();
             itemValidation();
             resetItemBorders();
+            itemTableListener();
             clearItemInputs();
             console.log(res.message);
         },
@@ -169,6 +164,7 @@ function generateItemCode() {
             let lastItemCode = res.data;
             let newItemCode = newItmCode(lastItemCode);
             $("#txtItemCode").val(newItemCode);
+            console.log(res.message);
         },
         error: function (error) {
             console.log(error.responseJSON.message);
@@ -195,6 +191,9 @@ function itemTableListener() {
         $("#txtItemDescription").val(description);
         $("#txtItemUnitPrice").val(unitPrice);
         $("#txtItemQtyOnHand").val(qtyOnHand);
+
+        $("#btnUpdateItem").prop("disabled", false);
+        $("#btnDeleteItem").prop("disabled", false);
     });
 }
 
@@ -204,4 +203,8 @@ function clearItemInputs() {
     $("#txtItemDescription").val("");
     $("#txtItemUnitPrice").val("");
     $("#txtItemQtyOnHand").val("");
+
+    $("#btnSaveItem").prop("disabled", true);
+    $("#btnUpdateItem").prop("disabled", true);
+    $("#btnDeleteItem").prop("disabled", true);
 }
