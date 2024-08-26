@@ -195,6 +195,9 @@ function customerTableListener() {
         $("#txtCustomerName").val(name);
         $("#txtCustomerAddress").val(address);
         $("#txtCustomerSalary").val(salary);
+
+        $("#btnUpdateCustomer").prop("disabled", false);
+        $("#btnDeleteCustomer").prop("disabled", false);
     });
 }
 
@@ -204,4 +207,8 @@ function clearCustomerInputs() {
     $("#txtCustomerName").val("");
     $("#txtCustomerAddress").val("");
     $("#txtCustomerSalary").val("");
+
+    $("#btnSaveCustomer").prop("disabled", true);
+    $("#btnUpdateCustomer").prop("disabled", true);
+    $("#btnDeleteCustomer").prop("disabled", true);
 }
