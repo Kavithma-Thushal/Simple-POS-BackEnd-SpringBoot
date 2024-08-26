@@ -10,23 +10,25 @@ let cart = [];
 
 $("#btnAddToCart").click(function () {
 
+    let customerId = $("#txtPlaceOrderCustomerId").val();
     let itemCode = $("#txtPlaceOrderItemCode").val();
     let itemDescription = $("#txtPlaceOrderItemDescription").val();
     let unitPrice = parseFloat($("#txtPlaceOrderItemUnitPrice").val());
     let buyQty = parseInt($("#txtPlaceOrderBuyQty").val());
     let total = buyQty * unitPrice;
 
-    if (!itemCode || !itemDescription || !unitPrice || !buyQty || isNaN(total)) {
+    if (!itemCode || !itemDescription || !unitPrice || !buyQty || isNaN(total) || !customerId) {
         errorNotification("Please fill all item details correctly");
         return;
     }
 
-    let existingItem = cart.find(item => item.itemCode === itemCode);
+    let existingItem = cart.find(item => item.itemCode === itemCode && item.customerId === customerId);
     if (existingItem) {
         existingItem.buyQty += buyQty;
         existingItem.total = existingItem.buyQty * existingItem.unitPrice;
     } else {
         cart.push({
+            customerId: customerId,
             itemCode: itemCode,
             itemDescription: itemDescription,
             unitPrice: unitPrice,
@@ -46,12 +48,12 @@ function updateCartTable() {
     let total = 0;
     cart.forEach(item => {
         let row = `<tr>
-            <td>${item.itemCode}</td>
+            <td>${item.customerId}</td> <!-- Display Customer ID -->
             <td>${item.itemDescription}</td>
-            <td>${item.unitPrice}</td>
+            <td>${item.unitPrice.toFixed(2)}</td>
             <td>${item.buyQty}</td>
-            <td>${item.total}</td>
-            <td><button class="btn btn-outline-danger btn-sm" onclick="removeFromCart('${item.itemCode}')">Remove</button></td>
+            <td>${item.total.toFixed(2)}</td>
+            <td><button class="btn btn-outline-danger btn-sm" onclick="removeFromCart('${item.itemCode}', '${item.customerId}')">Remove</button></td>
         </tr>`;
         tableBody.append(row);
         total += item.total;
@@ -60,8 +62,8 @@ function updateCartTable() {
     $("#txtPlaceOrderTotal").val(total.toFixed(2));
 }
 
-function removeFromCart(itemCode) {
-    cart = cart.filter(item => item.itemCode !== itemCode);
+function removeFromCart(itemCode, customerId) {
+    cart = cart.filter(item => item.itemCode !== itemCode || item.customerId !== customerId);
     updateCartTable();
 }
 
