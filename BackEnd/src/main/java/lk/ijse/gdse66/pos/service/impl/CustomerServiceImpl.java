@@ -134,6 +134,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public ResponseUtil<String> generateCustomerId() {
         String lastCustomerId = customerRepo.findTopByOrderByIdDesc().map(Customer::getId).orElse("C00-000");
+
         String successResponse = "Last Customer ID Retrieved Successfully...!";
         log.info("\u001B[34m{}\u001B[0m", successResponse);
         return new ResponseUtil<>(successResponse, HttpStatus.OK, lastCustomerId);

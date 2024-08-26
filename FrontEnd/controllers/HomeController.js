@@ -7,6 +7,7 @@
 $(document).ready(function () {
     getCustomerCount();
     getItemCount();
+    getOrderCount();
 });
 
 function getCustomerCount() {
@@ -29,6 +30,20 @@ function getItemCount() {
         method: "GET",
         success: function (res) {
             $("#itemCount").text(res.data);
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
+
+function getOrderCount() {
+    $.ajax({
+        url: placeOrderUrl + "/getOrderCount",
+        method: "GET",
+        success: function (res) {
+            $("#orderCount").text(res.data);
             console.log(res.message);
         },
         error: function (error) {

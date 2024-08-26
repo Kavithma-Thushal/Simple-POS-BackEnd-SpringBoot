@@ -26,4 +26,16 @@ public class PlaceOrderController {
         ResponseUtil<String> responseUtil = placeOrderService.placeOrder(orderDTO);
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
+
+    @GetMapping("/generateOrderId")
+    public ResponseEntity<ResponseUtil<String>> generateOrderId() {
+        ResponseUtil<String> responseUtil = placeOrderService.generateOrderId();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
+    }
+
+    @GetMapping("/getOrderCount")
+    public ResponseEntity<ResponseUtil<Integer>> getOrderCount() {
+        ResponseUtil<Integer> responseUtil = placeOrderService.getOrderCount();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
+    }
 }

@@ -11,4 +11,8 @@ import lk.ijse.gdse66.pos.util.ResponseUtil;
 public interface PlaceOrderService {
 
     ResponseUtil<String> placeOrder(OrderDTO orderDTO);
+
+    ResponseUtil<String> generateOrderId();
+
+    ResponseUtil<Integer> getOrderCount();
 }

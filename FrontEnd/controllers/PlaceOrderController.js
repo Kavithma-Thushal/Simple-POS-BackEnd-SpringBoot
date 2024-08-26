@@ -8,6 +8,10 @@ const placeOrderUrl = "http://localhost:8080/api/v1/orders";
 
 let cart = [];
 
+$(document).ready(function () {
+    generateOrderId();
+});
+
 $("#btnAddToCart").click(function () {
 
     let customerId = $("#txtPlaceOrderCustomerId").val();
@@ -59,7 +63,7 @@ function updateCartTable() {
         total += item.total;
     });
 
-    $("#txtPlaceOrderTotal").val(total.toFixed(2));
+    $("#txtPlaceOrderTotal").val(total);
 }
 
 function removeFromCart(itemCode, customerId) {
@@ -95,6 +99,8 @@ $("#btnPlaceOrder").click(function () {
         success: function (res) {
             cart = [];  // Clear cart after successful order
             updateCartTable();
+            getOrderCount();
+            generateOrderId();
             successNotification(res.message);
         },
         error: function (error) {
@@ -102,3 +108,27 @@ $("#btnPlaceOrder").click(function () {
         }
     });
 });
+
+function generateOrderId() {
+    $.ajax({
+        url: placeOrderUrl + "/generateOrderId",
+        method: "GET",
+        success: function (res) {
+            let lastOrderId = res.data;
+            let newOrderId = newOrdId(lastOrderId);
+            $("#txtPlaceOrderOrderId").val(newOrderId);
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}
+
+function newOrdId(lastOrderId) {
+    let parts = lastOrderId.split('-');
+    let prefix = parts[0];
+    let number = parseInt(parts[1]) + 1;
+    let newOrderId = prefix + '-' + number.toString().padStart(3, '0');
+    return newOrderId;
+}

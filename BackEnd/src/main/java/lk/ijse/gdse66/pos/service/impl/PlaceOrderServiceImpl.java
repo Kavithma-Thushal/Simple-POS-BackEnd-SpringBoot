@@ -95,4 +95,22 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 //        }
         return new ResponseUtil<>(successResponse, HttpStatus.OK, null);
     }
+
+    @Override
+    public ResponseUtil<String> generateOrderId() {
+        String lastOrderId = placeOrderRepo.findTopByOrderByOrderIdDesc().map(Orders::getOrderId).orElse("ORD-000");
+
+        String successResponse = "Last Order ID Retrieved Successfully...!";
+        log.info("\u001B[34m{}\u001B[0m", successResponse);
+        return new ResponseUtil<>(successResponse, HttpStatus.OK, lastOrderId);
+    }
+
+    @Override
+    public ResponseUtil<Integer> getOrderCount() {
+        Integer orderCount = placeOrderRepo.countBy();
+
+        String successResponse = "Order Count Retrieved Successfully...!";
+        log.info("\u001B[34m{}\u001B[0m", successResponse);
+        return new ResponseUtil<>(successResponse, HttpStatus.OK, orderCount);
+    }
 }

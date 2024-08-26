@@ -7,6 +7,7 @@
 const itemUrl = "http://localhost:8080/api/v1/item";
 
 $(document).ready(function () {
+    generateItemCode();
     loadAllItems();
 });
 
