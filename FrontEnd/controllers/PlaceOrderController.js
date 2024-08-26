@@ -4,7 +4,7 @@
  * @since : 7:05 AM - 6/18/2024
  **/
 
-let placeOrderUrl = "http://localhost:8080/api/v1/orders";
+const placeOrderUrl = "http://localhost:8080/api/v1/orders";
 
 let cart = [];
 
