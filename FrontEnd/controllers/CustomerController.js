@@ -4,13 +4,10 @@
  * @since : 7:05 AM - 6/18/2024
  **/
 
-let customerUrl = "http://localhost:8080/api/v1/customer";
+const customerUrl = "http://localhost:8080/api/v1/customer";
 
 $(document).ready(function () {
-    generateCustomerId();
     loadAllCustomers();
-    customerValidation();
-    resetCustomerBorders();
 });
 
 $("#btnSaveCustomer").click(function () {
@@ -58,9 +55,7 @@ $("#btnSearchCustomer").click(function () {
                     <td>${res.data.salary}</td>
                 </tr>`;
             $("#customerTable").append(row);
-
-            customerTableListener();
-            clearCustomerInputs();
+            loadAllCustomers();
             console.log(res.message);
         },
         error: function (error) {
@@ -147,11 +142,11 @@ function loadAllCustomers() {
                 $("#customerTable").append(row);
             });
 
-            generateCustomerId();
             getCustomerCount();
-            customerTableListener();
+            generateCustomerId();
             customerValidation();
             resetCustomerBorders();
+            customerTableListener();
             clearCustomerInputs();
             console.log(res.message);
 
@@ -169,6 +164,7 @@ function generateCustomerId() {
             let lastCustomerId = res.data;
             let newCustomerId = newCusId(lastCustomerId);
             $("#txtCustomerId").val(newCustomerId);
+            console.log(res.message);
         },
         error: function (error) {
             console.log(error.responseJSON.message);

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Add To Cart Added to UI">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/CustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/validations/CustomerValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/validations/CustomerValidation.js" afterDir="false" />
-    </list>
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="setButtonStatus" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,15 +196,7 @@
       <workItem from="1724603121656" duration="2591000" />
       <workItem from="1724605747612" duration="837000" />
       <workItem from="1724606617143" duration="1215000" />
-      <workItem from="1724658940686" duration="1037000" />
-    </task>
-    <task id="LOCAL-00004" summary="README.md Updated">
-      <option name="closed" value="true" />
-      <created>1723399323439</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1723399323439</updated>
+      <workItem from="1724658940686" duration="1095000" />
     </task>
     <task id="LOCAL-00005" summary="Count UI Added">
       <option name="closed" value="true" />
@@ -595,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724606583628</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="setButtonStatus">
+      <option name="closed" value="true" />
+      <created>1724660040635</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1724660040636</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +598,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="generate customer id successfully" />
     <MESSAGE value="generate item code successfully" />
     <MESSAGE value="Customer Count Added" />
     <MESSAGE value="Item Count Added" />
@@ -628,6 +622,7 @@
     <MESSAGE value="Place Order Modified" />
     <MESSAGE value="Labels Added to UI" />
     <MESSAGE value="Add To Cart Added to UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add To Cart Added to UI" />
+    <MESSAGE value="setButtonStatus" />
+    <option name="LAST_COMMIT_MESSAGE" value="setButtonStatus" />
   </component>
 </project>
