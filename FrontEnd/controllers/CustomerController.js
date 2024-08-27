@@ -163,7 +163,10 @@ function generateCustomerId() {
         method: "GET",
         success: function (res) {
             let lastCustomerId = res.data;
-            let newCustomerId = newCusId(lastCustomerId);
+            let parts = lastCustomerId.split('-');
+            let prefix = parts[0];
+            let number = parseInt(parts[1]) + 1;
+            let newCustomerId = prefix + '-' + number.toString().padStart(3, '0');
             $("#txtCustomerId").val(newCustomerId);
             console.log(res.message);
         },
@@ -171,14 +174,6 @@ function generateCustomerId() {
             console.log(error.responseJSON.message);
         }
     });
-}
-
-function newCusId(lastCustomerId) {
-    let parts = lastCustomerId.split('-');
-    let prefix = parts[0];
-    let number = parseInt(parts[1]) + 1;
-    let newCustomerId = prefix + '-' + number.toString().padStart(3, '0');
-    return newCustomerId;
 }
 
 function customerTableListener() {
