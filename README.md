@@ -1,4 +1,4 @@
-# 🌟 Simple POS BackEnd - Spring Boot 🌟
+# 🌟 Simple POS BackEnd - SpringBoot 🌟
 
 The Simple POS BackEnd is a robust and efficient backend system designed to support a Point of Sale (POS) application.
 Built with the Spring Boot framework, this backend provides essential functionalities for managing customers, item
