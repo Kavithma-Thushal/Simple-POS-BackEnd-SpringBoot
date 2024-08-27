@@ -5,4 +5,24 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="POSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Simple-POS-BackEnd-SpringBoot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="lk.ijse.gdse66.pos.POSApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lk.ijse.gdse66.pos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.POSApplication" />
+      </list>
+    </recent_temporary>
+  </component>
 </project>
