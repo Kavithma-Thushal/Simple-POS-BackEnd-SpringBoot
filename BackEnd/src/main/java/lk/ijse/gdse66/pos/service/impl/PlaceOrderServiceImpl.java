@@ -115,7 +115,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     }
 
     @Override
-    public ResponseUtil<List<OrderDTO>> loadAllOrderDetails() {
+    public ResponseUtil<List<OrderDTO>> loadOrderDetails() {
         List<Orders> ordersList = placeOrderRepo.findAll();
         List<OrderDTO> orderDTOList = new ArrayList<>();
 

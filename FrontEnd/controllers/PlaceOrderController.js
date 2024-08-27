@@ -12,7 +12,7 @@ $(document).ready(function () {
     generateOrderId();
     loadAllCustomersToCombo();
     loadAllItemsToCombo();
-    loadAllOrderDetails();
+    loadOrderDetails();
 });
 
 function generateOrderId() {
@@ -231,7 +231,7 @@ $("#btnPlaceOrder").click(function () {
             updateCartTable();
             getOrderCount();
             generateOrderId();
-            loadAllOrderDetails();
+            loadOrderDetails();
             successNotification(res.message);
         },
         error: function (error) {
@@ -240,9 +240,9 @@ $("#btnPlaceOrder").click(function () {
     });
 });
 
-function loadAllOrderDetails() {
+function loadOrderDetails() {
     $.ajax({
-        url: placeOrderUrl + '/loadAllOrderDetails',
+        url: placeOrderUrl + '/loadOrderDetails',
         method: 'GET',
         success: function (res) {
             const tableBody = $('#orderDetailsTable');

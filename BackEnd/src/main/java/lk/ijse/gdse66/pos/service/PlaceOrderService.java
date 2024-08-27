@@ -18,5 +18,5 @@ public interface PlaceOrderService {
 
     ResponseUtil<Integer> getOrderCount();
 
-    ResponseUtil<List<OrderDTO>> loadAllOrderDetails();
+    ResponseUtil<List<OrderDTO>> loadOrderDetails();
 }

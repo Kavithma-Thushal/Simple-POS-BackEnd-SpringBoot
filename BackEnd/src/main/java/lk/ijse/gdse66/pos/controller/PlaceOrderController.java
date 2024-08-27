@@ -41,9 +41,9 @@ public class PlaceOrderController {
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
-    @GetMapping("/loadAllOrderDetails")
-    public ResponseEntity<ResponseUtil<List<OrderDTO>>> loadAllOrderDetails() {
-        ResponseUtil<List<OrderDTO>> responseUtil = placeOrderService.loadAllOrderDetails();
+    @GetMapping("/loadOrderDetails")
+    public ResponseEntity<ResponseUtil<List<OrderDTO>>> loadOrderDetails() {
+        ResponseUtil<List<OrderDTO>> responseUtil = placeOrderService.loadOrderDetails();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 }
