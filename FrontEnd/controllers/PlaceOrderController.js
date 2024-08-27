@@ -20,22 +20,21 @@ function generateOrderId() {
         method: "GET",
         success: function (res) {
             let lastOrderId = res.data;
-            let newOrderId = newOrdId(lastOrderId);
+
+            // Split and generate new id
+            let parts = lastOrderId.split('-');
+            let prefix = parts[0];
+            let number = parseInt(parts[1]) + 1;
+            let newOrderId = prefix + '-' + number.toString().padStart(3, '0');
+
             $("#txtPlaceOrderOrderId").val(newOrderId);
+
             console.log(res.message);
         },
         error: function (error) {
             console.log(error.responseJSON.message);
         }
     });
-}
-
-function newOrdId(lastOrderId) {
-    let parts = lastOrderId.split('-');
-    let prefix = parts[0];
-    let number = parseInt(parts[1]) + 1;
-    let newOrderId = prefix + '-' + number.toString().padStart(3, '0');
-    return newOrderId;
 }
 
 function loadAllCustomersToCombo() {
@@ -231,6 +230,7 @@ $("#btnPlaceOrder").click(function () {
             updateCartTable();
             getOrderCount();
             generateOrderId();
+            loadAllOrderDetails();
             successNotification(res.message);
         },
         error: function (error) {
@@ -238,3 +238,32 @@ $("#btnPlaceOrder").click(function () {
         }
     });
 });
+
+function loadAllOrderDetails() {
+    $.ajax({
+        url: placeOrderUrl + '/loadAllOrderDetails',
+        method: 'GET',
+        success: function (res) {
+            const tableBody = $('#orderDetailsTable');
+            tableBody.empty();
+
+            res.data.forEach(function (orderDetail) {
+                orderDetail.orderDetailsList.forEach(function (detail) {
+                    let row = `<tr>
+                                    <td>${orderDetail.orderId}</td>
+                                    <td>${orderDetail.customerId}</td>
+                                    <td>${detail.itemCode}</td>
+                                    <td>${detail.buyQty}</td>
+                                    <td>${detail.total}</td>
+                                </tr>`;
+                    tableBody.append(row);
+                });
+            });
+
+            console.log(res.message);
+        },
+        error: function (error) {
+            console.log(error.responseJSON.message);
+        }
+    });
+}

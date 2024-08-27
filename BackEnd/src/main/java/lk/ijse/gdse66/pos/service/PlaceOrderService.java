@@ -3,6 +3,8 @@ package lk.ijse.gdse66.pos.service;
 import lk.ijse.gdse66.pos.dto.OrderDTO;
 import lk.ijse.gdse66.pos.util.ResponseUtil;
 
+import java.util.List;
+
 /**
  * @author : Kavithma Thushal
  * @project : Spring-Boot-POS
@@ -15,4 +17,6 @@ public interface PlaceOrderService {
     ResponseUtil<String> generateOrderId();
 
     ResponseUtil<Integer> getOrderCount();
+
+    ResponseUtil<List<OrderDTO>> loadAllOrderDetails();
 }

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author : Kavithma Thushal
  * @project : Spring-Boot-POS
@@ -36,6 +38,12 @@ public class PlaceOrderController {
     @GetMapping("/getOrderCount")
     public ResponseEntity<ResponseUtil<Integer>> getOrderCount() {
         ResponseUtil<Integer> responseUtil = placeOrderService.getOrderCount();
+        return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
+    }
+
+    @GetMapping("/loadAllOrderDetails")
+    public ResponseEntity<ResponseUtil<List<OrderDTO>>> loadAllOrderDetails() {
+        ResponseUtil<List<OrderDTO>> responseUtil = placeOrderService.loadAllOrderDetails();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 }

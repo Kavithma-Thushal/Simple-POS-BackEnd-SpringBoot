@@ -113,4 +113,32 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
         log.info("\u001B[34m{}\u001B[0m", successResponse);
         return new ResponseUtil<>(successResponse, HttpStatus.OK, orderCount);
     }
+
+    @Override
+    public ResponseUtil<List<OrderDTO>> loadAllOrderDetails() {
+        List<Orders> ordersList = placeOrderRepo.findAll();
+        List<OrderDTO> orderDTOList = new ArrayList<>();
+
+        for (Orders order : ordersList) {
+            OrderDTO orderDTO = new OrderDTO();
+            orderDTO.setOrderId(order.getOrderId());
+            orderDTO.setCustomerId(order.getCustomer().getId());
+            List<OrderDetailsDTO> orderDetailsDTOList = new ArrayList<>();
+
+            for (OrderDetails orderDetails : order.getOrderDetailsList()) {
+                OrderDetailsDTO orderDetailsDTO = new OrderDetailsDTO();
+                orderDetailsDTO.setItemCode(orderDetails.getItem().getCode());
+                orderDetailsDTO.setBuyQty(orderDetails.getBuyQty());
+                orderDetailsDTO.setTotal(orderDetails.getTotal());
+                orderDetailsDTOList.add(orderDetailsDTO);
+            }
+
+            orderDTO.setOrderDetailsList(orderDetailsDTOList);
+            orderDTOList.add(orderDTO);
+        }
+
+        String successResponse = "All Order Details Retrieved Successfully...!";
+        log.info("\u001B[34m{}\u001B[0m", successResponse);
+        return new ResponseUtil<>(successResponse, HttpStatus.OK, orderDTOList);
+    }
 }

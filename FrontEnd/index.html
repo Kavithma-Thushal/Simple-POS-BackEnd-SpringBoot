@@ -23,8 +23,10 @@
                     <a class="nav-link" href="#itemSection" onclick="showSection('itemSection')">Item</a>
                 </li>
                 <li class="nav-item mx-3">
-                    <a class="nav-link" href="#placeOrderSection" onclick="showSection('placeOrderSection')">Place
-                        Order</a>
+                    <a class="nav-link" href="#placeOrderSection" onclick="showSection('placeOrderSection')">Place Order</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="#orderDetailsSection" onclick="showSection('orderDetailsSection')">Order Details</a>
                 </li>
             </ul>
         </div>
@@ -229,7 +231,8 @@
                     </div>
                     <div class="mb-2">
                         <label for="txtPlaceOrderCustomerId" class="form-label fw-bold">Customer ID</label>
-                        <select class="form-control" id="txtPlaceOrderCustomerId" onchange="loadCustomerDetailsToInputs()"></select>
+                        <select class="form-control" id="txtPlaceOrderCustomerId"
+                                onchange="loadCustomerDetailsToInputs()"></select>
                     </div>
                     <div class="mb-2">
                         <label for="txtPlaceOrderCustomerName" class="form-label fw-bold">Customer Name</label>
@@ -252,7 +255,8 @@
                     <h3 class="text-center mb-4">Item Details</h3>
                     <div class="mb-2">
                         <label for="txtPlaceOrderItemCode" class="form-label fw-bold">Item Code</label>
-                        <select class="form-control" id="txtPlaceOrderItemCode" onchange="loadItemDetailsToInputs()"></select>
+                        <select class="form-control" id="txtPlaceOrderItemCode"
+                                onchange="loadItemDetailsToInputs()"></select>
                     </div>
                     <div class="mb-2">
                         <label for="txtPlaceOrderItemDescription" class="form-label fw-bold">Item Description</label>
@@ -315,12 +319,34 @@
 
     </section>
 
+    <!-- Order Details -->
+    <section id="orderDetailsSection" style="display: none;">
+        <h1 class="text-center fw-bold mt-4">Order Details</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-8 p-5 m-5 shadow-lg border-light rounded">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Customer ID</th>
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Buy Qty</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="orderDetailsTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script>
     function showSection(sectionId) {
-        $('#homeSection,#customerSection, #itemSection, #placeOrderSection').hide();
+        $('#homeSection, #customerSection, #itemSection, #placeOrderSection, #orderDetailsSection').hide();
         $('#' + sectionId).show();
     }
 </script>
