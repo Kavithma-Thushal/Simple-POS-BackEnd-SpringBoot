@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Refactored" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Refactored 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,14 +207,7 @@
       <workItem from="1724686731236" duration="3368000" />
       <workItem from="1724732262537" duration="3535000" />
       <workItem from="1724737053557" duration="673000" />
-    </task>
-    <task id="LOCAL-00013" summary="Save Customer Refactored">
-      <option name="closed" value="true" />
-      <created>1724409236775</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1724409236775</updated>
+      <workItem from="1724737746318" duration="47000" />
     </task>
     <task id="LOCAL-00014" summary="Customers CRUD Finished...!">
       <option name="closed" value="true" />
@@ -600,7 +593,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724737723513</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Refactored 2">
+      <option name="closed" value="true" />
+      <created>1724737787095</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1724737787095</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +609,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Reset Button Added" />
     <MESSAGE value="DB Refactored" />
     <MESSAGE value="Order Placed Successfully...!" />
     <MESSAGE value="Composite Key Added" />
@@ -633,6 +633,7 @@
     <MESSAGE value="generateOrderId and getOrderCount" />
     <MESSAGE value="Order Details Added" />
     <MESSAGE value="Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored" />
+    <MESSAGE value="Refactored 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored 2" />
   </component>
 </project>
