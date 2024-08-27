@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Order Details Added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Refactored" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,15 +206,7 @@
       <workItem from="1724672054121" duration="3203000" />
       <workItem from="1724686731236" duration="3368000" />
       <workItem from="1724732262537" duration="3535000" />
-      <workItem from="1724737053557" duration="408000" />
-    </task>
-    <task id="LOCAL-00012" summary="Refactored">
-      <option name="closed" value="true" />
-      <created>1724402226869</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1724402226869</updated>
+      <workItem from="1724737053557" duration="673000" />
     </task>
     <task id="LOCAL-00013" summary="Save Customer Refactored">
       <option name="closed" value="true" />
@@ -603,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724735819653</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Refactored">
+      <option name="closed" value="true" />
+      <created>1724737723512</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1724737723513</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,11 +628,11 @@
     <MESSAGE value="setButtonStatus" />
     <MESSAGE value="CustomerController.js Refactored" />
     <MESSAGE value="itemController.js Refactored" />
-    <MESSAGE value="Refactored" />
     <MESSAGE value="Place Order Updated" />
     <MESSAGE value="Place Order Updated 2" />
     <MESSAGE value="generateOrderId and getOrderCount" />
     <MESSAGE value="Order Details Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order Details Added" />
+    <MESSAGE value="Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored" />
   </component>
 </project>
