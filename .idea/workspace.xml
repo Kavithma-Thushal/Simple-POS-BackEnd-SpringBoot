@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Refactored 2">
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/controller/PlaceOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/PlaceOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/PlaceOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/pos/service/impl/PlaceOrderServiceImpl.java" afterDir="false" />
+    <list default="true" id="bd328a65-d778-40cc-b820-a7c97a19e6a3" name="Changes" comment="Load Order Details">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/PlaceOrderController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,14 +211,7 @@
       <workItem from="1724732262537" duration="3535000" />
       <workItem from="1724737053557" duration="673000" />
       <workItem from="1724737746318" duration="47000" />
-    </task>
-    <task id="LOCAL-00014" summary="Customers CRUD Finished...!">
-      <option name="closed" value="true" />
-      <created>1724433008505</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1724433008505</updated>
+      <workItem from="1724741158387" duration="425000" />
     </task>
     <task id="LOCAL-00015" summary="Send Emails">
       <option name="closed" value="true" />
@@ -606,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724737787095</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Load Order Details">
+      <option name="closed" value="true" />
+      <created>1724741148383</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1724741148383</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="DB Refactored" />
     <MESSAGE value="Order Placed Successfully...!" />
     <MESSAGE value="Composite Key Added" />
     <MESSAGE value="Order Id Duplicate Error Managed" />
@@ -639,6 +637,7 @@
     <MESSAGE value="Order Details Added" />
     <MESSAGE value="Refactored" />
     <MESSAGE value="Refactored 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored 2" />
+    <MESSAGE value="Load Order Details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Load Order Details" />
   </component>
 </project>

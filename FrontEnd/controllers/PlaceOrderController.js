@@ -151,7 +151,7 @@ $("#btnAddToCart").click(function () {
     let buyQty = parseInt($("#txtPlaceOrderBuyQty").val());
     let total = buyQty * unitPrice;
 
-    if (!itemCode || !itemDescription || !unitPrice || !buyQty || isNaN(total) || !customerId) {
+    if (!itemCode || !itemDescription || isNaN(unitPrice) || isNaN(buyQty) || !customerId) {
         errorNotification("Please fill all item details correctly");
         return;
     }
@@ -174,7 +174,10 @@ $("#btnAddToCart").click(function () {
     updateCartTable();
 });
 
-function updateCartTable() {
+function updateCartTable(itemCode = null, customerId = null) {
+    if (itemCode && customerId) {
+        cart = cart.filter(item => item.itemCode !== itemCode || item.customerId !== customerId);
+    }
 
     let tableBody = $("#orderTable");
     tableBody.empty();
@@ -182,23 +185,18 @@ function updateCartTable() {
     let total = 0;
     cart.forEach(item => {
         let row = `<tr>
-            <td>${item.customerId}</td> <!-- Display Customer ID -->
+            <td>${item.customerId}</td>
             <td>${item.itemDescription}</td>
             <td>${item.unitPrice.toFixed(2)}</td>
             <td>${item.buyQty}</td>
             <td>${item.total.toFixed(2)}</td>
-            <td><button class="btn btn-outline-danger btn-sm" onclick="removeFromCart('${item.itemCode}', '${item.customerId}')">Remove</button></td>
+            <td><button class="btn btn-outline-danger btn-sm" onclick="updateCartTable('${item.itemCode}', '${item.customerId}')">Remove</button></td>
         </tr>`;
         tableBody.append(row);
         total += item.total;
     });
 
     $("#txtPlaceOrderTotal").val(total);
-}
-
-function removeFromCart(itemCode, customerId) {
-    cart = cart.filter(item => item.itemCode !== itemCode || item.customerId !== customerId);
-    updateCartTable();
 }
 
 $("#btnPlaceOrder").click(function () {
