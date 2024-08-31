@@ -10,7 +10,7 @@ import java.util.Optional;
  * @project : Simple-POS-BackEnd-SpringBoot
  * @since : 9:46 PM - 8/10/2024
  **/
-public interface PlaceOrderRepo extends JpaRepository<Orders, String> {
+public interface OrderRepo extends JpaRepository<Orders, String> {
 
     // Generate Order ID
     Optional<Orders> findTopByOrderByOrderIdDesc();

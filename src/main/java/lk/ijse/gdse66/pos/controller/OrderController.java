@@ -2,7 +2,7 @@ package lk.ijse.gdse66.pos.controller;
 
 import jakarta.validation.Valid;
 import lk.ijse.gdse66.pos.dto.OrderDTO;
-import lk.ijse.gdse66.pos.service.PlaceOrderService;
+import lk.ijse.gdse66.pos.service.OrderService;
 import lk.ijse.gdse66.pos.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,32 +18,32 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/v1/orders")
-public class PlaceOrderController {
+public class OrderController {
 
     @Autowired
-    private PlaceOrderService placeOrderService;
+    private OrderService orderService;
 
     @PostMapping("/placeOrder")
     public ResponseEntity<ResponseUtil<String>> placeOrder(@Valid @RequestBody OrderDTO orderDTO) {
-        ResponseUtil<String> responseUtil = placeOrderService.placeOrder(orderDTO);
+        ResponseUtil<String> responseUtil = orderService.placeOrder(orderDTO);
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @GetMapping("/generateOrderId")
     public ResponseEntity<ResponseUtil<String>> generateOrderId() {
-        ResponseUtil<String> responseUtil = placeOrderService.generateOrderId();
+        ResponseUtil<String> responseUtil = orderService.generateOrderId();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @GetMapping("/getOrderCount")
     public ResponseEntity<ResponseUtil<Integer>> getOrderCount() {
-        ResponseUtil<Integer> responseUtil = placeOrderService.getOrderCount();
+        ResponseUtil<Integer> responseUtil = orderService.getOrderCount();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 
     @GetMapping("/loadOrderDetails")
     public ResponseEntity<ResponseUtil<List<OrderDTO>>> loadOrderDetails() {
-        ResponseUtil<List<OrderDTO>> responseUtil = placeOrderService.loadOrderDetails();
+        ResponseUtil<List<OrderDTO>> responseUtil = orderService.loadOrderDetails();
         return new ResponseEntity<>(responseUtil, responseUtil.getStatus());
     }
 }

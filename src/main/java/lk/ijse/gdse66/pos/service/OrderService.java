@@ -10,7 +10,7 @@ import java.util.List;
  * @project : Simple-POS-BackEnd-SpringBoot
  * @since : 9:44 PM - 8/10/2024
  **/
-public interface PlaceOrderService {
+public interface OrderService {
 
     ResponseUtil<String> placeOrder(OrderDTO orderDTO);
 

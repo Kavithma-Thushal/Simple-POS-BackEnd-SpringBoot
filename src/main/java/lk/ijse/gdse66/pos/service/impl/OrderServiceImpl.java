@@ -7,8 +7,8 @@ import lk.ijse.gdse66.pos.entity.OrderDetails;
 import lk.ijse.gdse66.pos.entity.Orders;
 import lk.ijse.gdse66.pos.repo.CustomerRepo;
 import lk.ijse.gdse66.pos.repo.ItemRepo;
-import lk.ijse.gdse66.pos.repo.PlaceOrderRepo;
-import lk.ijse.gdse66.pos.service.PlaceOrderService;
+import lk.ijse.gdse66.pos.repo.OrderRepo;
+import lk.ijse.gdse66.pos.service.OrderService;
 import lk.ijse.gdse66.pos.util.EmailSender;
 import lk.ijse.gdse66.pos.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +29,7 @@ import java.util.List;
 @Slf4j
 @Service
 @Transactional
-public class PlaceOrderServiceImpl implements PlaceOrderService {
+public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private CustomerRepo customerRepo;
@@ -38,7 +38,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     private ItemRepo itemRepo;
 
     @Autowired
-    private PlaceOrderRepo placeOrderRepo;
+    private OrderRepo orderRepo;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -50,7 +50,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     public ResponseUtil<String> placeOrder(OrderDTO orderDTO) {
 
         // Check if the OrderId already exists
-        if (placeOrderRepo.existsById(orderDTO.getOrderId())) {
+        if (orderRepo.existsById(orderDTO.getOrderId())) {
             String errorResponse = "Duplicate Order Id: " + orderDTO.getOrderId();
             log.error("\u001B[31m{}\u001B[0m", errorResponse);
             return new ResponseUtil<>(errorResponse, HttpStatus.CONFLICT, null);
@@ -84,7 +84,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
         // Place Order
         order.setOrderDetailsList(orderDetailsList);
-        placeOrderRepo.save(order);
+        orderRepo.save(order);
 
         String successResponse = "Order Placed Successfully...!";
         log.info("\u001B[34m{}\u001B[0m", successResponse);
@@ -98,7 +98,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
     @Override
     public ResponseUtil<String> generateOrderId() {
-        String lastOrderId = placeOrderRepo.findTopByOrderByOrderIdDesc().map(Orders::getOrderId).orElse("ORD-000");
+        String lastOrderId = orderRepo.findTopByOrderByOrderIdDesc().map(Orders::getOrderId).orElse("ORD-000");
 
         String successResponse = "Last Order ID Retrieved Successfully...!";
         log.info("\u001B[34m{}\u001B[0m", successResponse);
@@ -107,7 +107,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
     @Override
     public ResponseUtil<Integer> getOrderCount() {
-        Integer orderCount = placeOrderRepo.countBy();
+        Integer orderCount = orderRepo.countBy();
 
         String successResponse = "Order Count Retrieved Successfully...!";
         log.info("\u001B[34m{}\u001B[0m", successResponse);
@@ -116,7 +116,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
     @Override
     public ResponseUtil<List<OrderDTO>> loadOrderDetails() {
-        List<Orders> ordersList = placeOrderRepo.findAll();
+        List<Orders> ordersList = orderRepo.findAll();
         List<OrderDTO> orderDTOList = new ArrayList<>();
 
         for (Orders order : ordersList) {
